@@ -1,0 +1,13 @@
+mixin title(title, desc)
+	.tk-title
+		._title-container
+			h2._title= title
+		._description-container
+			p._description.title= desc
+				a(href='#') 812 355 55 55
+
+mixin imgLazy(src, alt)
+	img(src=src, alt=alt, class='lazy')&attributes(attributes)
+
+mixin img(src, alt)
+	img(src=src, alt=alt)&attributes(attributes)

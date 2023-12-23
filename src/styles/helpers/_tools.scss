@@ -1,0 +1,22 @@
+.tk-hover {
+	transition: opacity $transition-duration;
+
+	@include mouseover {
+		opacity: 0.7;
+	}
+}
+
+.tk-desktop {
+
+	@include md-down {
+		display: none;
+	}
+}
+
+.tk-mobile {
+	display: none;
+
+	@include md-down {
+		display: block;
+	}
+}
