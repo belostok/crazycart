@@ -1,4 +1,4 @@
-.tk-hover {
+.cc-hover {
 	transition: opacity $transition-duration;
 
 	@include mouseover {
@@ -6,14 +6,14 @@
 	}
 }
 
-.tk-desktop {
+.cc-desktop {
 
 	@include md-down {
 		display: none;
 	}
 }
 
-.tk-mobile {
+.cc-mobile {
 	display: none;
 
 	@include md-down {

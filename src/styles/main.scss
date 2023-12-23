@@ -1,8 +1,6 @@
-@import 'helpers/vars';
-@import 'helpers/media-queries';
-@import 'helpers/mixins';
-@import 'helpers/formatters';
-@import 'helpers/tools';
+@import '../../node_modules/swiper/swiper-bundle.min.css';
+
+@import 'helpers';
 
 @import 'base/fonts';
 @import 'base/reset';

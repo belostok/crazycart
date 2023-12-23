@@ -1,5 +1,3 @@
-@import './../helpers';
-
 .relative {
 	position: relative;
 }
@@ -204,22 +202,6 @@
 		max-height: none;
 		z-index: -1;
 	}
-}
-
-.clr-main {
-	color: $clr-primary;
-}
-
-.clr-second {
-	color: $clr-secondary;
-}
-
-.clr-alt {
-	color: $clr-alternate;
-}
-
-.bg-color-violet {
-	background-color: $clr-base;
 }
 
 @include xs-up {
