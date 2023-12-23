@@ -1,0 +1,19 @@
+.cc-holidays {
+	$max-height: inEm(2879px);
+
+	position: relative;
+	width: 100%;
+	max-height: $max-height;
+	background: linear-gradient(0deg, #4EE3FF 0%, #65C7F7 50%, #0052D4 100%);
+
+	&::before {
+		content: '';
+		position: absolute;
+		top: 0;
+		right: -120%;
+		bottom: 0;
+		left: 0;
+		background: url($img-path + '/holidays-bg.svg') repeat-x center 0;
+		background-size: auto $max-height;
+	}
+}
