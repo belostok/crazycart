@@ -1,7 +1,6 @@
 {
-  "name": "gulp2022",
-  "version": "1.0.0",
-  "description": "",
+  "name": "crazycart",
+  "version": "0.0.1",
   "main": "gulpfile.js",
   "type": "module",
   "scripts": {
@@ -10,7 +9,7 @@
     "deploy": "gulp deployFTP --build",
     "svgSprite": "gulp svgSprive"
   },
-  "author": "",
+  "author": "belostok.fl@gmail.com",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "latest",
