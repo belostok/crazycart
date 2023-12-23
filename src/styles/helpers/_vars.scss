@@ -13,6 +13,11 @@ $font-size-calc-md: 16px;
 $white: #FFF;
 $black: #000;
 
+$base-container-width: 1320px;
+
+$base-outer-padding-desktop: inRem(60px);
+$base-outer-padding-mobile: inEmMob(16px);
+
 $img-path: '../images';
 
 $transition-duration: 0.3s;
