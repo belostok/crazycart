@@ -42,6 +42,6 @@ main {
 
 .cc-wrapper {
 	width: 100%;
-	max-width: $base-container-width;
+	max-width: calc($base-container-width - $base-outer-padding-desktop * 2);
 	margin: 0 auto;
 }
