@@ -1,6 +1,7 @@
 /*
 /*/
 !/gulp/
+/gulp/version.json
 !/src/
 !/gulpfile.js
 !/package.json
