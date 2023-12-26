@@ -19,29 +19,30 @@ html {
 body {
 	font: normal 400 1em/1.5 $font-family-primary;
 	word-break: break-word;
-	max-width: 100vw;
-	min-height: 100%;
+	max-width: 100dvw;
+	min-height: 100dvh;
 	min-width: 320px;
 	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
 main {
+	flex-grow: 1;
 	width: 100%;
 }
 
 .cc-outer {
 	width: 100%;
-	padding-left: $base-outer-padding-desktop;
-	padding-right: $base-outer-padding-desktop;
+	padding-inline: $base-outer-padding-desktop;
 
 	@include lg-down {
-		padding-left: $base-outer-padding-mobile;
-		padding-right: $base-outer-padding-mobile;
+		padding-inline: $base-outer-padding-mobile;
 	}
 }
 
 .cc-wrapper {
 	width: 100%;
 	max-width: calc($base-container-width - $base-outer-padding-desktop * 2);
-	margin: 0 auto;
+	margin-inline: auto;
 }

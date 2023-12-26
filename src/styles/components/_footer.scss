@@ -1,0 +1,14 @@
+.cc-footer {
+	$paddings: inEm(30px);
+
+	background: $dark-blue;
+	padding-inline: $paddings;
+	border-radius: inEm(20px) inEm(20px) 0 0;
+
+	&__wrapper {
+		width: 100%;
+		max-width: calc($base-container-width - $paddings);
+		min-height: inEm(332px);
+		margin-inline: auto;
+	}
+}
