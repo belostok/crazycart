@@ -1,4 +1,5 @@
 .cc-header {
+	$root: &;
 	$paddings: inEm(30px);
 
 	background: $dark-blue;
@@ -8,7 +9,88 @@
 	&__wrapper {
 		width: 100%;
 		max-width: calc($base-container-width - $paddings);
-		min-height: inEm(112px);
 		margin-inline: auto;
+	}
+
+	&__upper {
+		min-height: inEm(68px);
+	}
+
+	&__address {
+		margin-left: inEm(30px);
+	}
+
+	&__logo {
+		position: absolute;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		margin: auto;
+		width: inEm(105px);
+		height: inEm(56px);
+	}
+
+	&__items {
+		column-gap: inEm(30px);
+	}
+
+	&__item-icon {
+		margin-right: inEm(3px);
+	}
+
+	&__item-value {
+		color: $white;
+		font-size: inEm(15px);
+		line-height: 1em;
+		font-weight: 600;
+	}
+
+	&__cta {
+		margin-left: inEm(38px);
+	}
+
+	&__lower {
+		padding-top: inEm(5px);
+		padding-bottom: inEm(16px);
+	}
+
+	&__nav {
+		width: 100%;
+	}
+
+	&__menu {
+		margin-inline: inEm(-5px);
+		column-gap: inEm(52.5px);
+		row-gap: inEm(10px);
+	}
+
+	&__menu-item {
+
+		&_active {
+
+			#{$root} {
+
+				&__menu-link {
+					pointer-events: none;
+					font-weight: 900;
+				}
+			}
+		}
+	}
+
+	&__menu-link {
+		display: block;
+		color: $white;
+		font-size: inEm(13px);
+		padding: inEm(5px, 13px);
+		line-height: 1em;
+		font-weight: 600;
+		text-transform: uppercase;
+		transition: opacity $transition-duration;
+
+		@include mouseover {
+			opacity: 0.7;
+		}
 	}
 }

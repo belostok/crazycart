@@ -1,0 +1,16 @@
+.cc-address-picker {
+
+	&__title {
+		font-size: inEm(14px);
+		line-height: 1em;
+		color: $white;
+	}
+
+	&__arrow-container {
+		margin-left: inEm(3px);
+
+		svg {
+			transition: transform $transition-duration;
+		}
+	}
+}

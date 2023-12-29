@@ -1,0 +1,29 @@
+.cc-city-picker {
+
+	&__button {
+		background: $red;
+		border-radius: inEm(100px);
+		height: inEm(24px);
+		padding-inline: inEm(5px);
+	}
+
+	&__point-container {
+		margin-right: inEm(3px);
+	}
+
+	&__title {
+		font-size: inEm(14px);
+		line-height: 1em;
+		font-weight: 600;
+		color: $white;
+		text-transform: uppercase;
+	}
+
+	&__arrow-container {
+		margin-left: inEm(3px);
+
+		svg {
+			transition: transform $transition-duration;
+		}
+	}
+}
