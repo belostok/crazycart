@@ -1,14 +1,123 @@
 .cc-footer {
+	$root: &;
 	$paddings: inEm(30px);
 
 	background: $dark-blue;
-	padding-inline: $paddings;
+	padding: inEm(30px) $paddings inEm(40px);
 	border-radius: inEm(20px) inEm(20px) 0 0;
 
 	&__wrapper {
 		width: 100%;
 		max-width: calc($base-container-width - $paddings);
-		min-height: inEm(332px);
 		margin-inline: auto;
+	}
+
+	&__side {
+
+		&_left {
+			flex-shrink: 0;
+			width: inEm(298px);
+		}
+
+		&_middle {
+			flex-shrink: 0;
+			width: inEm(392px);
+		}
+
+		&_right {
+			flex-grow: 1;
+		}
+	}
+
+	&__upper & {
+
+		&__side {
+
+			&_middle {
+				padding-top: inEm(27px);
+			}
+
+			&_right {
+				padding-top: inEm(27px);
+				column-gap: inEm(80px);
+			}
+		}
+	}
+
+	&__lower {
+		margin-top: inEm(50px);
+	}
+	&__lower & {
+
+		&__side {
+
+			&_middle {
+
+				#{$root} {
+
+					&__lower-item {
+						width: max-content;
+					}
+				}
+			}
+
+			&_right {
+				text-align: right;
+			}
+		}
+	}
+
+	&__logo {
+		width: inEm(130px);
+		height: inEm(69px);
+	}
+
+	&__city {
+		margin-top: inEm(30px);
+	}
+
+	&__time {
+		margin-top: inEm(19px);
+	}
+
+	&__social {
+		margin-top: inEm(30px);
+	}
+
+	&__nav-list {
+		margin-top: inEm(14px);
+		row-gap: inEm(12px);
+	}
+
+	&__nav-title {
+		display: block;
+		color: $white;
+		text-transform: uppercase;
+		font-size: inEm(14px);
+		line-height: 0.95em;
+		letter-spacing: -0.02em;
+		font-weight: 800;
+	}
+
+	&__nav-link {
+		display: block;
+		color: $white;
+		font-size: inEm(14px);
+		line-height: 1em;
+	}
+
+	&__lower-item {
+		font-size: inEm(14px);
+		line-height: 1em;
+		color: rgba($white, 0.2);
+		transition: color $transition-duration;
+
+		&_link {
+			text-decoration: underline;
+
+			@include mouseover {
+				color: $white;
+			}
+		}
 	}
 }

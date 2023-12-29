@@ -1,0 +1,18 @@
+.cc-social {
+	column-gap: inEm(10px);
+	row-gap: inEm(10px);
+
+	&__item {
+		width: inEm(40px);
+		height: inEm(40px);
+		border: 1px solid $white;
+		border-radius: 50%;
+	}
+
+	&__title {
+		color: $white;
+		font-size: inEm(15px);
+		line-height: 1em;
+		font-weight: 500;
+	}
+}

@@ -1,2 +1,79 @@
 footer.cc-footer
 	._wrapper
+		._upper.flex
+			._side.-left
+				a._logo.cc-hover.img-contain(href='#')
+					+img('../images/logo.svg', '#')._logo-image
+				._city
+					+cityButton
+				._time
+					.cc-contacts-item.-small.flex.aic
+						span._item-icon.img-contain.cc-icon
+							<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g clip-path="url(#clip0_537_1206)">
+							<path d="M8.49992 5.33325C8.49992 5.05711 8.27606 4.83325 7.99992 4.83325C7.72378 4.83325 7.49992 5.05711 7.49992 5.33325L8.49992 5.33325ZM7.02014 6.9797C6.82488 6.78444 6.50829 6.78444 6.31303 6.9797C6.11777 7.17496 6.11777 7.49154 6.31303 7.6868L7.02014 6.9797ZM1.68757 1.77615C1.47194 1.94866 1.43698 2.2633 1.60948 2.47893C1.78199 2.69456 2.09664 2.72952 2.31227 2.55702L1.68757 1.77615ZM3.97893 1.22369C4.19456 1.05118 4.22952 0.736535 4.05702 0.520904C3.88451 0.305273 3.56987 0.270313 3.35424 0.442818L3.97893 1.22369ZM13.6876 2.55702C13.9032 2.72952 14.2178 2.69456 14.3904 2.47893C14.5629 2.2633 14.5279 1.94866 14.3123 1.77615L13.6876 2.55702ZM12.6456 0.442818C12.43 0.270313 12.1153 0.305273 11.9428 0.520904C11.7703 0.736535 11.8053 1.05118 12.0209 1.22369L12.6456 0.442818ZM7.99992 8.19518H7.49992H7.99992ZM7.49992 5.33325L7.49992 8.19518L8.49992 8.19518L8.49992 5.33325L7.49992 5.33325ZM6.31303 7.6868L7.31303 8.6868L8.02014 7.9797L7.02014 6.9797L6.31303 7.6868ZM14.1666 7.99992C14.1666 11.4057 11.4057 14.1666 7.99992 14.1666V15.1666C11.958 15.1666 15.1666 11.958 15.1666 7.99992H14.1666ZM7.99992 14.1666C4.59416 14.1666 1.83325 11.4057 1.83325 7.99992H0.833252C0.833252 11.958 4.04188 15.1666 7.99992 15.1666V14.1666ZM1.83325 7.99992C1.83325 4.59416 4.59416 1.83325 7.99992 1.83325V0.833252C4.04188 0.833252 0.833252 4.04188 0.833252 7.99992H1.83325ZM7.99992 1.83325C11.4057 1.83325 14.1666 4.59416 14.1666 7.99992H15.1666C15.1666 4.04188 11.958 0.833252 7.99992 0.833252V1.83325ZM2.31227 2.55702L3.97893 1.22369L3.35424 0.442818L1.68757 1.77615L2.31227 2.55702ZM14.3123 1.77615L12.6456 0.442818L12.0209 1.22369L13.6876 2.55702L14.3123 1.77615ZM7.49992 8.19518C7.49992 7.92369 7.82817 7.78773 8.02014 7.9797L7.31303 8.68681C7.75102 9.12479 8.49992 8.81459 8.49992 8.19518L7.49992 8.19518Z" fill="white"/>
+							</g>
+							<defs>
+							<clipPath id="clip0_537_1206">
+							<rect width="16" height="16" fill="white"/>
+							</clipPath>
+							</defs>
+							</svg>
+						span._item-value 11:00-22:00
+			._side.-middle
+				._phone
+					+phoneItem
+				._social
+					+social
+
+			._side.-right.flex
+				nav._nav
+					span._nav-title ПРАЗДНИКИ
+					ul._nav-list.flex.fdc
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Дни Рождения
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Выпускные
+						li._nav-item
+							a._nav-link.cc-hover(href='#') ВИП
+				nav._nav
+					span._nav-title БРОНИРОВАНИЕ
+					ul._nav-list.flex.fdc
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Билеты
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Сертификат
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Цены
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Развлечения
+				nav._nav
+					span._nav-title КРЭЗИ КАРТ
+					ul._nav-list.flex.fdc
+						li._nav-item
+							a._nav-link.cc-hover(href='#') О нас
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Новости
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Галерея
+						li._nav-item
+							a._nav-link.cc-hover(href='#') FAQ
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Вакансии
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Контакты
+				nav._nav
+					span._nav-title ФРАНШИЗА
+					ul._nav-list.flex.fdc
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Условия
+						li._nav-item
+							a._nav-link.cc-hover(href='#') Все парки
+
+		._lower.flex
+			._side.-left
+				span._lower-item © 2015-2023. Crazy Cart
+			._side.-middle
+				a._lower-item.-link(href='#') Политика в отношении обработки персональных данных
+			._side.-right
+				a._lower-item.-link(href='#') Разработка сайта

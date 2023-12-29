@@ -1,0 +1,21 @@
+.cc-contacts-item {
+
+	&_small & {
+
+		&__item-value {
+			font-size: inEm(14px);
+			font-weight: 400;
+		}
+	}
+
+	&__item-icon {
+		margin-right: inEm(3px);
+	}
+
+	&__item-value {
+		color: $white;
+		font-size: inEm(15px);
+		line-height: 1em;
+		font-weight: 600;
+	}
+}
