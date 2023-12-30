@@ -27,9 +27,10 @@ body {
 	flex-direction: column;
 }
 
-main {
+.cc-main {
 	flex-grow: 1;
 	width: 100%;
+	margin-block: inEm(-17px);
 }
 
 .cc-outer {

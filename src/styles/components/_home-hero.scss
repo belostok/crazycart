@@ -1,3 +1,144 @@
 .cc-home-hero {
+	background: $blue;
 
+	&__wrapper {
+		width: 100%;
+		max-width: $base-container-width;
+		margin-inline: auto;
+	}
+
+	&__image-container {
+		width: inEm(1165px);
+		height: inEm(693px);
+
+		@include lg-down {
+			width: 81vw;
+            height: 48.1vw;
+		}
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(90deg, rgba($o-black, 0.4) 0%, rgba($o-black, 0) 39.18%);
+		}
+	}
+
+	&__text-container {
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+	}
+
+	&__title-container {
+		max-width: inEm(731px);
+	}
+
+	&__text-wrapper {
+		padding-top: inEm(241px);
+
+		@include lg-down {
+			padding-top: 16.7vw;
+		}
+	}
+
+	&__title {
+		font-size: inEm(75px);
+		line-height: 0.95em;
+		letter-spacing: -0.025em;
+		font-weight: 800;
+		color: $white;
+		text-transform: uppercase;
+		@include rows-limit(4);
+	}
+
+	&__button-container {
+		margin-top: inEm(30px);
+	}
+
+	&__slider {
+		overflow: hidden;
+	}
+
+	&__pagination-container {
+		top: inEm(161px);
+		left: 0;
+		right: 0;
+		height: inEm(50px);
+
+		@include lg-down {
+			top: 11.2vw;
+		}
+	}
+
+	&__pagination-bullet {
+		position: relative;
+		z-index: 1;
+		width: inEm(50px);
+		height: inEm(50px);
+		border-radius: 50%;
+		border: 1px solid transparent;
+		transition: border-color $transition-duration;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			margin: auto;
+			width: 6px;
+			height: 6px;
+			border-radius: 100%;
+			background: $white;
+		}
+
+		&.swiper-pagination-bullet-active {
+			border-color: $white;
+		}
+	}
+
+	&__nav-container {
+		width: max-content;
+		margin: inEm(-32px) auto 0;
+		column-gap: inEm(10px);
+	}
+
+	&__nav {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: inEm(65px);
+		height: inEm(65px);
+		border-radius: 50%;
+		background: $white;
+		transition: background $transition-duration;
+
+		@include mouseover {
+			background: $red;
+
+			svg {
+
+				path {
+					fill: $white;
+				}
+			}
+		}
+
+		svg {
+			width: inEm(30px);
+			height: inEm(28px);
+
+			path {
+				transition: fill $transition-duration;
+			}
+		}
+	}
 }

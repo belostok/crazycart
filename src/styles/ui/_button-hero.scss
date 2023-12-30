@@ -1,0 +1,20 @@
+.cc-button-hero {
+	position: relative;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	background: $red;
+	height: inEm(78px);
+	min-width: inEm(248px);
+	border-radius: inEm(90px);
+	padding-inline: inEm(40px);
+
+	&__title {
+		pointer-events: none;
+		color: $white;
+		font-size: inEm(18px);
+		line-height: 1em;
+		font-weight: 700;
+		text-transform: uppercase;
+	}
+}

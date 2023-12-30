@@ -2,6 +2,8 @@
 	$root: &;
 	$paddings: inEm(30px);
 
+	position: relative;
+	z-index: 2;
 	background: $dark-blue;
 	padding: inEm(30px) $paddings inEm(40px);
 	border-radius: inEm(20px) inEm(20px) 0 0;

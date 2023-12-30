@@ -1,6 +1,6 @@
 .cc-button-cta {
 	position: relative;
-	display: flex;
+	display: inline-flex;
 	justify-content: center;
 	align-items: center;
 	padding: 0 inEm(25px);
@@ -9,6 +9,7 @@
 	background: $white;
 
 	&__title {
+		pointer-events: none;
 		color: $red;
 		font-size: inEm(14px);
 		font-weight: 700;
