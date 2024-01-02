@@ -3,13 +3,17 @@
 
 	&__wrapper {
 		width: 100%;
-		max-width: $base-container-width;
+		max-width: $max-container-width;
 		margin-inline: auto;
 	}
 
 	&__image-container {
 		width: inEm(1165px);
 		height: inEm(693px);
+
+		@media screen and (min-width: 1440px) and (max-width: 1920px) {
+			width: 81vw;
+		}
 
 		@include lg-down {
 			width: 81vw;

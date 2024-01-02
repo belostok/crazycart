@@ -26,6 +26,15 @@
 	height: inEm(16px);
 }
 
+.cc-heading-1 {
+	font-size: inEm(125px);
+	line-height: lh(118.75px, 125px);
+	letter-spacing: -2.5%;
+	font-weight: 800;
+	color: $black;
+	text-transform: uppercase;
+}
+
 .cc-heading-2 {
 	font-size: inEm(110px);
 	line-height: 0.95em;
@@ -34,6 +43,100 @@
 	color: $dark-blue;
 	text-transform: uppercase;
 	text-align: center;
+}
+
+.cc-heading-3 {
+	font-size: inEm(75px);
+	line-height: lh(71.25px, 75px);
+	letter-spacing: -4%;
+	font-weight: 800;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.cc-heading-4 {
+	font-size: inEm(60px);
+	line-height: lh(57px, 60px);
+	letter-spacing: -4%;
+	font-weight: 800;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.cc-heading-5 {
+	font-size: inEm(38px);
+	line-height: lh(36.1px, 38px);
+	letter-spacing: -4%;
+	font-weight: 800;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.cc-heading-6 {
+	font-size: inEm(32px);
+	line-height: lh(30.4px, 32px);
+	letter-spacing: -4%;
+	font-weight: 800;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.cc-title-22 {
+	font-size: inEm(22px);
+	line-height: lh(20.9px, 22px);
+	letter-spacing: -4%;
+	font-weight: 800;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.cc-title-18 {
+	font-size: inEm(18px);
+	line-height: lh(17.1px, 18px);
+	letter-spacing: -4%;
+	font-weight: 800;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.cc-title-15 {
+	font-size: inEm(15px);
+	line-height: lh(17.25px, 15px);
+	letter-spacing: -4%;
+	font-weight: 800;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.cc-title-14 {
+	font-size: inEm(14px);
+	line-height: lh(13.3px, 14px);
+	letter-spacing: -2%;
+	font-weight: 800;
+	color: $black;
+	text-transform: uppercase;
+}
+
+.cc-text-22 {
+	font-size: inEm(22px);
+	line-height: lh(24.2px, 22px);
+	font-weight: 500;
+	color: $black;
+}
+
+.cc-text-18 {
+	font-size: inEm(18px);
+	line-height: lh(21px, 18px);
+	letter-spacing: -1.1%;
+	font-weight: 500;
+	color: $black;
+}
+
+.cc-text-15 {
+	font-size: inEm(15px);
+	line-height: lh(18.75px, 15px);
+	font-weight: 500;
+	color: $black;
 }
 
 .swiper-pagination-lock,
