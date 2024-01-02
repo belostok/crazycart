@@ -11,8 +11,8 @@
 		width: inEm(1165px);
 		height: inEm(693px);
 
-		@media screen and (min-width: 1440px) and (max-width: 1920px) {
-			width: 81vw;
+		@media screen and (min-width: 1441px) {
+			width: calc(50% + (($base-container-width - $base-outer-padding-desktop * 2) / 2) - #{inEm(200px)});
 		}
 
 		@include lg-down {

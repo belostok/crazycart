@@ -35,5 +35,45 @@ section.cc-home-hero
 					<path d="M3 14.5C1.61929 14.5 0.5 15.6193 0.5 17C0.5 18.3807 1.61929 19.5 3 19.5L3 14.5ZM33 19.5C34.3807 19.5 35.5 18.3807 35.5 17C35.5 15.6193 34.3807 14.5 33 14.5V19.5ZM23.874 1.24767C22.9062 0.262909 21.3233 0.249143 20.3386 1.21693C19.3538 2.18471 19.3401 3.76756 20.3078 4.75233L23.874 1.24767ZM26.899 7.89246L25.1159 9.64479L26.899 7.89246ZM26.899 26.1075L28.6821 27.8599L26.899 26.1075ZM20.3078 29.2477C19.3401 30.2324 19.3538 31.8153 20.3386 32.7831C21.3233 33.7509 22.9062 33.7371 23.874 32.7523L20.3078 29.2477ZM32.9458 16.1227L35.4267 15.8147V15.8147L32.9458 16.1227ZM32.9458 17.8773L35.4267 18.1853V18.1853L32.9458 17.8773ZM3 19.5L33 19.5V14.5L3 14.5L3 19.5ZM20.3078 4.75233L25.1159 9.64479L28.6821 6.14013L23.874 1.24767L20.3078 4.75233ZM25.1159 24.3552L20.3078 29.2477L23.874 32.7523L28.6821 27.8599L25.1159 24.3552ZM25.1159 9.64479C27.074 11.6372 28.3925 12.9842 29.2804 14.1193C30.1357 15.2127 30.3954 15.872 30.4648 16.4307L35.4267 15.8147C35.2009 13.9956 34.3544 12.4907 33.2187 11.0387C32.1156 9.62856 30.5584 8.04936 28.6821 6.14013L25.1159 9.64479ZM28.6821 27.8599C30.5584 25.9506 32.1156 24.3714 33.2187 22.9613C34.3544 21.5093 35.2009 20.0044 35.4267 18.1853L30.4648 17.5693C30.3954 18.128 30.1357 18.7873 29.2804 19.8807C28.3925 21.0158 27.074 22.3628 25.1159 24.3552L28.6821 27.8599ZM30.4648 16.4307C30.5117 16.8087 30.5117 17.1913 30.4648 17.5693L35.4267 18.1853C35.5244 17.3982 35.5244 16.6018 35.4267 15.8147L30.4648 16.4307Z" fill="#E31E34"/>
 					</svg>
 
-section.cc-holidays
+section.cc-holidays.cc-outer
+	._wrapper.cc-wrapper
+		._title-container.relative
+			h2._title.cc-heading-2 Наши
+				span праздники
+		._items
+			._item.-birthday.relative.flex
+				._background.absolute
+				._image-container.absolute.img-contain
+					img._image(src='../images/hb-img.svg', alt='#', loading='lazy')
+				._text-container.relative
+					._description-container
+						span._description Крутой праздник для именинника
+					._item-title-container
+						h3._item-title День
+							span poждения
+				._button-container
+					+detailsButton
 
+			._item.-vip.relative.flex
+				._background.absolute
+				._image-container.absolute.img-contain
+					img._image(src='../images/vip-img.svg', alt='#', loading='lazy')
+				._text-container.relative
+					._description-container
+						span._description Эксклюзивные праздники для вашего ребенка
+					._item-title-container
+						h3._item-title VIP
+				._button-container
+					+detailsButton
+
+			._item.-graduation.relative.flex
+				._background.absolute
+				._image-container.absolute.img-contain
+					img._image(src='../images/graduation-img.svg', alt='#', loading='lazy')
+				._text-container.relative
+					._description-container
+						span._description Весёлые выпускные, которые запомнятся надолго
+					._item-title-container
+						h3._item-title Выпускные
+				._button-container
+					+detailsButton

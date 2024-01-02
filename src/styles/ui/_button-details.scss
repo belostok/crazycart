@@ -1,0 +1,32 @@
+.cc-button-details {
+	$root: &;
+	position: relative;
+	width: inEm(210px);
+	height: inEm(210px);
+	background: $red;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: background $transition-duration;
+
+	@include mouseover {
+		background: $white;
+
+		#{$root} {
+
+			&__title {
+				color: $red;
+			}
+		}
+	}
+
+	&__title {
+		text-transform: uppercase;
+		color: $white;
+		font-size: inEm(18px);
+		line-height: 1em;
+		font-weight: 700;
+		transition: color $transition-duration;
+	}
+}

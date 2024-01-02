@@ -1,19 +1,212 @@
 .cc-holidays {
+	$root: &;
 	$max-height: inEm(2879px);
 
 	position: relative;
+	overflow: hidden;
 	width: 100%;
 	max-height: $max-height;
 	background: linear-gradient(0deg, #4EE3FF 0%, #65C7F7 50%, #0052D4 100%);
+	padding-top: inEm(270px);
+	padding-bottom: inEm(334px);
+	margin-top: inEm(-120px);
 
 	&::before {
 		content: '';
 		position: absolute;
 		top: 0;
-		right: -120%;
+		right: -131%;
 		bottom: 0;
 		left: 0;
 		background: url($img-path + '/holidays-bg.svg') repeat-x center 0;
 		background-size: auto $max-height;
+	}
+
+	&__title-container {
+		margin-left: inEm(200px);
+	}
+
+	&__title {
+		color: $white;
+		text-align: left;
+
+		& > span {
+			display: block;
+			transform: translateX(inEm(130px, 110px));
+		}
+	}
+
+	&__item {
+
+		&_birthday {
+			width: inEm(1145px);
+			margin: inEm(401px) auto 0;
+			justify-content: space-between;
+			align-items: center;
+
+			.cc-button-details {
+				transform: rotate(10.4deg);
+			}
+
+			#{$root} {
+
+				&__background {
+					top: inEm(-180px);
+					background-image: url('../images/hb-bg.svg');
+				}
+
+				&__item-title {
+					text-align: right;
+					font-size: inEm(130px);
+					letter-spacing: lh(-5.2px, 130px);
+				}
+
+				&__description-container {
+					position: absolute;
+					top: inEm(10px);
+					left: 0;
+					max-width: inEm(200px);
+				}
+
+				&__image-container {
+					right: inEm(50px);
+					bottom: inEm(-195px);
+					width: inEm(694px);
+					height: inEm(803px);
+				}
+			}
+		}
+
+		&_vip {
+			margin: inEm(525px) 0 0 inEm(100px);
+			align-items: flex-end;
+
+			.cc-button-details {
+				transform: rotate(-10deg);
+			}
+
+			#{$root} {
+
+				&__background {
+					top: inEm(-150px);
+					background-image: url('../images/vip-bg.svg');
+				}
+
+				&__text-container {
+					display: flex;
+					flex-direction: column;
+					margin-bottom: inEm(-15px);
+				}
+
+				&__item-title {
+					font-size: inEm(150px);
+					letter-spacing: lh(-6px, 150px);
+				}
+
+				&__description-container {
+					position: relative;
+					max-width: inEm(320px);
+					order: 1;
+					margin-top: inEm(10px);
+					margin-left: inEm(110px);
+				}
+
+				&__image-container {
+					width: inEm(626px);
+					height: inEm(841px);
+					top: inEm(-390px);
+					left: inEm(-30px);
+				}
+
+				&__button-container {
+					z-index: 1;
+					order: -1;
+					margin-right: inEm(105px);
+				}
+			}
+		}
+
+		&_graduation {
+			flex-direction: column;
+			align-items: flex-end;
+			margin-top: inEm(240px);
+			margin-right: inEm(337px);
+
+			.cc-button-details {
+				transform: rotate(10deg);
+			}
+
+			#{$root} {
+
+				&__background {
+					top: inEm(20px);
+					background-image: url('../images/graduation-bg.svg');
+				}
+
+				&__text-container {
+					display: flex;
+					align-items: center;
+					flex-direction: column;
+				}
+
+				&__item-title {
+					font-size: inEm(110px);
+					letter-spacing: lh(-4.4px, 110px);
+				}
+
+				&__description-container {
+					position: absolute;
+					bottom: calc(100% + #{inEm(15px)});
+					max-width: inEm(315px);
+					text-align: right;
+					margin-left: inEm(-15px);
+				}
+
+				&__image-container {
+					width: inEm(489px);
+					height: inEm(578px);
+					right: inEm(-320px);
+					bottom: inEm(-170px);
+				}
+
+				&__button-container {
+					z-index: 1;
+					order: -1;
+					margin-bottom: inEm(25px);
+					margin-right: inEm(-35px);
+				}
+			}
+		}
+	}
+
+	&__background {
+		height: inEm(275px);
+		left: -100vw;
+		right: -100vw;
+		margin-inline: auto;
+		background-repeat: repeat-x;
+		background-size: auto 100%;
+		background-position-x: 50%;
+	}
+
+	&__item-title {
+		color: $white;
+		text-transform: uppercase;
+		line-height: 95%;
+		font-weight: 800;
+
+		span {
+			display: block;
+		}
+	}
+
+	&__description {
+		color: $white;
+		font-size: inEm(22px);
+		line-height: 1.1em;
+	}
+
+	&__button-container {
+		position: relative;
 	}
 }

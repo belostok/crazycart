@@ -1,8 +1,8 @@
 @font-face {
 	font-family: Mulish;
 	font-display: swap;
-	src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff");
-	font-weight: 800;
+	src: url("../fonts/Mulish-Black.woff2") format("woff2"), url("../fonts/Mulish-Black.woff") format("woff");
+	font-weight: 900;
 	font-style: normal;
 }
 @font-face {
@@ -11,6 +11,20 @@
 	src: url("../fonts/Mulish-Bold.woff2") format("woff2"), url("../fonts/Mulish-Bold.woff") format("woff");
 	font-weight: 700;
 	font-style: normal;
+}
+@font-face {
+	font-family: Mulish;
+	font-display: swap;
+	src: url("../fonts/Mulish-ExtraBold.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold.woff") format("woff");
+	font-weight: 800;
+	font-style: normal;
+}
+@font-face {
+	font-family: Mulish;
+	font-display: swap;
+	src: url("../fonts/Mulish-ExtraBold_Italic.woff2") format("woff2"), url("../fonts/Mulish-ExtraBold_Italic.woff") format("woff");
+	font-weight: 800;
+	font-style: italic;
 }
 @font-face {
 	font-family: Mulish;
