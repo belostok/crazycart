@@ -1,0 +1,86 @@
+.cc-input {
+	$root: &;
+
+	position: relative;
+	display: block;
+	width: 100%;
+
+	&_icon {
+
+		& > span {
+			left: inEm(36px, 15px) !important;
+		}
+	}
+	&_icon & {
+
+		&__input {
+			padding-left: inEm(36px, 15px);
+		}
+	}
+
+	&_focus,
+	&._error {
+
+		& > span {
+			display: none !important;
+		}
+	}
+
+	&:not(&_focus) {
+
+		&._error {
+
+			#{$root} {
+
+				&__message_error {
+					display: block !important;
+					opacity: 1;
+				}
+			}
+		}
+	}
+
+	&__input {
+		font-size: inEm(15px);
+		width: 100%;
+		height: inEm(65px, 15px);
+		border-radius: inEm(10px, 15px);
+		border: 1px solid $white;
+		background: transparent;
+		padding-inline: inEm(15px, 15px);
+		color: $white;
+	}
+
+	& > span {
+		display: block;
+		height: max-content;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: inEm(15px, 15px);
+		right: inEm(15px, 15px);
+		margin-block: auto;
+		font-size: inEm(15px);
+		line-height: 1em;
+		font-weight: 500;
+		color: rgba($white, 0.5);
+		pointer-events: none;
+	}
+
+	&__message {
+		opacity: 0;
+
+		&_error {
+			color: $pale-turq !important;
+		}
+	}
+
+	&__icon {
+		position: absolute;
+		top: calc(#{inEm(65px)} / 2);
+		transform: translateY(-50%);
+		left: inEm(15px);
+		width: inEm(16px);
+		height: inEm(16px);
+	}
+}

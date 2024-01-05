@@ -1,0 +1,32 @@
+.cc-button-form {
+	$root: &;
+
+	position: relative;
+	width: 100%;
+	background: $white;
+	padding: inEm(25px) inEm(30px);
+	border-radius: inEm(70px);
+	border: 1px solid $white;
+	transition: background $transition-duration;
+
+	@include mouseover {
+		background: transparent;
+
+		#{$root} {
+
+			&__title {
+				color: $white;
+			}
+		}
+	}
+
+	&__title {
+		pointer-events: none;
+		text-transform: uppercase;
+		font-size: inEm(18px);
+		line-height: 1em;
+		font-weight: 700;
+		color: $black;
+		transition: color $transition-duration;
+	}
+}

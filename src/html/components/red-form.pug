@@ -1,0 +1,27 @@
+mixin redForm
+	section.cc-red-form.cc-outer
+		._wrapper.cc-wrapper
+			._title-container
+				h2._title помочь
+					br
+					| с выбором праздника?
+			._form-container
+				form._form.js-cc-form
+					input(type='hidden', name='project_name', value='project name')
+					input(type='hidden', name='admin_email', value='admin email')
+					input(type='hidden', name='form_subject', value='form subject')
+					._inputs.flex.fwrap
+						._input
+							+inputText('name', 'text', 'Имя')(class='_req _name')
+						._input
+							+inputText('phone', 'tel', 'Телефон')(class='_req _phone')
+						._input
+							+inputText('date', 'text', 'Дата праздника', '../images/calendar.svg').js-cc-date-input(class='_req', readonly)
+						._input
+							+inputText('location', 'autocomplete', 'Филиал', '../images/location.svg')(class='_req')
+					label.cc-checkbox._checkbox.aic.iflex
+						input._input(type='checkbox')
+						span._title Я соглашаюсь с
+							a(href='#') политикой обработки персональных данных
+					._button
+						+formButton

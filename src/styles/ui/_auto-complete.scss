@@ -1,0 +1,22 @@
+#autoComplete_list_1 {
+	position: absolute;
+	z-index: 1;
+	top: 100%;
+	width: 100%;
+	background: $white;
+	padding-block: inEm(10px);
+
+	.cc-no-result, li {
+		font-size: inEm(14px);
+		line-height: 1em;
+		padding: inEm(15px, 14px);
+	}
+
+	li {
+		transition: background $transition-duration;
+
+		@include mouseover {
+			background: rgba($black, 0.1);
+		}
+	}
+}

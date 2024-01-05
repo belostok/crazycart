@@ -47,6 +47,9 @@
     "webpack-stream": "latest"
   },
   "dependencies": {
+    "@tarekraafat/autocomplete.js": "^10.2.7",
+    "inputmask": "^5.0.8",
+    "js-datepicker": "^5.18.2",
     "swiper": "^11.0.5"
   }
 }

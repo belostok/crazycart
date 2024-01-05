@@ -1,0 +1,74 @@
+.cc-red-form {
+	position: relative;
+	overflow: hidden;
+	background: $red;
+
+	&__wrapper {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__title-container {
+		position: relative;
+		width: inEm(762px);
+		padding: inEm(90px) 0 inEm(87px);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: inEm(-426px);
+			right: inEm(-73px);
+			width: inEm(1598px);
+			height: inEm(1343px);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url('../images/form-bg.svg');
+		}
+	}
+
+	&__title {
+		position: relative;
+		text-transform: uppercase;
+		color: $white;
+		font-size: inEm(100px);
+		line-height: 95%;
+		font-weight: 800;
+		letter-spacing: lh(-4px, 100px);
+	}
+
+	&__form-container {
+		flex-shrink: 0;
+		width: inEm(516px);
+		padding-top: inEm(60px);
+		padding-bottom: inEm(87px);
+	}
+
+	&__inputs {
+		column-gap: inEm(10px);
+		row-gap: inEm(10px);
+	}
+
+	&__input {
+
+		&:nth-child(1),
+		&:nth-child(4) {
+			width: 100%;
+		}
+
+		&:nth-child(2) {
+			width: inEm(286px);
+		}
+
+		&:nth-child(3) {
+			width: inEm(220px);
+		}
+	}
+
+	&__checkbox {
+		margin-top: inEm(20px);
+	}
+
+	&__button {
+		margin-top: inEm(20px);
+	}
+}

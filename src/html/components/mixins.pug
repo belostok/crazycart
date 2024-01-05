@@ -76,3 +76,26 @@ mixin social
 mixin detailsButton
 	a.cc-button-details(href='#')
 		span._title Подробнее
+
+mixin formButton(cl)
+	button.cc-button-form(type='submit', class=cl)
+		span._title Отправить
+
+mixin inputText(name, type, label, icon)
+	if icon
+		label.cc-input.-icon.js-cc-label
+			img._icon(src= icon, alt='#')
+			span._label-text.js-cc-input-label= label
+			span._message.js-cc-input-message Сообщение подсказка
+			span._message.-error.js-cc-input-error Сообщение об ошибке
+			if type === 'autocomplete'
+				input._input.js-cc-input.js-cc-auto-complete(name='location', type='text', dir='ltr', spellcheck=false, autocorrect='off', autocomplete='off', autocapitalize='off')&attributes(attributes)
+			else
+				input._input.js-cc-input(name=name, type=type)&attributes(attributes)
+	else
+		label.cc-input.js-cc-label
+			span._label-text.js-cc-input-label= label
+			span._message.js-cc-input-message Сообщение подсказка
+			span._message.-error.js-cc-input-error Сообщение об ошибке
+			input._input.js-cc-input(name=name, type=type)&attributes(attributes)
+

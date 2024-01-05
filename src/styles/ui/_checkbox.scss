@@ -1,0 +1,38 @@
+.cc-checkbox {
+	position: relative;
+	cursor: pointer;
+
+	&__input {
+		cursor: pointer;
+		flex-shrink: 0;
+		width: inEm(20px);
+		height: inEm(20px);
+		border-radius: 50%;
+		border: inEm(2px) solid $white;
+		margin-right: inEm(10px);
+		background-repeat: no-repeat;
+		background-size: inEm(12px) inEm(8px);
+		background-position: center 60%;
+
+		&:checked {
+			background-image: url('../images/checkbox.svg');
+		}
+	}
+
+	&__title {
+		font-size: inEm(15px);
+		line-height: 1em;
+		font-weight: 500;
+		color: $white;
+
+		a {
+			text-decoration: underline;
+			margin-left: inEm(5px, 15px);
+			transition: opacity $transition-duration;
+
+			@include mouseover {
+				opacity: 0.7;
+			}
+		}
+	}
+}
