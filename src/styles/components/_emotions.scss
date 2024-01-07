@@ -1,0 +1,22 @@
+.cc-emotions {
+	position: relative;
+	padding-top: inEm(180px);
+
+	&_home {
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			top: inEm(396px);
+			bottom: 0;
+			background: linear-gradient(180deg, #4EE3FF 0%, #65C7F7 9.04%, #0052D4 18.07%);
+		}
+	}
+
+	&__title-container {
+		max-width: inEm(945px);
+		margin: 0 auto inEm(60px);
+	}
+}

@@ -28,6 +28,7 @@ body {
 }
 
 .cc-main {
+	overflow: hidden;
 	flex-grow: 1;
 	width: 100%;
 	margin-block: inEm(-17px);

@@ -1,5 +1,8 @@
 include ../../components/red-form
 include ../../components/event-items
+include ../../components/video-section
+include ../../components/promotions
+include ../../components/emotions
 
 section.cc-home-hero
 	._wrapper
@@ -81,5 +84,8 @@ section.cc-holidays.cc-outer
 				._button-container
 					+detailsButton
 
-+redForm
-+eventItems
++redForm('cc-red-form_home')
++eventItems('праздник мечты для вашего ребёнка', 'cc-event-items_home')
++videoSection('Прочувствуйте атмосферу', 'cc-video-section_home')
++promotions('Акции', 'cc-promotions_home')
++emotions('Эмоции наших гостей', 'cc-emotions_home')

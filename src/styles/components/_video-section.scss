@@ -1,0 +1,142 @@
+.cc-video-section {
+	$root: &;
+
+	position: relative;
+	padding-top: inEm(180px);
+
+	&_home {
+		z-index: 1;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: inEm(1696px);
+			height: inEm(1696px);
+			left: -100vw;
+			right: -100vw;
+			bottom: inEm(-884px);
+			margin-inline: auto;
+			opacity: 0.8;
+			background: $white;
+			filter: blur(inEm(382px));
+		}
+	}
+
+	&__title-container {
+		position: relative;
+		margin-bottom: inEm(60px);
+	}
+
+	&__wrapper {
+		width: 100%;
+		max-width: $base-container-width;
+		margin-inline: auto;
+	}
+
+	&__video-container {
+		width: 100%;
+		height: inEm(795px);
+		background: $black;
+
+		&_prepare {
+
+			video {
+				display: block !important;
+			}
+
+			#{$root} {
+
+				&__image-container {
+					opacity: 0;
+				}
+
+				&__button {
+					opacity: 0;
+				}
+			}
+		}
+
+		&_active {
+
+			#{$root} {
+
+				&__image-container {
+					display: none;
+				}
+
+				&__button {
+					display: none;
+				}
+			}
+		}
+	}
+
+	iframe,
+	video {
+		width: 100%;
+		height: 100%;
+	}
+
+	video {
+		display: none;
+	}
+
+	&__image-container {
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		transition: opacity $transition-duration;
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: linear-gradient(180deg, $o-black -16.42%, rgba($o-black, 0) 48.72%, $o-black 113.86%);
+		}
+	}
+
+	&__image {
+		display: block;
+	}
+
+	&__button {
+		width: inEm(204px);
+		height: inEm(204px);
+		border-radius: 50%;
+		background: $white;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		transition: background $transition-duration, opacity $transition-duration;
+
+		@include mouseover {
+			background: $red;
+
+			svg {
+
+				path {
+					stroke: $white;
+				}
+			}
+		}
+
+		svg {
+			width: inEm(72px);
+			height: inEm(77px);
+			pointer-events: none;
+
+			path {
+				transition: stroke $transition-duration;
+			}
+		}
+	}
+}

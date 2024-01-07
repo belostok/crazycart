@@ -1,3 +1,18 @@
-mixin eventItems
-	section.cc-event-items.cc-outer
+mixin eventItems(title, cl)
+	section.cc-event-items.cc-outer(class= cl)
 		._wrapper.cc-wrapper
+			._title-container
+				h2._title.cc-heading-2= title
+			- var n = 1;
+			._items
+				while n < 11
+					a._item.cc-hover.img-cover(href='#')
+						img._image(src='../images/event-items-' + n + '.jpg', alt='#', loading='lazy')
+					- n++;
+				// - var m = 1
+				// 	while m < 6
+				// 		a._item.cc-hover.img-cover(href='#')
+				// 			img._image(src='../images/event-items-' + m + '.jpg', alt='#', loading='lazy')
+				// 		- m++;
+
+

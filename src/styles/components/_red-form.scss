@@ -3,6 +3,10 @@
 	overflow: hidden;
 	background: $red;
 
+	&_home {
+		z-index: 1;
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;

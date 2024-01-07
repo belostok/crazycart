@@ -1,0 +1,15 @@
+mixin videoSection(title, cl)
+	section.cc-video-section(class= cl)
+		._title-wrapper.cc-outer
+			._title-container.cc-wrapper
+				h2._title.cc-heading-2= title
+		._wrapper
+			._video-container.relative.js-cc-video-container
+				video(src='../assets/video-sample.mp4', controls, autoplay, playsinline)
+				//<iframe width="560" height="315" src="https://www.youtube.com/embed/4xDzrJKXOOY?si=aYZWCGG7D87s6hf7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+				._image-container.absolute.img-cover
+					img._image(src='../images/video-preview.jpg', alt='#', loading='lazy')
+				button._button.absolute.js-cc-video-button
+					<svg width="78" height="83" viewBox="0 0 78 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M48.4737 15.3118C63.3965 23.9058 70.8579 28.2028 73.3619 33.8128C75.546 38.7061 75.546 44.2939 73.3619 49.1872C70.8579 54.7972 63.3965 59.0942 48.4737 67.6882C33.5509 76.2821 26.0895 80.5792 19.9668 79.9373C14.6264 79.3774 9.77495 76.5834 6.61863 72.2501C3 67.282 3 58.688 3 41.5C3 24.312 3 15.718 6.61863 10.7499C9.77495 6.41657 14.6264 3.62264 19.9668 3.06275C26.0895 2.42085 33.5509 6.71785 48.4737 15.3118Z" stroke="#E31E34" stroke-width="5.16667"/>
+					</svg>

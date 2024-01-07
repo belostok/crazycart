@@ -1,3 +1,91 @@
 .cc-event-items {
 
+	&_home & {
+
+		&__wrapper {
+			position: relative;
+			padding-top: inEm(180px);
+			margin-bottom: inEm(-40px);
+
+			&::before,
+			&::after {
+				content: '';
+				position: absolute;
+				background: $turq;
+				border-radius: 50%;
+			}
+
+			&::before {
+				width: inEm(780px);
+				height: inEm(780px);
+				top: inEm(-422px);
+				right: inEm(-306px);
+				opacity: 0.7;
+				filter: blur(inEm(215.5px));
+			}
+
+			&::after {
+				width: inEm(1631px);
+				height: inEm(1631px);
+				left: inEm(-654px);
+				bottom: inEm(-473px);
+				opacity: 0.8;
+				filter: blur(inEm(367px));
+			}
+		}
+
+		&__items {
+			z-index: 1;
+		}
+	}
+
+	&__title-container {
+		position: relative;
+		margin-bottom: inEm(60px);
+	}
+
+	&__items {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: inEm(40px);
+	}
+
+	&__item {
+		overflow: hidden;
+		border-radius: inEm(20px);
+		margin-bottom: inEm(40px);
+
+		&:nth-child(10n+1) {
+			grid-column: 1 / 4;
+			height: inEm(514px);
+		}
+
+		&:nth-child(10n+2),
+		&:nth-child(10n+3),
+		&:nth-child(10n+4) {
+			height: inEm(510px);
+		}
+
+		&:nth-child(10n+5) {
+			grid-column: 1 / 3;
+			height: inEm(690px);
+		}
+
+		&:nth-child(10n+6),
+		&:nth-child(10n+7) {
+			grid-column: 3 / 4;
+			height: inEm(325px);
+		}
+
+		&:nth-child(10n+7) {
+			margin-top: calc(#{inEm(-325px)} - #{inEm(40px)});
+		}
+
+		&:nth-child(10n+8),
+		&:nth-child(10n+9),
+		&:nth-child(10n+10) {
+			height: inEm(413px);
+		}
+	}
 }

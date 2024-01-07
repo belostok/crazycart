@@ -5,6 +5,7 @@
 	height: inEm(210px);
 	background: $red;
 	border-radius: 50%;
+	border: 1px solid $red;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -19,6 +20,11 @@
 				color: $red;
 			}
 		}
+	}
+
+	&_promo {
+		width: inEm(160px);
+		height: inEm(160px);
 	}
 
 	&__title {

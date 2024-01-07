@@ -6,6 +6,7 @@ import datePicker from './modules/date-picker.js';
 import forms from './modules/forms.js';
 import autoComplete from './modules/auto-complete.js';
 import inputMask from './modules/input-mask.js';
+import video from './modules/video.js';
 
 flsFunctions.isWebp();
 
@@ -16,4 +17,5 @@ documentReady(() => {
 	autoComplete();
 	forms();
 	inputMask();
+	video();
 });
