@@ -1,5 +1,6 @@
 .cc-emotions {
 	position: relative;
+	overflow: hidden;
 	padding-top: inEm(180px);
 
 	&_home {
@@ -11,12 +12,53 @@
 			right: 0;
 			top: inEm(396px);
 			bottom: 0;
-			background: linear-gradient(180deg, #4EE3FF 0%, #65C7F7 9.04%, #0052D4 18.07%);
+			background: linear-gradient(180deg, #4EE3FF 0%, #65C7F7 50%, #0052D4 100%);
 		}
 	}
 
 	&__title-container {
 		max-width: inEm(945px);
 		margin: 0 auto inEm(60px);
+	}
+
+	&__slider {
+		overflow: hidden;
+	}
+
+	&__slide-grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: inEm(20px);
+		row-gap: inEm(20px);
+	}
+
+	&__nav {
+		z-index: 1;
+		top: 0;
+		bottom: inEm(80px);
+		margin-block: auto;
+		width: inEm(160px);
+		height: inEm(160px);
+		border: inEm(3.2px) solid $white;
+		border-radius: 50%;
+		transition: background $transition-duration, border-color $transition-duration;
+
+		@include mouseover {
+			background: $red;
+			border-color: $red;
+		}
+
+		&_prev {
+			left: inEm(-80px);
+		}
+
+		&_next {
+			right: inEm(-80px);
+		}
+	}
+
+	&__pagination {
+		width: max-content;
+		margin: inEm(30px) auto 0;
 	}
 }

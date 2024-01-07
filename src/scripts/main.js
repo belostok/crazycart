@@ -7,6 +7,7 @@ import forms from './modules/forms.js';
 import autoComplete from './modules/auto-complete.js';
 import inputMask from './modules/input-mask.js';
 import video from './modules/video.js';
+import emotionsSlider from './modules/emotions-slider.js';
 
 flsFunctions.isWebp();
 
@@ -18,4 +19,5 @@ documentReady(() => {
 	forms();
 	inputMask();
 	video();
+	emotionsSlider();
 });

@@ -1,7 +1,7 @@
 import Swiper from 'swiper/bundle';
 
 export default () => {
-	const sliderContainers = document.querySelectorAll( '.js-cc-home-hero-slider' );
+	const sliderContainers = document.querySelectorAll( '.js-cc-emotions-slider' );
 	if ( sliderContainers.length ) {
 		let sliders = [];
 		sliderContainers.forEach( ( el, index ) => {
@@ -19,13 +19,13 @@ export default () => {
 				sliders[ index ] = new Swiper( sliderContainer, {
 					loopedSlides: slides.length,
 					loop: slides.length > 1,
-					autoplay: slides.length > 1 ? autoplay : false,
+					// autoplay: slides.length > 1 ? autoplay : false,
 					navigation: {
-						prevEl: parent.querySelector( '.js-cc-hero-slider-prev' ),
-						nextEl: parent.querySelector( '.js-cc-hero-slider-next' ),
+						prevEl: parent.querySelector( '.js-cc-emotions-nav-prev' ),
+						nextEl: parent.querySelector( '.js-cc-emotions-nav-next' ),
 					},
 					pagination: {
-						el: parent.querySelector( '.js-cc-hero-slider-pagination' ) || null,
+						el: parent.querySelector( '.js-cc-emotions-pagination' ) || null,
 						clickable: true,
 						renderBullet: ( index, className ) => {
 							return '<button class="swiper-pagination-bullet cc-pagination__bullet"></button>';
@@ -37,3 +37,4 @@ export default () => {
 	}
 
 }
+
