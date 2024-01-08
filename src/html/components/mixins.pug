@@ -81,6 +81,10 @@ mixin formButton(cl)
 	button.cc-button-form(type='submit', class=cl)
 		span._title Отправить
 
+mixin feedbackButton(title, cl)
+	a.cc-button-feedback(href='#', class=cl)
+		span._title=title
+
 mixin inputText(name, type, label, icon)
 	if icon
 		label.cc-input.-icon.js-cc-label

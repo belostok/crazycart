@@ -1,0 +1,26 @@
+.cc-feedback {
+	$slider-padding: inEm(100px);
+	$slider-width: calc( $base-container-width - #{$slider-padding} * 2 );
+
+	position: relative;
+	background: $blue;
+	padding-top: inEm(180px);
+
+	&__title-container {
+		margin-bottom: inEm(90px);
+	}
+
+	&__title {
+		color: $white;
+	}
+
+	&__slider-outer {
+		padding-inline: $slider-padding;
+	}
+
+	&__slider-wrapper {
+		width: 100%;
+		max-width: $slider-width;
+		margin-inline: auto;
+	}
+}
