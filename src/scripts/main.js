@@ -8,6 +8,7 @@ import autoComplete from './modules/auto-complete.js';
 import inputMask from './modules/input-mask.js';
 import video from './modules/video.js';
 import emotionsSlider from './modules/emotions-slider.js';
+import feedbackSlider from './modules/feedback-slider.js';
 
 flsFunctions.isWebp();
 
@@ -20,4 +21,5 @@ documentReady(() => {
 	inputMask();
 	video();
 	emotionsSlider();
+	feedbackSlider();
 });

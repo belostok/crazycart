@@ -48,6 +48,11 @@
 			border-color: $red;
 		}
 
+		svg {
+			width: inEm(78px);
+			height: inEm(72px);
+		}
+
 		&_prev {
 			left: inEm(-80px);
 		}

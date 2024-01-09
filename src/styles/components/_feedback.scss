@@ -1,9 +1,6 @@
 .cc-feedback {
-	$slider-padding: inEm(100px);
-	$slider-width: calc( $base-container-width - #{$slider-padding} * 2 );
-
 	position: relative;
-	background: $blue;
+	background: linear-gradient(to bottom, $blue 0%, $blue 80%, rgba($blue, 0) 100%);
 	padding-top: inEm(180px);
 
 	&__title-container {
@@ -14,13 +11,77 @@
 		color: $white;
 	}
 
-	&__slider-outer {
-		padding-inline: $slider-padding;
+	&__item {
+		padding-inline: inEm(40px);
 	}
 
-	&__slider-wrapper {
-		width: 100%;
-		max-width: $slider-width;
-		margin-inline: auto;
+	&__item-upper {
+		margin-bottom: inEm(20px);
+	}
+
+	&__item-image-container {
+		width: inEm(60px);
+		height: inEm(60px);
+		border-radius: 50%;
+		overflow: hidden;
+		margin-right: inEm(20px);
+		flex-shrink: 0;
+	}
+
+	&__item-title {
+		text-transform: uppercase;
+		font-size: inEm(20px);
+		line-height: 0.95em;
+		letter-spacing: lh(-0.8px, 20px);
+		font-weight: 800;
+		color: $white;
+		word-spacing: 1000px;
+	}
+
+	&__item-text-container {
+		margin-top: inEm(20px);
+	}
+
+	&__item-description {
+		font-size: inEm(15px);
+		line-height: 1.4em;
+		color: $white;
+	}
+
+	&__item-button {
+		margin-top: inEm(20px);
+	}
+
+	&__pagination {
+
+		&:not(.swiper-pagination-lock) {
+			margin-top: inEm(40px);
+		}
+	}
+
+	&__nav-container {
+		column-gap: inEm(10px);
+	}
+
+	&__nav {
+		width: inEm(50px);
+		height: inEm(50px);
+		border: 1px solid $white;
+		border-radius: 50%;
+		transition: background $transition-duration, border-color $transition-duration;
+
+		&:not(.swiper-button-lock) {
+			margin-top: inEm(40px);
+		}
+
+		@include mouseover {
+			background: $red;
+			border-color: $red;
+		}
+
+		svg {
+			width: inEm(22px);
+			height: inEm(20px);
+		}
 	}
 }

@@ -1,4 +1,29 @@
 .cc-button-feedback {
-	display: block;
+	$root: &;
+
+	display: inline-block;
 	position: relative;
+	padding: inEm(5px) inEm(10px);
+	border: 1px solid $white;
+	border-radius: inEm(100px);
+	transition: background $transition-duration;
+
+	@include mouseover {
+		background: $white;
+
+		#{$root} {
+
+			&__title {
+				color: $blue;
+			}
+		}
+	}
+
+	&__title {
+		display: block;
+		font-size: inEm(15px);
+		line-height: 1.4em;
+		color: $white;
+		transition: color $transition-duration;
+	}
 }
