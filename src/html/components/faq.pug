@@ -1,0 +1,24 @@
+mixin faq(title, cl)
+	section.cc-faq.cc-outer(class= cl)
+		._wrapper.cc-wrapper
+			._title-container
+				h2._title.cc-heading-2= title
+
+		- var n = 1;
+		._items.flex.fdc
+			while n < 6
+				._item.js-cc-faq-item
+					._question-container.flex.aic.jcspb
+						._question-title-container.flex.aic
+							._index-container.flex.aic
+								span._index= '//00' + n
+							._question-title-container
+								h3._question-title БЕЗОПАСНО ЛИ КАТАНИЕ?
+						._arrow.flex.aic.jcc
+							<svg width="20" height="9" viewBox="0 0 20 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M18.3332 1.33301L15.421 4.27129C13.0986 6.61451 11.9374 7.78613 10.5221 7.96653C10.1753 8.01073 9.82439 8.01073 9.47762 7.96653C8.0623 7.78613 6.90109 6.61451 4.57869 4.27129L1.6665 1.33301" stroke="white" stroke-width="2" stroke-linecap="round"/>
+							</svg>
+					._answer-container.js-cc-faq-answer
+						._answer-inner
+							p._answer Прокат абсолютно безопасен, машинка с низким центром тяжести и находится близко к полу, также есть ножки для защиты от переворота. На трассе инструктор, который экипирует ребенка защитой, научит управлять картингом и проследит за катанием, а также проведет инструктаж по безопасному катанию.
+				- n++;

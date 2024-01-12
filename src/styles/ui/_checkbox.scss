@@ -3,16 +3,17 @@
 	cursor: pointer;
 
 	&__input {
+		font-size: 1em;
 		cursor: pointer;
 		flex-shrink: 0;
 		width: inEm(20px);
 		height: inEm(20px);
 		border-radius: 50%;
 		border: inEm(2px) solid $white;
-		margin-right: inEm(10px);
+		margin: 0 inEm(10px) 0 0;
 		background-repeat: no-repeat;
-		background-size: inEm(12px) inEm(8px);
-		background-position: center 60%;
+		background-size: inEm(12px) inEm(10px);
+		background-position: 42% 60%;
 
 		&:checked {
 			background-image: url('../images/checkbox.svg');

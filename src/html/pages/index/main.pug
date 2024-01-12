@@ -4,6 +4,7 @@ include ../../components/video-section
 include ../../components/promotions
 include ../../components/emotions
 include ../../components/feedback
+include ../../components/faq
 
 section.cc-home-hero
 	._wrapper
@@ -85,9 +86,11 @@ section.cc-holidays.cc-outer
 				._button-container
 					+detailsButton
 
-+redForm('cc-red-form_home')
++redForm('cc-red-form_home', 0)
 +eventItems('праздник мечты для вашего ребёнка', 'cc-event-items_home')
 +videoSection('Прочувствуйте атмосферу', 'cc-video-section_home')
 +promotions('Акции', 'cc-promotions_home')
 +emotions('Эмоции наших гостей', 'cc-emotions_home')
 +feedback('Отзывы', 'cc-feedback_home')
++faq('часто задаваемые вопросы', 'cc-faq_home')
++redForm('cc-red-form_blue', 1)

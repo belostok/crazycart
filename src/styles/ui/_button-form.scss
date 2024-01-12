@@ -20,6 +20,29 @@
 		}
 	}
 
+	&_red {
+		background: $red;
+		border-color: $red;
+
+		@include mouseover {
+			background: $white;
+			border-color: $white;
+
+			#{$root} {
+
+				&__title {
+					color: $black;
+				}
+			}
+		}
+	}
+	&_red & {
+
+		&__title {
+			color: $white;
+		}
+	}
+
 	&__title {
 		pointer-events: none;
 		text-transform: uppercase;

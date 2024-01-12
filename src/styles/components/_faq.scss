@@ -1,0 +1,154 @@
+.cc-faq {
+	$root: &;
+
+	position: relative;
+	padding-top: inEm(180px);
+	padding-bottom: inEm(95px);
+
+	&_home {
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: inEm(-163px);
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: url($img-path + '/faq-bg.svg') repeat-x center 0;
+			background-size: auto 100%;
+		}
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: inEm(-163px);
+			right: 0;
+			bottom: 0;
+			left: 0;
+			background: $blue
+		}
+	}
+
+	&_home & {
+
+		&__wrapper {
+			position: relative;
+			z-index: 1;
+		}
+
+		&__items {
+			z-index: 1;
+		}
+	}
+
+	&__title {
+		color: $white;
+	}
+
+	&__items {
+		position: relative;
+		width: 100%;
+		max-width: inEm(1052px);
+		margin: inEm(90px) auto 0;
+		row-gap: inEm(10px);
+	}
+
+	&__item {
+		cursor: pointer;
+		background: $red;
+		border-radius: inEm(20px);
+		color: $white;
+		transition: background $transition-duration;
+
+		&_active {
+			background: $white;
+			color: $black;
+
+			#{$root} {
+
+				&__index {
+					font-size: inEm(24px);
+					line-height: 0.95em;
+					letter-spacing: lh(-0.96px, 24px);
+					color: #E9E8E8;
+				}
+
+				&__arrow {
+					transform: rotate(180deg);
+				}
+
+				&__answer-container {
+					top: inEm(-16.5px);
+				}
+
+				&__answer {
+					opacity: 1;
+					transition: opacity $transition-duration;
+				}
+			}
+		}
+	}
+
+	&__question-container {
+		padding: inEm(40px);
+	}
+
+	&__index-container {
+		flex-shrink: 0;
+		margin-right: inEm(20px);
+	}
+
+	&__index {
+		font-size: 12px;
+		line-height: 1em;
+		font-weight: 800;
+		transition: $transition-duration;
+	}
+
+	&__question-title-container {
+		padding-right: inEm(20px);
+	}
+
+	&__question-title {
+		font-size: inEm(24px);
+		line-height: 0.95em;
+		letter-spacing: lh(-0.96px, 24px);
+		font-weight: 800;
+		text-transform: uppercase;
+		transition: color $transition-duration;
+	}
+
+	&__arrow {
+		flex-shrink: 0;
+		width: inEm(40px);
+		height: inEm(40px);
+		border-radius: 50%;
+		border: inEm(2px) solid $white;
+		background: $red;
+		transition: transform $transition-duration;
+
+		svg {
+			width: inEm(20px);
+			height: inEm(9px);
+		}
+	}
+
+	&__answer-container {
+		position: relative;
+		overflow: hidden;
+		height: 0;
+		padding-inline: inEm(40px);
+		transition: top $transition-duration;
+	}
+
+	&__answer-inner {
+		max-width: inEm(700px);
+		padding-bottom: inEm(23.5px);
+	}
+
+	&__answer {
+		font-size: inEm(15px);
+		line-height: 1.4em;
+		opacity: 0;
+	}
+}

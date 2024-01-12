@@ -29,7 +29,7 @@
 
 	&__wrapper {
 		width: 100%;
-		max-width: $base-container-width;
+		max-width: $max-container-width;
 		margin-inline: auto;
 	}
 
@@ -37,6 +37,10 @@
 		width: 100%;
 		height: inEm(795px);
 		background: $black;
+
+		@media screen and (min-width: 1441px) {
+			height: min(55.2vw, 1060px);
+		}
 
 		&_prepare {
 

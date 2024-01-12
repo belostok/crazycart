@@ -39,11 +39,20 @@
 		font-weight: 800;
 		line-height: 0.95em;
 		letter-spacing: lh(-14px, 349px);
+
+		@include lg-down {
+			font-size: inEmMob(260px);
+			letter-spacing: lh(-14px, 260px);
+		}
 	}
 
 	&__items {
 		position: relative;
 		margin: inEm(-45px) inEm(-10px) inEm(-10px);
+
+		@include lg-down {
+			margin-top: inEmMob(-34px);
+		}
 	}
 
 	&__item-wrapper {

@@ -1,4 +1,4 @@
-mixin redForm(cl)
+mixin redForm(cl, index)
 	section.cc-red-form.cc-outer(class= cl)
 		._wrapper.cc-wrapper
 			._title-container
@@ -18,10 +18,13 @@ mixin redForm(cl)
 						._input
 							+inputText('date', 'text', 'Дата праздника', '../images/calendar.svg').js-cc-date-input(class='_req', readonly)
 						._input
-							+inputText('location', 'autocomplete', 'Филиал', '../images/location.svg')(class='_req')
+							+inputText('location', 'autocomplete', 'Филиал', '../images/location.svg', index)(class='_req')
 					label.cc-checkbox._checkbox.aic.iflex
 						input._input(type='checkbox')
 						span._title Я соглашаюсь с
 							a(href='#') политикой обработки персональных данных
 					._button
-						+formButton
+						if cl === 'cc-red-form_blue'
+							+formButton('cc-button-form_red')
+						else
+							+formButton

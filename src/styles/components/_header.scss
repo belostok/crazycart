@@ -8,6 +8,10 @@
 	padding-inline: $paddings;
 	border-radius: 0 0 inEm(20px) inEm(20px);
 
+	@include md-down {
+		padding-inline: inEmMob(10px);
+	}
+
 	&__wrapper {
 		width: 100%;
 		max-width: calc($base-container-width - $paddings);
@@ -16,10 +20,18 @@
 
 	&__upper {
 		min-height: inEm(68px);
+
+		@include md-down {
+			min-height: inEmMob(60px);
+		}
 	}
 
 	&__address {
 		margin-left: inEm(30px);
+
+		@include md-down {
+			display: none;
+		}
 	}
 
 	&__logo {
@@ -31,19 +43,85 @@
 		margin: auto;
 		width: inEm(105px);
 		height: inEm(56px);
+
+		@include md-down {
+			width: inEmMob(83px);
+			height: inEmMob(44px);
+		}
 	}
 
 	&__items {
 		column-gap: inEm(30px);
+
+		@include md-down {
+			column-gap: inEmMob(10px);
+		}
+	}
+
+	@include md-down {
+
+		.cc-contacts-item {
+
+			&_time {
+				display: none;
+			}
+
+			&_phone {
+				background: $red;
+				width: inEmMob(44px);
+				height: inEmMob(44px);
+				border-radius: 50%;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+
+				.cc-contacts-item__item-icon {
+					width: inEmMob(24px);
+					height: inEmMob(24px);
+					margin-right: 0;
+				}
+
+				.cc-contacts-item__item-value {
+					display: none;
+				}
+			}
+		}
+	}
+
+	&__menu-button {
+		display: none;
+
+		@include md-down {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background: $red;
+			width: inEmMob(44px);
+			height: inEmMob(44px);
+			border-radius: 50%;
+
+			svg {
+				width: inEmMob(24px);
+				height: inEmMob(24px);
+			}
+		}
 	}
 
 	&__cta {
 		margin-left: inEm(38px);
+
+		@include md-down {
+			display: none;
+		}
 	}
 
 	&__lower {
 		padding-top: inEm(5px);
 		padding-bottom: inEm(16px);
+
+		@include md-down {
+			display: none;
+		}
 	}
 
 	&__nav {

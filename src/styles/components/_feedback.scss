@@ -1,14 +1,40 @@
 .cc-feedback {
 	position: relative;
-	background: linear-gradient(to bottom, $blue 0%, $blue 80%, rgba($blue, 0) 100%);
 	padding-top: inEm(180px);
 
+	&_home {
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: 1;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: inEm(-400px);
+			background: linear-gradient(to bottom, $blue 0%, $blue calc(100% - #{inEm(400px)} - #{inEm(163px)}), rgba($blue, 0) 100%);
+		}
+	}
+
+	&_home & {
+
+		&__wrapper {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
 	&__title-container {
+		position: relative;
 		margin-bottom: inEm(90px);
 	}
 
 	&__title {
 		color: $white;
+	}
+
+	&__slider {
+		overflow: hidden;
 	}
 
 	&__item {
@@ -60,6 +86,7 @@
 	}
 
 	&__nav-container {
+		position: relative;
 		column-gap: inEm(10px);
 	}
 

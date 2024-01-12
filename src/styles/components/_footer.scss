@@ -19,11 +19,19 @@
 		&_left {
 			flex-shrink: 0;
 			width: inEm(298px);
+
+			@include lg-down {
+				width: 20%;
+			}
 		}
 
 		&_middle {
 			flex-shrink: 0;
 			width: inEm(392px);
+
+			@include lg-down {
+				width: 24%;
+			}
 		}
 
 		&_right {
@@ -58,6 +66,7 @@
 				#{$root} {
 
 					&__lower-item {
+						display: inline-block;
 						width: max-content;
 					}
 				}

@@ -5,10 +5,22 @@
 		border-radius: inEm(100px);
 		height: inEm(24px);
 		padding-inline: inEm(5px);
+
+		@include md-down {
+			border-radius: inEmMob(100px);
+			height: inEmMob(24px);
+			padding-inline: inEmMob(5px);
+		}
 	}
 
 	&__point-container {
 		margin-right: inEm(3px);
+
+		@include md-down {
+			width: inEmMob(12px);
+			height: inEmMob(12px);
+			margin-right: inEmMob(3px);
+		}
 	}
 
 	&__title {
@@ -17,10 +29,20 @@
 		font-weight: 600;
 		color: $white;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: 12px;
+		}
 	}
 
 	&__arrow-container {
 		margin-left: inEm(3px);
+
+		@include md-down {
+			width: inEmMob(14px);
+			height: inEmMob(14px);
+			margin-left: inEmMob(3px);
+		}
 
 		svg {
 			transition: transform $transition-duration;

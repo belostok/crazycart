@@ -49,12 +49,20 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: inEm(40px);
+
+		@include lg-down {
+				column-gap: inEmMob(20px);
+		}
 	}
 
 	&__item {
 		overflow: hidden;
 		border-radius: inEm(20px);
 		margin-bottom: inEm(40px);
+
+		@include lg-down {
+			margin-bottom: inEmMob(20px);
+		}
 
 		&:nth-child(10n+1) {
 			grid-column: 1 / 4;
