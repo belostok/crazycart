@@ -11,6 +11,11 @@
 	align-items: center;
 	transition: background $transition-duration;
 
+	@include md-down {
+		width: inEmMob(110px);
+		height: inEmMob(110px);
+	}
+
 	@include mouseover {
 		background: $white;
 
@@ -25,6 +30,13 @@
 	&_promo {
 		width: inEm(160px);
 		height: inEm(160px);
+
+		@include md-down {
+			width: auto;
+			height: auto;
+			padding: inEmMob(16px) inEmMob(30px);
+			border-radius: inEmMob(90px);
+		}
 	}
 
 	&__title {
@@ -34,5 +46,9 @@
 		line-height: 1em;
 		font-weight: 700;
 		transition: color $transition-duration;
+
+		@include md-down {
+			font-size: inEmMob(14px);
+		}
 	}
 }

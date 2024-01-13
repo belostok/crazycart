@@ -1,4 +1,5 @@
 .cc-pagination {
+	flex-wrap: wrap;
 
 	&__bullet {
 		position: relative;
@@ -8,6 +9,11 @@
 		border-radius: 50%;
 		border: 1px solid transparent;
 		transition: border-color $transition-duration;
+
+		@include md-down {
+			width: inEmMob(30px);
+			height: inEmMob(30px);
+		}
 
 		&::before {
 			content: '';

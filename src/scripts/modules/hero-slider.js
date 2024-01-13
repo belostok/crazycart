@@ -19,7 +19,7 @@ export default () => {
 				sliders[ index ] = new Swiper( sliderContainer, {
 					loopedSlides: slides.length,
 					loop: slides.length > 1,
-					autoplay: slides.length > 1 ? autoplay : false,
+					// autoplay: slides.length > 1 ? autoplay : false,
 					navigation: {
 						prevEl: parent.querySelector( '.js-cc-hero-slider-prev' ),
 						nextEl: parent.querySelector( '.js-cc-hero-slider-next' ),

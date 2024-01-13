@@ -10,6 +10,7 @@
 
 	@include md-down {
 		padding-inline: inEmMob(10px);
+		border-radius: 0 0 inEmMob(20px) inEmMob(20px);
 	}
 
 	&__wrapper {

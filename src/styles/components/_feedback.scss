@@ -2,6 +2,10 @@
 	position: relative;
 	padding-top: inEm(180px);
 
+	@include md-down {
+		padding-top: inEmMob(120px);
+	}
+
 	&_home {
 
 		&::before {

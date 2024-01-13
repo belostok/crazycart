@@ -3,6 +3,11 @@
 	overflow: hidden;
 	background: $red;
 
+	@include md-down {
+		padding-top: inEmMob(60px);
+		padding-bottom: inEmMob(60px);
+	}
+
 	&_home {
 		z-index: 1;
 	}
@@ -30,12 +35,22 @@
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;
+
+		@include md-down {
+			flex-direction: column;
+		}
 	}
 
 	&__title-container {
 		position: relative;
 		width: inEm(762px);
 		padding: inEm(90px) 0 inEm(87px);
+
+		@include md-down {
+			width: 100%;
+			padding: 0;
+			margin-bottom: inEmMob(30px);
+		}
 
 		&::before {
 			content: '';
@@ -47,6 +62,16 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-image: url('../images/form-bg.svg');
+
+			@include md-down {
+				top: inEmMob(-60px);
+				right: -100vw;
+				left: -100vw;
+				margin-inline: auto;
+				width: inEmMob(773px);
+				height: inEmMob(367px);
+				background-image: url('../images/form-bg-mobile.svg');
+			}
 		}
 	}
 
@@ -58,6 +83,12 @@
 		line-height: 95%;
 		font-weight: 800;
 		letter-spacing: lh(-4px, 100px);
+
+		@include md-down {
+			text-align: center;
+			font-size: inEmMob(36px);
+			letter-spacing: lh(-0.72px, 36px);
+		}
 	}
 
 	&__form-container {
@@ -65,6 +96,12 @@
 		width: inEm(516px);
 		padding-top: inEm(60px);
 		padding-bottom: inEm(87px);
+
+		@include md-down {
+			width: 100%;
+			padding-top: 0;
+			padding-bottom: 0;
+		}
 	}
 
 	&__inputs {
@@ -81,18 +118,34 @@
 
 		&:nth-child(2) {
 			width: inEm(286px);
+
+			@include md-down {
+				width: 100%;
+			}
 		}
 
 		&:nth-child(3) {
 			width: inEm(220px);
+
+			@include md-down {
+				width: 100%;
+			}
 		}
 	}
 
 	&__checkbox {
 		margin-top: inEm(20px);
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+		}
 	}
 
 	&__button {
 		margin-top: inEm(20px);
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+		}
 	}
 }

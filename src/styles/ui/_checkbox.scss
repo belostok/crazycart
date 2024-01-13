@@ -15,6 +15,14 @@
 		background-size: inEm(12px) inEm(10px);
 		background-position: 42% 60%;
 
+		@include md-down {
+			width: inEmMob(20px);
+			height: inEmMob(20px);
+			border-width: inEmMob(2px);
+			margin-right: inEmMob(10px);
+			background-size: inEmMob(12px) inEmMob(10px);
+		}
+
 		&:checked {
 			background-image: url('../images/checkbox.svg');
 		}
@@ -25,6 +33,10 @@
 		line-height: 1em;
 		font-weight: 500;
 		color: $white;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 
 		a {
 			text-decoration: underline;

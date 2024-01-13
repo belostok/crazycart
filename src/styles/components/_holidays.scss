@@ -11,6 +11,12 @@
 	padding-bottom: inEm(334px);
 	margin-top: inEm(-120px);
 
+	@include md-down {
+		margin-top: inEmMob(-80px);
+		padding-top: inEmMob(200px);
+		padding-bottom: inEmMob(120px);
+	}
+
 	&::before {
 		content: '';
 		position: absolute;
@@ -22,17 +28,36 @@
 		background-size: auto $max-height;
 	}
 
+	&__wrapper {
+
+		@include md-down {
+			max-width: 350px;
+		}
+	}
+
 	&__title-container {
 		margin-left: inEm(200px);
+
+		@include md-down {
+			margin-left: 0;
+		}
 	}
 
 	&__title {
 		color: $white;
 		text-align: left;
 
+		@include md-down {
+			text-align: center;
+		}
+
 		& > span {
 			display: block;
 			transform: translateX(inEm(130px, 110px));
+
+			@include md-down {
+				transform: translateX(0);
+			}
 		}
 	}
 
@@ -44,6 +69,11 @@
 			justify-content: space-between;
 			align-items: center;
 
+			@include md-down {
+				margin-top: inEmMob(233px);
+				width: 100%;
+			}
+
 			.cc-button-details {
 				transform: rotate(10.4deg);
 			}
@@ -53,12 +83,28 @@
 				&__background {
 					top: inEm(-180px);
 					background-image: url('../images/hb-bg.svg');
+
+					@include md-down {
+						top: inEmMob(-55px);
+					}
+				}
+
+				&__item-title-container {
+
+					@include md-down {
+						order: -1;
+					}
 				}
 
 				&__item-title {
 					text-align: right;
 					font-size: inEm(130px);
 					letter-spacing: lh(-5.2px, 130px);
+
+					@include md-down {
+						font-size: inEmMob(36px);
+						letter-spacing: lh(-0.72px, 36px);
+					}
 				}
 
 				&__description-container {
@@ -66,6 +112,14 @@
 					top: inEm(10px);
 					left: 0;
 					max-width: inEm(200px);
+
+					@include md-down {
+						position: relative;
+						max-width: inEmMob(130px);
+						top: auto;
+						left: auto;
+						margin-top: inEmMob(5px);
+					}
 				}
 
 				&__image-container {
@@ -73,6 +127,20 @@
 					bottom: inEm(-195px);
 					width: inEm(694px);
 					height: inEm(803px);
+
+					@include md-down {
+						width: inEmMob(244px);
+						height: inEmMob(280px);
+						right: inEmMob(25px);
+						bottom: inEmMob(10px);
+					}
+				}
+
+				&__button-container {
+
+					@include md-down {
+						margin-top: inEmMob(-20px);
+					}
 				}
 			}
 		}
@@ -81,8 +149,18 @@
 			margin: inEm(525px) 0 0 inEm(100px);
 			align-items: flex-end;
 
+			@include md-down {
+				align-items: flex-start;
+				justify-content: flex-end;
+				margin: inEmMob(196px) 0 0;
+			}
+
 			.cc-button-details {
 				transform: rotate(-10deg);
+
+				@include md-down {
+					transform: rotate(10.4deg);
+				}
 			}
 
 			#{$root} {
@@ -90,17 +168,30 @@
 				&__background {
 					top: inEm(-150px);
 					background-image: url('../images/vip-bg.svg');
+
+					@include md-down {
+						top: inEmMob(-40px);
+					}
 				}
 
 				&__text-container {
 					display: flex;
 					flex-direction: column;
 					margin-bottom: inEm(-15px);
+
+					@include md-down {
+						margin-bottom: 0;
+					}
 				}
 
 				&__item-title {
 					font-size: inEm(150px);
 					letter-spacing: lh(-6px, 150px);
+
+					@include md-down {
+						font-size: inEmMob(48px);
+						letter-spacing: lh(-0.96px, 48px);
+					}
 				}
 
 				&__description-container {
@@ -109,6 +200,12 @@
 					order: 1;
 					margin-top: inEm(10px);
 					margin-left: inEm(110px);
+
+					@include md-down {
+						max-width: inEmMob(160px);
+						margin-left: 0;
+						margin-top: inEmMob(5px);
+					}
 				}
 
 				&__image-container {
@@ -116,12 +213,25 @@
 					height: inEm(841px);
 					top: inEm(-390px);
 					left: inEm(-30px);
+
+					@include md-down {
+						width: inEmMob(229px);
+						height: inEmMob(305px);
+						top: inEmMob(-149px);
+						left: inEmMob(-53px);
+					}
 				}
 
 				&__button-container {
 					z-index: 1;
 					order: -1;
 					margin-right: inEm(105px);
+
+					@include md-down {
+						order: 1;
+						margin-top: inEmMob(10px);
+						margin-right: 0;
+					}
 				}
 			}
 		}
@@ -132,8 +242,20 @@
 			margin-top: inEm(240px);
 			margin-right: inEm(337px);
 
+			@include md-down {
+				flex-direction: row;
+				justify-content: space-between;
+				align-items: flex-start;
+				margin-top: inEmMob(195px);
+				margin-right: 0;
+			}
+
 			.cc-button-details {
 				transform: rotate(10deg);
+
+				@include md-down {
+					transform: rotate(10.4deg);
+				}
 			}
 
 			#{$root} {
@@ -141,6 +263,10 @@
 				&__background {
 					top: inEm(20px);
 					background-image: url('../images/graduation-bg.svg');
+
+					@include md-down {
+						top: inEmMob(-55px);
+					}
 				}
 
 				&__text-container {
@@ -149,9 +275,21 @@
 					flex-direction: column;
 				}
 
+				&__item-title-container {
+
+					@include md-down {
+						order: -1;
+					}
+				}
+
 				&__item-title {
 					font-size: inEm(110px);
 					letter-spacing: lh(-4.4px, 110px);
+
+					@include md-down {
+						font-size: inEmMob(36px);
+						letter-spacing: lh(-0.72px, 36px);
+					}
 				}
 
 				&__description-container {
@@ -160,6 +298,15 @@
 					max-width: inEm(315px);
 					text-align: right;
 					margin-left: inEm(-15px);
+
+					@include md-down {
+						position: relative;
+						bottom: auto;
+						max-width: inEmMob(230px);
+						text-align: left;
+						margin-top: inEmMob(5px);
+						margin-left: 0;
+					}
 				}
 
 				&__image-container {
@@ -167,6 +314,13 @@
 					height: inEm(578px);
 					right: inEm(-320px);
 					bottom: inEm(-170px);
+
+					@include md-down {
+						width: inEmMob(168px);
+						height: inEmMob(207px);
+						right: inEmMob(10px);
+						bottom: inEmMob(35px);
+					}
 				}
 
 				&__button-container {
@@ -174,6 +328,13 @@
 					order: -1;
 					margin-bottom: inEm(25px);
 					margin-right: inEm(-35px);
+
+					@include md-down {
+						order: 1;
+						margin-top: inEmMob(10px);
+						margin-bottom: 0;
+						margin-right: 0;
+					}
 				}
 			}
 		}
@@ -187,6 +348,15 @@
 		background-repeat: repeat-x;
 		background-size: auto 100%;
 		background-position-x: 50%;
+
+		@include md-down {
+			height: inEmMob(80px);
+		}
+	}
+
+	&__text-container {
+		display: flex;
+		flex-direction: column;
 	}
 
 	&__item-title {
@@ -201,9 +371,14 @@
 	}
 
 	&__description {
+		display: block;
 		color: $white;
 		font-size: inEm(22px);
 		line-height: 1.1em;
+
+		@include md-down {
+			font-size: inEmMob(14px);
+		}
 	}
 
 	&__button-container {

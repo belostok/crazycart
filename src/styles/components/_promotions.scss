@@ -4,6 +4,10 @@
 	position: relative;
 	padding-top: inEm(180px);
 
+	@include md-down {
+		padding-top: inEmMob(90px);
+	}
+
 	&_home {
 
 		&::before {
@@ -44,6 +48,11 @@
 			font-size: inEmMob(260px);
 			letter-spacing: lh(-14px, 260px);
 		}
+
+		@include md-down {
+			font-size: inEmMob(95px);
+			letter-spacing: lh(-3.8px, 95px);
+		}
 	}
 
 	&__items {
@@ -53,19 +62,37 @@
 		@include lg-down {
 			margin-top: inEmMob(-34px);
 		}
+
+		@include md-down {
+			row-gap: inEmMob(20px);
+			flex-direction: column;
+			margin: inEmMob(30px) 0 0;
+		}
 	}
 
 	&__item-wrapper {
 		padding: inEm(10px);
 
+		@include md-down {
+			padding: 0;
+		}
+
 		&:nth-child(4n+1),
 		&:nth-child(4n+4) {
 			width: 59%;
+
+			@include md-down {
+				width: 100%;
+			}
 		}
 
 		&:nth-child(4n+2),
 		&:nth-child(4n+3) {
 			width: 41%;
+
+			@include md-down {
+				width: 100%;
+			}
 		}
 	}
 
@@ -75,12 +102,24 @@
 		height: inEm(400px);
 		border-radius: inEm(20px);
 		padding: inEm(30px);
+
+		@include md-down {
+			padding: inEmMob(20px);
+			border-radius: inEmMob(20px);
+			height: auto;
+			min-height: inEmMob(290px);
+		}
 	}
 
 	&__item-upper {
 		display: flex;
 		column-gap: inEm(16px);
 		margin-right: inEm(-30px);
+
+		@include md-down {
+			column-gap: inEmMob(66px);
+			margin-right: inEmMob(-20px);
+		}
 
 		&::after {
 			content: '';
@@ -89,6 +128,12 @@
 			background-repeat: no-repeat;
 			background-size: inEm(843px) inEm(78px);
 			background-image: url('../images/promo-dec.svg');
+
+			@include md-down {
+				width: inEmMob(648px);
+				height: inEmMob(60px);
+				background-size: inEmMob(648px) inEmMob(60px);
+			}
 		}
 	}
 
@@ -96,15 +141,31 @@
 		flex-shrink: 0;
 		height: inEm(80px);
 		width: max-content;
+
+		@include md-down {
+			width: inEmMob(60px);
+			height: inEmMob(60px);
+		}
 	}
 
 	&__item-icon {
 		width: auto;
 		height: 100%;
+
+		@include md-down {
+			max-width: none;
+		}
 	}
 
 	&__item-lower {
 		column-gap: inEm(15px);
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+			align-items: flex-start;
+			justify-content: flex-end;
+			flex-direction: column;
+		}
 	}
 
 	&__item-title {
@@ -115,10 +176,19 @@
 		text-transform: uppercase;
 		color: $black;
 		@include rows-limit(5);
+
+		@include md-down {
+			font-size: inEmMob(26px);
+			letter-spacing: lh(-1.04px, 26px);
+		}
 	}
 
 	&__item-note-container {
 		margin-top: inEm(15px);
+
+		@include md-down {
+			margin-top: inEmMob(10px);
+		}
 	}
 
 	&__item-note {
@@ -126,5 +196,15 @@
 		line-height: 1.4em;
 		color: $black;
 		@include rows-limit(1);
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			-webkit-line-clamp: initial;
+			line-clamp: initial;
+		}
+	}
+
+	&__item-button {
+		margin-top: inEmMob(10px);
 	}
 }

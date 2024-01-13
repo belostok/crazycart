@@ -6,10 +6,18 @@
 	background: $white;
 	padding-block: inEm(10px);
 
+	@include md-down {
+		padding-block: inEmMob(10px);
+	}
+
 	.cc-no-result, li {
 		font-size: inEm(14px);
 		line-height: 1em;
 		padding: inEm(15px, 14px);
+
+		@include md-down {
+			font-size: inEmMob(14px);
+		}
 	}
 
 	li {

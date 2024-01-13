@@ -43,6 +43,10 @@
 	color: $dark-blue;
 	text-transform: uppercase;
 	text-align: center;
+
+	@include md-down {
+		font-size: inEmMob(36px);
+	}
 }
 
 .cc-heading-3 {

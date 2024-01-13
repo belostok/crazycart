@@ -9,6 +9,11 @@
 	border: 1px solid $white;
 	transition: background $transition-duration;
 
+	@include md-down {
+		padding: inEmMob(25px) inEmMob(30px);
+		border-radius: inEmMob(70px);
+	}
+
 	@include mouseover {
 		background: transparent;
 
@@ -51,5 +56,9 @@
 		font-weight: 700;
 		color: $black;
 		transition: color $transition-duration;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+		}
 	}
 }

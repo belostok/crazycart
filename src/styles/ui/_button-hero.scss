@@ -9,6 +9,13 @@
 	border-radius: inEm(90px);
 	padding-inline: inEm(40px);
 
+	@include md-down {
+		height: inEmMob(46px);
+		padding-inline: inEmMob(30px);
+		min-width: inEmMob(151px);
+		border-radius: inEmMob(90px);
+	}
+
 	&__title {
 		pointer-events: none;
 		color: $white;
@@ -16,5 +23,9 @@
 		line-height: 1em;
 		font-weight: 700;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(14px);
+		}
 	}
 }

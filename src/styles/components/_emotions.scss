@@ -3,6 +3,10 @@
 	overflow: hidden;
 	padding-top: inEm(180px);
 
+	@include md-down {
+		padding-top: inEmMob(123px);
+	}
+
 	&_home {
 
 		&::before {
@@ -13,16 +17,39 @@
 			top: inEm(396px);
 			bottom: 0;
 			background: linear-gradient(180deg, #4EE3FF 0%, #65C7F7 50%, #0052D4 100%);
+
+			@include md-down {
+				background: linear-gradient(180deg, #4EE3FF 0%, #65C7F7 30%, #0052D4 100%);
+			}
 		}
 	}
 
 	&__title-container {
 		max-width: inEm(945px);
 		margin: 0 auto inEm(60px);
+
+		@include md-down {
+			margin-bottom: inEmMob(27px);
+		}
 	}
 
 	&__slider {
 		overflow: hidden;
+
+		&_mobile {
+			display: none;
+
+			@include md-down {
+				display: block;
+			}
+		}
+
+		&_desktop {
+
+			@include md-down {
+				display: none;
+			}
+		}
 	}
 
 	&__slide-grid {
@@ -30,6 +57,23 @@
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: inEm(20px);
 		row-gap: inEm(20px);
+	}
+
+	&__image-container {
+
+		@include md-down {
+			height: 89.7vw;
+		}
+	}
+
+	&__nav-container {
+
+		@include md-down {
+			position: relative;
+			display: flex;
+			align-items: center;
+			margin-top: inEmMob(20px);
+		}
 	}
 
 	&__nav {
@@ -43,6 +87,15 @@
 		border-radius: 50%;
 		transition: background $transition-duration, border-color $transition-duration;
 
+		@include md-down {
+			position: relative;
+			width: inEmMob(50px);
+			height: inEmMob(50px);
+			border-width: inEmMob(2px);
+			top: auto;
+			bottom: auto;
+		}
+
 		@include mouseover {
 			background: $red;
 			border-color: $red;
@@ -51,19 +104,69 @@
 		svg {
 			width: inEm(78px);
 			height: inEm(72px);
+
+			@include md-down {
+				width: inEmMob(28px);
+				height: inEmMob(26px);
+			}
 		}
 
 		&_prev {
 			left: inEm(-80px);
+
+			@include md-down {
+				left: auto;
+				right: inEmMob(10px);
+			}
 		}
 
 		&_next {
 			right: inEm(-80px);
+
+			@include md-down {
+				right: 0;
+			}
 		}
 	}
 
 	&__pagination {
+		display: flex;
+		flex-wrap: wrap;
 		width: max-content;
 		margin: inEm(30px) auto 0;
+
+		&_mobile {
+			display: none;
+
+			@include md-down {
+				display: flex;
+			}
+		}
+
+		&_desktop {
+
+			@include md-down {
+				display: none;
+			}
+		}
+
+		@include md-down {
+			margin-top: 0;
+			margin-left: 0;
+			width: inEmMob(170px);
+
+			.cc-pagination {
+
+				&__bullet {
+					width: inEmMob(20px);
+					height: inEmMob(20px);
+
+					&::before {
+						width: 4px;
+						height: 4px;
+					}
+				}
+			}
+		}
 	}
 }

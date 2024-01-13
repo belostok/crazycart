@@ -4,6 +4,10 @@
 	position: relative;
 	padding-top: inEm(180px);
 
+	@include md-down {
+		padding-top: inEmMob(120px);
+	}
+
 	&_home {
 		z-index: 1;
 
@@ -12,6 +16,7 @@
 			position: absolute;
 			width: inEm(1696px);
 			height: inEm(1696px);
+			border-radius: 50%;
 			left: -100vw;
 			right: -100vw;
 			bottom: inEm(-884px);
@@ -19,12 +24,23 @@
 			opacity: 0.8;
 			background: $white;
 			filter: blur(inEm(382px));
+
+			@include md-down {
+				width: inEmMob(441px);
+				height: inEmMob(441px);
+				bottom: inEmMob(-226px);
+				filter: blur(inEm(99.2px));
+			}
 		}
 	}
 
 	&__title-container {
 		position: relative;
 		margin-bottom: inEm(60px);
+
+		@include md-down {
+			margin-bottom: inEmMob(30px);
+		}
 	}
 
 	&__wrapper {
@@ -40,6 +56,10 @@
 
 		@media screen and (min-width: 1441px) {
 			height: min(55.2vw, 1060px);
+		}
+
+		@include md-down {
+			height: 55vw;
 		}
 
 		&_prepare {
@@ -122,6 +142,11 @@
 		align-items: center;
 		transition: background $transition-duration, opacity $transition-duration;
 
+		@include md-down {
+			width: inEmMob(60px);
+			height: inEmMob(60px);
+		}
+
 		@include mouseover {
 			background: $red;
 
@@ -137,6 +162,11 @@
 			width: inEm(72px);
 			height: inEm(77px);
 			pointer-events: none;
+
+			@include md-down {
+				width: inEmMob(23px);
+				height: inEmMob(25px);
+			}
 
 			path {
 				transition: stroke $transition-duration;

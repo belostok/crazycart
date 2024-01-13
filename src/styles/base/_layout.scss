@@ -32,6 +32,10 @@ body {
 	flex-grow: 1;
 	width: 100%;
 	margin-block: inEm(-17px);
+
+	@include md-down {
+		margin-block: inEmMob(-16px);
+	}
 }
 
 .cc-outer {
