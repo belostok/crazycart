@@ -14,12 +14,22 @@
 
 	&_blue {
 		background: $blue;
+
+		@include md-down {
+			padding-top: inEmMob(75px);
+			padding-bottom: inEmMob(106px);
+		}
 	}
 	&_blue & {
 
 		&__title-container {
 			padding-top: inEm(142px);
 			padding-bottom: inEm(136px);
+
+			@include md-down {
+				padding: 0;
+				margin-bottom: inEmMob(30px);
+			}
 
 			&::before {
 				content: none;
@@ -29,6 +39,10 @@
 		&__form-container {
 			padding-top: inEm(112px);
 			padding-bottom: inEm(136px);
+
+			@include md-down {
+				padding: 0;
+			}
 		}
 	}
 

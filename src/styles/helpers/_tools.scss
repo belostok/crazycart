@@ -24,6 +24,11 @@
 .cc-icon {
 	width: inEm(16px);
 	height: inEm(16px);
+
+	@include md-down {
+		width: inEmMob(16px);
+		height: inEmMob(16px);
+	}
 }
 
 .cc-heading-1 {
@@ -148,6 +153,3 @@
 	display: none !important;
 }
 
-.cc-input {
-
-}

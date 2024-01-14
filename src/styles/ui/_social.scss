@@ -2,11 +2,21 @@
 	column-gap: inEm(10px);
 	row-gap: inEm(10px);
 
+	@include md-down {
+		column-gap: inEmMob(10px);
+		row-gap: inEmMob(10px);
+	}
+
 	&__item {
 		width: inEm(40px);
 		height: inEm(40px);
 		border: 1px solid $white;
 		border-radius: 50%;
+
+		@include md-down {
+			width: inEmMob(40px);
+			height: inEmMob(40px);
+		}
 	}
 
 	&__title {
@@ -14,5 +24,9 @@
 		font-size: inEm(15px);
 		line-height: 1em;
 		font-weight: 500;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 	}
 }

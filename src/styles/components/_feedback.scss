@@ -31,6 +31,10 @@
 	&__title-container {
 		position: relative;
 		margin-bottom: inEm(90px);
+
+		@include md-down {
+			margin-bottom: inEmMob(45px);
+		}
 	}
 
 	&__title {
@@ -43,10 +47,18 @@
 
 	&__item {
 		padding-inline: inEm(40px);
+
+		@include md-down {
+			padding-inline: 0;
+		}
 	}
 
 	&__item-upper {
 		margin-bottom: inEm(20px);
+
+		@include md-down {
+			margin-bottom: inEmMob(20px);
+		}
 	}
 
 	&__item-image-container {
@@ -56,6 +68,12 @@
 		overflow: hidden;
 		margin-right: inEm(20px);
 		flex-shrink: 0;
+
+		@include md-down {
+			width: inEmMob(60px);
+			height: inEmMob(60px);
+			margin-right: inEmMob(20px);
+		}
 	}
 
 	&__item-title {
@@ -66,32 +84,59 @@
 		font-weight: 800;
 		color: $white;
 		word-spacing: 1000px;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+			letter-spacing: lh(-0.72px, 18px);
+		}
 	}
 
 	&__item-text-container {
 		margin-top: inEm(20px);
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+		}
 	}
 
 	&__item-description {
 		font-size: inEm(15px);
 		line-height: 1.4em;
 		color: $white;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 	}
 
 	&__item-button {
 		margin-top: inEm(20px);
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+		}
 	}
 
 	&__pagination {
+		display: flex;
+		flex-wrap: wrap;
 
 		&:not(.swiper-pagination-lock) {
 			margin-top: inEm(40px);
+
+			@include md-down {
+				margin-top: inEmMob(45px);
+			}
 		}
 	}
 
 	&__nav-container {
 		position: relative;
 		column-gap: inEm(10px);
+
+		@include md-down {
+			column-gap: inEmMob(10px);
+		}
 	}
 
 	&__nav {
@@ -101,8 +146,17 @@
 		border-radius: 50%;
 		transition: background $transition-duration, border-color $transition-duration;
 
+		@include md-down {
+			width: inEmMob(50px);
+			height: inEmMob(50px);
+		}
+
 		&:not(.swiper-button-lock) {
 			margin-top: inEm(40px);
+
+			@include md-down {
+				margin-top: inEmMob(45px);
+			}
 		}
 
 		@include mouseover {
@@ -113,6 +167,11 @@
 		svg {
 			width: inEm(22px);
 			height: inEm(20px);
+
+			@include md-down {
+				width: inEmMob(22px);
+				height: inEmMob(20px);
+			}
 		}
 	}
 }

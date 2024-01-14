@@ -8,10 +8,19 @@
 	padding: inEm(30px) $paddings inEm(40px);
 	border-radius: inEm(20px) inEm(20px) 0 0;
 
+	@include md-down {
+		padding: inEmMob(30px) inEmMob(20px) inEmMob(40px);
+		border-radius: inEmMob(20px) inEmMob(20px) 0 0;
+	}
+
 	&__wrapper {
 		width: 100%;
 		max-width: calc($base-container-width - $paddings);
 		margin-inline: auto;
+
+		@include md-down {
+			max-width: none;
+		}
 	}
 
 	&__side {
@@ -23,6 +32,10 @@
 			@include lg-down {
 				width: 20%;
 			}
+
+			@include md-down {
+				width: 100%;
+			}
 		}
 
 		&_middle {
@@ -32,10 +45,21 @@
 			@include lg-down {
 				width: 24%;
 			}
+
+			@include md-down {
+				width: 100%;
+			}
 		}
 
 		&_right {
 			flex-grow: 1;
+		}
+	}
+
+	&__upper {
+
+		@include md-down {
+			flex-direction: column;
 		}
 	}
 
@@ -45,21 +69,56 @@
 
 			&_middle {
 				padding-top: inEm(27px);
+
+				@include md-down {
+					padding-top: 0;
+					margin-top: inEmMob(20px);
+				}
 			}
 
 			&_right {
 				padding-top: inEm(27px);
 				column-gap: inEm(80px);
+
+				@include md-down {
+					padding-top: 0;
+					margin-top: inEmMob(60px);
+					column-gap: 5%;
+					row-gap: inEmMob(30px);
+					display: grid;
+					grid-template-columns: repeat(4, 1fr);
+				}
+
+				@include sm-down {
+					padding-top: 0;
+					margin-top: inEmMob(60px);
+					column-gap: 5%;
+					row-gap: inEmMob(30px);
+					display: grid;
+					grid-template-columns: repeat(2, 1fr);
+				}
 			}
 		}
 	}
 
 	&__lower {
 		margin-top: inEm(50px);
+
+		@include md-down {
+			flex-direction: column;
+			align-items: center;
+			max-width: inEmMob(316px);
+			margin: inEmMob(65px) auto 0;
+			row-gap: inEmMob(15px);
+		}
 	}
 	&__lower & {
 
 		&__side {
+
+			@include md-down {
+				text-align: center;
+			}
 
 			&_middle {
 
@@ -68,12 +127,20 @@
 					&__lower-item {
 						display: inline-block;
 						width: max-content;
+
+						@include md-down {
+							width: auto;
+						}
 					}
 				}
 			}
 
 			&_right {
 				text-align: right;
+
+				@include md-down {
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -81,23 +148,73 @@
 	&__logo {
 		width: inEm(130px);
 		height: inEm(69px);
+
+		@include md-down {
+			width: inEmMob(130px);
+			height: inEmMob(69px);
+		}
+	}
+
+	&__upper-items {
+
+		@include md-down {
+			display: flex;
+			align-items: center;
+			margin-top: inEmMob(33px);
+		}
 	}
 
 	&__city {
 		margin-top: inEm(30px);
+
+		@include md-down {
+			margin-top: 0;
+		}
 	}
 
 	&__time {
 		margin-top: inEm(19px);
+
+		@include md-down {
+			margin-top: 0;
+			margin-left: inEmMob(70px);
+		}
+	}
+
+	&__phone {
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+		}
+	}
+
+	&__addresses {
+
+		&_mobile {
+			display: none;
+
+			@include md-down {
+				display: block;
+			}
+		}
 	}
 
 	&__social {
 		margin-top: inEm(30px);
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+		}
 	}
 
 	&__nav-list {
 		margin-top: inEm(14px);
 		row-gap: inEm(12px);
+
+		@include md-down {
+			margin-top: inEmMob(14px);
+			row-gap: inEmMob(12px);
+		}
 	}
 
 	&__nav-title {
@@ -108,6 +225,10 @@
 		line-height: 0.95em;
 		letter-spacing: -0.02em;
 		font-weight: 800;
+
+		@include md-down {
+			font-size: inEmMob(14px);
+		}
 	}
 
 	&__nav-link {
@@ -115,13 +236,22 @@
 		color: $white;
 		font-size: inEm(14px);
 		line-height: 1em;
+
+		@include md-down {
+			font-size: inEmMob(14px);
+		}
 	}
 
 	&__lower-item {
+		display: block;
 		font-size: inEm(14px);
 		line-height: 1em;
 		color: rgba($white, 0.2);
 		transition: color $transition-duration;
+
+		@include md-down {
+			font-size: inEmMob(14px);
+		}
 
 		&_link {
 			text-decoration: underline;
@@ -129,6 +259,17 @@
 			@include mouseover {
 				color: $white;
 			}
+		}
+	}
+
+	.cc-address-picker {
+
+		&__title {
+			font-size: inEmMob(14px);
+		}
+
+		&__arrow-container {
+			margin-left: inEmMob(3px);
 		}
 	}
 }

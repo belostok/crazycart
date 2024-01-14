@@ -5,11 +5,19 @@
 		&__item-value {
 			font-size: inEm(14px);
 			font-weight: 400;
+
+			@include md-down {
+				font-size: inEmMob(14px);
+			}
 		}
 	}
 
 	&__item-icon {
 		margin-right: inEm(3px);
+
+		@include md-down {
+			margin-right: inEmMob(3px);
+		}
 	}
 
 	&__item-value {
@@ -17,5 +25,9 @@
 		font-size: inEm(15px);
 		line-height: 1em;
 		font-weight: 600;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+		}
 	}
 }

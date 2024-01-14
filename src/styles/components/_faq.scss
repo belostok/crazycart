@@ -5,6 +5,11 @@
 	padding-top: inEm(180px);
 	padding-bottom: inEm(95px);
 
+	@include md-down {
+		padding-top: inEmMob(120px);
+		padding-bottom: inEmMob(47px);
+	}
+
 	&_home {
 
 		&::after {
@@ -51,6 +56,12 @@
 		max-width: inEm(1052px);
 		margin: inEm(90px) auto 0;
 		row-gap: inEm(10px);
+
+		@include md-down {
+			margin-top: inEmMob(45px);
+			max-width: none;
+			row-gap: inEmMob(10px);
+		}
 	}
 
 	&__item {
@@ -59,6 +70,10 @@
 		border-radius: inEm(20px);
 		color: $white;
 		transition: background $transition-duration;
+
+		@include md-down {
+			border-radius: inEmMob(20px);
+		}
 
 		&_active {
 			background: $white;
@@ -71,6 +86,10 @@
 					line-height: 0.95em;
 					letter-spacing: lh(-0.96px, 24px);
 					color: #E9E8E8;
+
+					@include md-down {
+						font-size: min(12px, #{inEmMob(12px)});
+					}
 				}
 
 				&__arrow {
@@ -79,6 +98,10 @@
 
 				&__answer-container {
 					top: inEm(-16.5px);
+
+					@include md-down {
+						top: inEmMob(-15px);
+					}
 				}
 
 				&__answer {
@@ -91,22 +114,41 @@
 
 	&__question-container {
 		padding: inEm(40px);
+
+		@include md-down {
+			padding: inEmMob(30px) inEmMob(20px);
+		}
 	}
 
 	&__index-container {
 		flex-shrink: 0;
 		margin-right: inEm(20px);
+
+		@include md-down {
+			margin-right: 0;
+			margin-bottom: inEmMob(5px);
+		}
 	}
 
 	&__index {
-		font-size: 12px;
+		font-size: min(12px, #{inEm(12px)});
 		line-height: 1em;
 		font-weight: 800;
 		transition: $transition-duration;
+
+		@include md-down {
+			font-size: min(12px, #{inEmMob(12px)});
+		}
 	}
 
 	&__question-title-container {
 		padding-right: inEm(20px);
+
+		@include md-down {
+			flex-direction: column;
+			align-items: flex-start;
+			padding-right: inEmMob(20px);
+		}
 	}
 
 	&__question-title {
@@ -116,6 +158,11 @@
 		font-weight: 800;
 		text-transform: uppercase;
 		transition: color $transition-duration;
+
+		@include md-down {
+			font-size: inEmMob(16px);
+			letter-spacing: lh(-0.64px, 16px);
+		}
 	}
 
 	&__arrow {
@@ -127,9 +174,20 @@
 		background: $red;
 		transition: transform $transition-duration;
 
+		@include md-down {
+			width: inEmMob(40px);
+			height: inEmMob(40px);
+			border-width: inEmMob(2px);
+		}
+
 		svg {
 			width: inEm(20px);
 			height: inEm(9px);
+
+			@include md-down {
+				width: inEmMob(20px);
+				height: inEmMob(9px);
+			}
 		}
 	}
 
@@ -139,16 +197,29 @@
 		height: 0;
 		padding-inline: inEm(40px);
 		transition: top $transition-duration;
+
+		@include md-down {
+			padding-inline: inEmMob(20px);
+		}
 	}
 
 	&__answer-inner {
 		max-width: inEm(700px);
 		padding-bottom: inEm(23.5px);
+
+		@include md-down {
+			max-width: none;
+			padding-bottom: inEmMob(15px);
+		}
 	}
 
 	&__answer {
 		font-size: inEm(15px);
 		line-height: 1.4em;
 		opacity: 0;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 	}
 }
