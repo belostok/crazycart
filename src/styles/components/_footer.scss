@@ -243,13 +243,13 @@
 	}
 
 	&__lower-item {
-		display: block;
 		font-size: inEm(14px);
 		line-height: 1em;
 		color: rgba($white, 0.2);
 		transition: color $transition-duration;
 
 		@include md-down {
+			display: block;
 			font-size: inEmMob(14px);
 		}
 
