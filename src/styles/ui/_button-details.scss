@@ -39,6 +39,10 @@
 		}
 	}
 
+	&_no-border {
+		border: none;
+	}
+
 	&__title {
 		text-transform: uppercase;
 		color: $white;

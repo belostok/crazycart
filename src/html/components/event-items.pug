@@ -6,12 +6,12 @@ mixin eventItems(title, cl)
 			- var n = 1;
 			._items.js-cc-event-items
 				while n < 11
-					a._item.js-cc-event-item.cc-hover.img-cover(href='#', style='order:' + n)
+					a._item.js-cc-event-item.img-cover(href='#', style='order:' + n)
 						img._image(src='../images/event-items-' + n + '.jpg', alt='#', loading='lazy')
 					- n++;
 				- var m = 1
 					while m < 7
-						a._item.cc-hover.img-cover(href='#', style='order:' + n)
+						a._item.img-cover(href='#', style='order:' + n)
 							img._image(src='../images/event-items-' + m + '.jpg', alt='#', loading='lazy')
 						- m++;
 						- n++;

@@ -103,3 +103,12 @@ mixin inputText(name, type, label, icon, index)
 			span._message.-error.js-cc-input-error Сообщение об ошибке
 			input._input.js-cc-input(name=name, type=type)&attributes(attributes)
 
+mixin breadcrumbs
+	.cc-breadcrumbs.cc-outer
+		._wrapper.cc-wrapper
+			ul._list.flex.fwrap.aic
+				li._item
+					a._link(href='#') Главная
+				li._item
+					a._link(href='#') Выбрать праздник
+				li._item День рождения

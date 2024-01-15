@@ -1,0 +1,32 @@
+.cc-breadcrumbs {
+
+	&__item {
+		display: flex;
+		align-items: center;
+		font-size: inEm(15px);
+		line-height: 1.4em;
+		color: $red;
+
+		&:not(:last-child) {
+
+			&::after {
+				content: '';
+				width: inEm(6px, 15px);
+				height: inEm(6px, 15px);
+				margin-inline: inEm(8px, 15px);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../images/breadcrumbs.svg');
+			}
+		}
+	}
+
+	&__link {
+		color: $black;
+		transition: opacity $transition-duration;
+
+		@include mouseover {
+			opacity: 0.7;
+		}
+	}
+}
