@@ -1,0 +1,28 @@
+.cc-nav {
+	width: inEm(50px);
+	height: inEm(50px);
+	border-radius: 50%;
+	border: 1px solid $black;
+	transition: background $transition-duration, border-color $transition-duration;
+
+	@include mouseover {
+		background: $red;
+		border-color: $red;
+
+		svg {
+
+			path {
+				fill: $white;
+			}
+		}
+	}
+
+	svg {
+		width: inEm(25px);
+		height: inEm(22px);
+
+		path {
+			transition: fill $transition-duration;
+		}
+	}
+}

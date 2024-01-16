@@ -1,0 +1,34 @@
+mixin events(title, cl)
+	section.cc-events.cc-outer(class= cl)
+		._wrapper.cc-wrapper
+			._title-container
+				h2._title= title
+
+			._items.flex.fwrap
+				._item.-main.-birthday
+					._image-container.img-contain
+
+					._text-container
+						h3._item-title ДЕНЬ РОЖДЕНИЯ
+						p._item-description Крутой праздник для именинника
+
+					._button.absolute
+						+detailsButton
+				._item.-vip
+					._image-container.img-contain
+
+					._text-container
+						h3._item-title VIP
+						p._item-description Эксклюзивные праздники для вашего ребенка
+
+					._button.absolute
+						+detailsButton
+				._item.-graduation
+					._image-container.img-contain
+
+					._text-container
+						h3._item-title Выпускные
+						p._item-description Весёлые выпускные, которые запомнятся надолго
+
+					._button.absolute
+						+detailsButton

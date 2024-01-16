@@ -1,3 +1,27 @@
 .cc-events-hero-slider {
 	margin-top: inEm(30px);
+
+	&__slider {
+		overflow: hidden;
+	}
+
+	&__item {
+		min-height: inEm(540px);
+	}
+
+	&__nav-wrapper {
+		margin-top: inEm(40px);
+	}
+
+	&__nav-container {
+		column-gap: inEm(10px);
+	}
+
+	&__bullet {
+		border-color: $red;
+
+		&::before {
+			background: $red;
+		}
+	}
 }
