@@ -6,29 +6,48 @@ mixin events(title, cl)
 
 			._items.flex.fwrap
 				._item.-main.-birthday
-					._image-container.img-contain
+					._image
 
-					._text-container
-						h3._item-title ДЕНЬ РОЖДЕНИЯ
-						p._item-description Крутой праздник для именинника
+					._text-container.relative
+						._item-title-container
+							h3._item-title ДЕНЬ РОЖДЕНИЯ
+						._item-description-container
+							p._item-description Крутой праздник для именинника
 
 					._button.absolute
 						+detailsButton
-				._item.-vip
-					._image-container.img-contain
+				._item.-vip.-main
+					._image
 
-					._text-container
-						h3._item-title VIP
-						p._item-description Эксклюзивные праздники для вашего ребенка
+					._text-container.relative
+						._item-title-container
+							h3._item-title VIP
+								span._item-title-add Праздник
+						._item-description-container
+							p._item-description Эксклюзивные праздники для вашего ребенка
 
 					._button.absolute
 						+detailsButton
 				._item.-graduation
-					._image-container.img-contain
+					._image
 
-					._text-container
-						h3._item-title Выпускные
-						p._item-description Весёлые выпускные, которые запомнятся надолго
+					._text-container.relative
+						._item-title-container
+							h3._item-title Выпускные
+						._item-description-container
+							p._item-description Весёлые выпускные, которые запомнятся надолго
+
+					._button.absolute
+						+detailsButton
+				._item.-vip
+					._image
+
+					._text-container.relative
+						._item-title-container
+							h3._item-title VIP
+								span._item-title-add Праздник
+						._item-description-container
+							p._item-description Эксклюзивные праздники для вашего ребенка
 
 					._button.absolute
 						+detailsButton
