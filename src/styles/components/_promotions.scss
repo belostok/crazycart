@@ -20,19 +20,21 @@
 			background: linear-gradient(0deg, #4EE3FF 0%, #65C7F7 22.93%, #0052D4 45.85%);
 		}
 	}
-	&_home & {
 
-		&__title-container {
-			z-index: 2;
+	&_events & {
+
+		&__title {
+			color: $red;
 		}
 
-		&__items {
-			z-index: 1;
+		&__item {
+			border: 1px solid #04062D;
 		}
 	}
 
 	&__title-container {
 		position: relative;
+		z-index: 2;
 		text-align: center;
 	}
 
@@ -57,6 +59,7 @@
 
 	&__items {
 		position: relative;
+		z-index: 1;
 		margin: inEm(-45px) inEm(-10px) inEm(-10px);
 
 		@include lg-down {

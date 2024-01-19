@@ -19,12 +19,78 @@
 			background: linear-gradient(to bottom, $blue 0%, $blue calc(100% - #{inEm(400px)} - #{inEm(163px)}), rgba($blue, 0) 100%);
 		}
 	}
-
 	&_home & {
 
 		&__wrapper {
 			position: relative;
 			z-index: 1;
+		}
+	}
+
+	&_events {
+
+		.cc-button-feedback {
+			$button: &;
+
+			border-color: $black;
+			transition: background $transition-duration, border-color $transition-duration;
+
+			@include mouseover {
+				background: $red;
+				border-color: $red;
+
+				.cc-button-feedback__title {
+					color: $white;
+				}
+			}
+
+			&__title {
+				color: $black;
+			}
+		}
+
+		.cc-pagination {
+
+			&__bullet {
+
+				&::before {
+					background: $red;
+				}
+
+				&.swiper-pagination-bullet-active {
+					border-color: $red;
+				}
+			}
+		}
+	}
+	&_events & {
+
+		&__title,
+		&__item-title,
+		&__item-description {
+			color: $black;
+		}
+
+		&__nav {
+			border-color: $black;
+
+			@include mouseover {
+
+				svg {
+
+					path {
+						fill: $white;
+					}
+				}
+			}
+
+			svg {
+
+				path {
+					fill: $black;
+					transition: fill $transition-duration;
+				}
+			}
 		}
 	}
 

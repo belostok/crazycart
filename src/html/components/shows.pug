@@ -1,0 +1,24 @@
+mixin shows(cl)
+	section.cc-shows.cc-outer(class= cl)
+		._wrapper.cc-wrapper
+			._title-container
+				h2._title.cc-heading-2.flex.fdc
+					span._title-first.relative.flex.aife Наши
+						span._count-container.absolute.flex.jcc.aic
+							span._count 21
+					span шоу-программы
+
+			- var n = 0;
+			._items.-hide-items.relative.js-cc-shows-items
+				while n < 15
+					a._item.relative.js-cc-shows-item(href='#')
+						._image-container.img-cover.absolute
+							img._image(src='../images/shows-1.jpg', alt='#', loading='lazy')
+						._item-title-container.relative
+							h3._item-title Трансформеры Шоу
+						._item-button.absolute
+							+showButton('Подробнее')
+					- n++;
+
+				._button.absolute.jcc.aife
+					+detailsButton('cc-button-details_more js-cc-shows-button', 'Посмотреть всё', true)

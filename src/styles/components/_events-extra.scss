@@ -1,0 +1,41 @@
+.cc-events-extra {
+	margin-top: inEm(458px);
+
+	&__title {
+		color: $black;
+		text-align: left;
+
+		span {
+			display: block;
+
+			&:nth-of-type(1) {
+				text-align: right;
+			}
+
+			&:nth-of-type(2) {
+				text-align: center;
+				padding-right: inRem(100px);
+			}
+		}
+	}
+
+	&__image-container {
+		z-index: -1;
+		width: inEm(992px);
+		height: inEm(1043px);
+		left: inEm(-55px);
+		bottom: inEm(-120px);
+	}
+
+	&__description-container {
+		margin-top: inEm(30px);
+		margin-left: inEm(804px);
+		max-width: inEm(392px);
+	}
+
+	&__description {
+		font-size: inEm(22px);
+		line-height: 1.1em;
+		color: $black;
+	}
+}

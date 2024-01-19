@@ -11,6 +11,7 @@ import emotionsSlider from './modules/emotions-slider.js';
 import feedbackSlider from './modules/feedback-slider.js';
 import faq from './modules/faq.js';
 import eventsHeroSlider from './modules/events-hero-slider.js';
+import shows from './modules/shows.js';
 
 flsFunctions.isWebp();
 
@@ -26,4 +27,5 @@ documentReady(() => {
 	feedbackSlider();
 	faq();
 	eventsHeroSlider();
+	shows();
 });

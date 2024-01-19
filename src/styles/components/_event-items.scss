@@ -62,6 +62,10 @@
 		}
 	}
 
+	&_events {
+		margin-top: inEm(180px);
+	}
+
 	&__title-container {
 		position: relative;
 		margin-bottom: inEm(60px);
@@ -76,14 +80,17 @@
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: inEm(40px);
+		margin-bottom: inEm(-40px);
 
 		@include lg-down {
 			column-gap: inEmMob(20px);
+			margin-bottom: inEm(-20px);
 		}
 
 		@include md-down {
 			column-gap: inEmMob(10px);
 			grid-template-columns: repeat(2, 1fr);
+			margin-bottom: inEm(-10px);
 		}
 	}
 

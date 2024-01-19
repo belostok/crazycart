@@ -43,6 +43,11 @@
 		border: none;
 	}
 
+	&_more {
+		width: inEm(240px);
+		height: inEm(240px);
+	}
+
 	&__title {
 		text-transform: uppercase;
 		color: $white;

@@ -1,0 +1,28 @@
+.cc-button-show {
+	$root: &;
+
+	padding: inEm(15px) inEm(20px);
+	border-radius: inEm(130px);
+	background: $white;
+	transition: background $transition-duration;
+
+	@include mouseover {
+		background: $red;
+
+		#{$root} {
+
+			&__title {
+				color: $white;
+			}
+		}
+	}
+
+	&__title {
+		color: $red;
+		text-transform: uppercase;
+		font-size: inEm(14px);
+		line-height: 1em;
+		font-weight: 700;
+		transition: color $transition-duration;
+	}
+}

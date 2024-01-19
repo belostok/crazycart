@@ -24,6 +24,53 @@
 		}
 	}
 
+	&_events {
+
+		.cc-pagination {
+
+			&__bullet {
+
+				&::before {
+					background: $red;
+				}
+
+				&.swiper-pagination-bullet-active {
+					border-color: $red;
+				}
+			}
+		}
+	}
+	&_events & {
+
+		&__title-container {
+			max-width: none;
+			margin-inline: inEm(-30px);
+		}
+
+		&__nav {
+			background: $red;
+			border-color: $red;
+
+			@include mouseover {
+				background: $white;
+
+				svg {
+
+					path {
+						fill: $red;
+					}
+				}
+			}
+
+			svg {
+
+				path {
+					transition: fill $transition-duration;
+				}
+			}
+		}
+	}
+
 	&__title-container {
 		max-width: inEm(945px);
 		margin: 0 auto inEm(60px);

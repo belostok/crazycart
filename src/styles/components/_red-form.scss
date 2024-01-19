@@ -46,6 +46,52 @@
 		}
 	}
 
+	&_events {
+		margin-top: inEm(123px);
+		background: transparent;
+
+		.cc-checkbox {
+
+			&__title {
+				line-height: 1.25em;
+			}
+		}
+	}
+	&_events & {
+
+		&__wrapper {
+			background: $red;
+			border-radius: inEm(20px);
+			overflow: hidden;
+			padding-inline: inEm(60px);
+		}
+
+		&__form-container {
+			width: inEm(456px);
+		}
+
+		&__input {
+
+			&:nth-child(2) {
+				width: inEm(226px);
+			}
+
+			&:nth-child(3) {
+				width: inEm(220px);
+			}
+		}
+
+		&__checkbox {
+			max-width: inEm(373px);
+		}
+	}
+
+	&_events-pre-footer {
+		margin-top: inEm(180px);
+		border-radius: inEm(20px);
+		overflow: hidden;
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;

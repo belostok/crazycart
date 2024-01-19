@@ -73,9 +73,19 @@ mixin social
 		a._item.flex.aic.jcc.cc-hover(href='#')
 			span._title Yt
 
-mixin detailsButton(cl)
-	a.cc-button-details(href='#', class=cl)
-		span._title Подробнее
+mixin detailsButton(cl, title, button)
+	if button
+		button.cc-button-details(class=cl)
+			if title
+				span._title= title
+			else
+				span._title Подробнее
+	else
+		a.cc-button-details(href='#', class=cl)
+			if title
+				span._title= title
+			else
+				span._title Подробнее
 
 mixin formButton(cl)
 	button.cc-button-form(type='submit', class=cl)
@@ -83,6 +93,10 @@ mixin formButton(cl)
 
 mixin feedbackButton(title, cl)
 	a.cc-button-feedback(href='#', class=cl)
+		span._title=title
+
+mixin showButton(title, cl)
+	button.cc-button-show(class=cl)
 		span._title=title
 
 mixin inputText(name, type, label, icon, index)
