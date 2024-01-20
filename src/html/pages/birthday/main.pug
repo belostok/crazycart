@@ -1,0 +1,26 @@
+include ../../components/event-hero
+include ../../components/rates-item
+
++breadcrumbs
++eventHero('birthday')
++tabsNav
+
+section.cc-rates.cc-outer
+	._wrapper.cc-wrapper
+		._section
+			._title-container
+				h2._title Дети 4-8 лет
+			._items
+				+ratesItem('Стандарт')
+				+ratesItem('Популярный')
+				+ratesItem('VIP')
+				+ratesItem('VIP Максимальный', true)
+
+		._section.-blue
+			._title-container
+				h2._title Дети 9-14 лет
+			._items
+				+ratesItem('Стандарт')
+				+ratesItem('Популярный')
+				+ratesItem('VIP')
+				+ratesItem('VIP Максимальный', true)

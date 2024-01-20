@@ -1,0 +1,43 @@
+mixin prices
+	.cc-rates-item__prices-container
+		.cc-rates-item__prices-title-container
+			h4.cc-rates-item__prices-title Стоимость
+		.cc-rates-item__prices-items.flex.fwrap
+			.cc-rates-item__prices-item.flex.fdc
+				.cc-rates-item__prices-item-value-container
+					span.cc-rates-item__prices-item-value 41 990 ₽
+				.cc-rates-item__prices-item-description-container
+					span.cc-rates-item__prices-item-description // Будни
+			.cc-rates-item__prices-item.-holiday.flex.fdc
+				.cc-rates-item__prices-item-value-container
+					span.cc-rates-item__prices-item-value 44 990 ₽
+				.cc-rates-item__prices-item-description-container
+					span.cc-rates-item__prices-item-description // Выходные
+			.cc-rates-item__prices-item.-add.flex.fdc
+				.cc-rates-item__prices-item-value-container
+					span.cc-rates-item__prices-item-value 2 500 ₽
+				.cc-rates-item__prices-item-description-container
+					span.cc-rates-item__prices-item-description + 1 ребёнок
+
+mixin ratesList
+	.cc-rates-item__list-container
+		.cc-rates-item__list-title-container
+			h4.cc-rates-item__list-title Что входит
+		ul.cc-rates-item__list
+			li.cc-rates-item__list-item Гонки по трассе и обучение трюкам
+			li.cc-rates-item__list-item Украшение комнаты шарами
+			li.cc-rates-item__list-item VR парк
+			li.cc-rates-item__list-item Аниматор
+			li.cc-rates-item__list-item Сервировка стола праздничной посудой
+			li.cc-rates-item__list-item Призовой Тир
+			li.cc-rates-item__list-item VIP-комната
+				span [ 4 часа ]
+			li.cc-rates-item__list-item Подарок имениннику
+				span [ медаль + водительское ]
+
+		.cc-rates-item__list-extra-container
+			.cc-rates-item__list-extra-item-container
+				span.cc-rates-item__list-extra-item Шоу-программа
+					span [ 30-40 мин ]
+			.cc-rates-item__list-extra-description-container
+				p.cc-rates-item__list-extra-description Крио-мороженое, Тесла шоу, Научная магия, бумажная дискотека, Фокусник, Мастер-классы

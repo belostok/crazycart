@@ -1,0 +1,39 @@
+mixin ratesItem(title, max, cl)
+	.cc-rates-item.cc-rates__item(class= (max ? 'cc-rates-item_max' : '') + ' ' + (cl || ''))
+		._title-section
+			._title-container
+				h3._title.cc-heading-3= title
+			._title-details.flex.jcspb
+				._title-details-side.-left.flex
+					span._title-details-item Тариф
+					span._title-details-item На 6 детей
+				._title-details-side.-right.flex
+					span._title-details-item [ 4-5 часов ]
+
+		._side.-left.flex.fdc
+			if max
+				._info-title-container
+					h3._info-title Дети 4-5 лет
+
+				+ratesList
+
+			._prices
+				+prices
+
+			if max
+				._button
+					+formButton('cc-button-form_red-border', 'Заказать')
+
+		._side.-right.flex.fdc
+			if max
+				._info-title-container
+					h3._info-title Дети 6-8 лет
+
+			+ratesList
+
+			if max
+				._prices
+					+prices
+
+			._button
+				+formButton('cc-button-form_red-border', 'Заказать')

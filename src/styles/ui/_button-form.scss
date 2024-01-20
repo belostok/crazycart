@@ -2,6 +2,9 @@
 	$root: &;
 
 	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	width: 100%;
 	background: $white;
 	padding: inEm(25px) inEm(30px);
@@ -42,6 +45,28 @@
 		}
 	}
 	&_red & {
+
+		&__title {
+			color: $white;
+		}
+	}
+
+	&_red-border {
+		background: $red;
+		border-color: $red;
+
+		@include mouseover {
+			background: $white;
+
+			#{$root} {
+
+				&__title {
+					color: $black;
+				}
+			}
+		}
+	}
+	&_red-border & {
 
 		&__title {
 			color: $white;

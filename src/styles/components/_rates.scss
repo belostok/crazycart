@@ -1,0 +1,91 @@
+.cc-rates {
+	$root: &;
+
+	margin-top: inEm(60px);
+
+	&__title-container {
+		margin: 0 inEm(-40px) inEm(60px);
+	}
+
+	&__title {
+		font-size: inEm(180px);
+		line-height: 0.95em;
+		letter-spacing: lh(-4.5px, 180px);
+		font-weight: 800;
+		text-transform: uppercase;
+		color: $red;
+		text-align: center;
+	}
+
+	&__section {
+
+		&_blue {
+
+			#{$root} {
+
+				&__title {
+					color: $d-blue;
+				}
+			}
+
+			.cc-rates-item {
+				$item-root: &;
+
+				border-color: $d-blue;
+
+				&__title-details-side_right {
+
+					.cc-rates-item__title-details-item {
+						color: $d-blue;
+					}
+				}
+
+				&__prices-item_holiday {
+					border-color: $d-blue;
+
+					.cc-rates-item__prices-item-value,
+					.cc-rates-item__prices-item-description {
+						color: $d-blue;
+					}
+				}
+
+				&__list-item,
+				&__list-extra-item,
+				&__list-extra-description {
+
+					span {
+						color: $d-blue;
+					}
+				}
+
+				&__list-item,
+				&__list-extra-item {
+
+					&::before {
+						background-image: url('../images/list-blue.svg');
+					}
+				}
+			}
+
+			.cc-button-form_red-border {
+				background: $d-blue;
+				border-color: $d-blue;
+
+				@include mouseover {
+					background: $white;
+				}
+			}
+		}
+
+		&:not(:first-child) {
+			margin-top: inEm(120px);
+		}
+	}
+
+	&__item {
+
+		&:not(:first-child) {
+			margin-top: inEm(90px);
+		}
+	}
+}

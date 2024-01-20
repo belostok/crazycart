@@ -1,0 +1,29 @@
+.cc-event-hero {
+	margin-top: inEm(30px);
+
+	&_birthday & {
+
+		&__image-container {
+			top: inEm(-178px);
+			right: inEm(-45px);
+			width: inEm(680px);
+			height: inEm(644px);
+		}
+	}
+
+	&__wrapper {
+		height: inEm(444px);
+		border-radius: inEm(20px);
+		background: linear-gradient(262deg, #4EE3FF 0%, #65C7F7 50%, #0052D4 100%);
+		padding: inEm(30px);
+	}
+
+	&__title-container {
+		max-width: inEm(1043px);
+	}
+
+	&__title {
+		color: $white;
+		letter-spacing: lh(-3.125px, 125px);
+	}
+}

@@ -1,0 +1,37 @@
+.cc-tabs-nav {
+	$root: &;
+
+	margin-top: inEm(60px);
+
+	&__list {
+		column-gap: inEm(10px);
+		row-gap: inEm(10px);
+	}
+
+	&__item {
+
+		&_active {
+
+			#{$root} {
+
+				&__link {
+					pointer-events: none;
+					background: $red;
+					border-color: $red;
+					color: $white;
+				}
+			}
+		}
+	}
+
+	&__link {
+		display: block;
+		font-size: inEm(18px);
+		line-height: 1em;
+		font-weight: 700;
+		color: $black;
+		padding: inEm(10px, 18px) inEm(15px, 18px);
+		border: 1px solid $black;
+		border-radius: inEm(70px, 18px);
+	}
+}

@@ -87,9 +87,13 @@ mixin detailsButton(cl, title, button)
 			else
 				span._title Подробнее
 
-mixin formButton(cl)
-	button.cc-button-form(type='submit', class=cl)
-		span._title Отправить
+mixin formButton(cl, title)
+	if title
+		a.cc-button-form(href='#', class=cl)
+			span._title= title
+	else
+		button.cc-button-form(type='submit', class=cl)
+			span._title Отправить
 
 mixin feedbackButton(title, cl)
 	a.cc-button-feedback(href='#', class=cl)
@@ -126,3 +130,13 @@ mixin breadcrumbs
 				li._item
 					a._link(href='#') Выбрать праздник
 				li._item День рождения
+
+mixin tabsNav(cl)
+	- var items = ['ТРЦ АВИАПАРК', 'ТРЦ САЛАРИС', 'ТРК ВЕСНА', 'ТРК VEGAS КРОКУС', 'ТРЦ ГОРОД КОСИНО', 'ТРЦ VEGAS КУНЦЕВО', 'БУТОВО МОЛЛ', 'ТРЦ ГОРОД ЛЕФОРТОВО', 'ТЦ ОТРАДА', 'ТРК КРАСНЫЙ КИТ', 'ТЦ СИТИ'];
+	nav.cc-tabs-nav.cc-outer(class= cl)
+		._wrapper.cc-wrapper
+			ul._list.flex.fwrap.jcc
+				each val, index in items
+					li._item(class= (index === 0 ? 'cc-tabs-nav__item_active' : ''))
+						a._link.cc-hover(href='#')= val
+
