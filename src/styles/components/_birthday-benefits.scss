@@ -1,0 +1,71 @@
+.cc-birthday-benefits {
+	margin-top: inEm(180px);
+
+	&__title-container {
+		position: relative;
+		z-index: 1;
+	}
+
+	&__title {
+		color: $black;
+		text-align: left;
+
+		span {
+			display: block;
+			text-align: right;
+		}
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: inEm(30px);
+		margin-top: inEm(114px);
+	}
+
+	&__image-container {
+		top: inEm(-217px);
+		left: inEm(-72px);
+		width: inEm(773px);
+		height: inEm(824px);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: inEm(164px);
+			left: inEm(-207px);
+			width: inEm(671px);
+			height: inEm(671px);
+			border-radius: 50%;
+			opacity: 0.6;
+			background: $red;
+			filter: blur(inEm(249.4px));
+		}
+	}
+
+	&__image {
+		position: relative;
+	}
+
+	&__items {
+		position: relative;
+		row-gap: inEm(45px);
+		min-height: inEm(484px);
+	}
+
+	&__icon-container {
+		width: inEm(60px);
+		height: inEm(60px);
+	}
+
+	&__description-container {
+		margin-top: inEm(15px);
+		max-width: inEm(548px);
+	}
+
+	&__description {
+		font-size: inEm(22px);
+		line-height: 1.1em;
+		color: $black;
+	}
+}

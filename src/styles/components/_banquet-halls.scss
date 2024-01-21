@@ -1,0 +1,80 @@
+.cc-banquet-halls {
+	margin-top: inEm(180px);
+
+	&__title {
+		color: $black;
+	}
+
+	&__items {
+		column-gap: inEm(40px);
+		row-gap: inEm(40px);
+		margin-top: inEm(60px);
+	}
+
+	&__item {
+		width: calc(50% - #{inEm(20px)});
+		border-radius: inEm(20px);
+		overflow: hidden;
+	}
+
+	&__item-title-container {
+		margin-bottom: inEm(15px);
+	}
+
+	&__slide-title-container {
+		z-index: 1;
+		top: inEm(10px);
+		right: inEm(10px);
+		padding: inEm(6px) inEm(10px);
+		border-radius: inEm(20px);
+		background: $white;
+	}
+
+	&__slide-title {
+		display: block;
+		font-size: inEm(15px);
+		line-height: 1em;
+		font-weight: 500;
+		color: $black;
+	}
+
+	&__nav {
+		z-index: 1;
+		top: 0;
+		bottom: 0;
+		margin-block: auto;
+		width: inEm(50px);
+		height: inEm(50px);
+		border-radius: 50%;
+		background: $red;
+		transition: background $transition-duration;
+
+		&_prev {
+			left: inEm(20px);
+		}
+
+		&_next {
+			right: inEm(20px);
+		}
+
+		@include mouseover {
+			background: $white;
+
+			svg {
+
+				path {
+					fill: $red;
+				}
+			}
+		}
+
+		svg {
+			width: inEm(22px);
+			height: inEm(20px);
+
+			path {
+				transition: fill $transition-duration;
+			}
+		}
+	}
+}

@@ -1,0 +1,50 @@
+.cc-birthday-cake {
+	margin-top: inEm(246px);
+
+	&__wrapper {
+
+		&::before {
+			content: '';
+			position: absolute;
+			left: inEm(-514px);
+			bottom: inEm(-30px);
+			width: inEm(782px);
+			height: inEm(782px);
+			border-radius: 50%;
+			opacity: 0.8;
+			background: $red;
+			filter: blur(inEm(270.5px));
+		}
+	}
+
+	&__title-container {
+		flex-shrink: 0;
+		width: inEm(784px);
+	}
+
+	&__image-container {
+		top: inEm(-148px);
+		right: inEm(-196px);
+		width: inEm(469px);
+		height: inEm(468px);
+	}
+
+	&__title {
+		text-align: left;
+		color: $black;
+	}
+
+	&__description-container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		row-gap: inEm(15px);
+		width: inEm(400px);
+		color: $black;
+
+		p {
+			font-size: inEm(22px);
+			line-height: 1.1em;
+		}
+	}
+}

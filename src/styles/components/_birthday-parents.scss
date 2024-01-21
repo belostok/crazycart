@@ -1,0 +1,74 @@
+.cc-birthday-parents {
+	margin-top: inEm(163px);
+
+	&__title {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		color: $black;
+
+		span {
+			position: relative;
+
+			&:nth-child(1),
+			&:nth-child(3) {
+				margin-left: inRem(268px);
+			}
+
+			&:nth-child(3) {
+				z-index: 1;
+			}
+		}
+	}
+
+	&__image-container {
+		top: inEm(-62px);
+		right: inEm(134px);
+		width: inEm(384px);
+		height: inEm(384px);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: inEm(97px);
+			right: inEm(-235px);
+			width: inEm(504px);
+			height: inEm(504px);
+			border-radius: 50%;
+			opacity: 0.4;
+			background: $d-blue;
+			filter: blur(inEm(187px));
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: inEm(47px);
+		row-gap: inEm(47px);
+		margin-top: inEm(60px);
+	}
+
+	&__item {
+		position: relative;
+		padding-left: inEm(75px);
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: inEm(60px);
+			height: inEm(60px);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url('../images/heart-list-item.svg');
+		}
+	}
+
+	&__item-description {
+		font-size: inEm(22px);
+		line-height: 1.1em;
+		color: $black;
+	}
+}
