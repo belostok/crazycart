@@ -1,0 +1,49 @@
+.cc-set {
+	margin-top: inEm(180px);
+	color: $black;
+
+	&__title {
+		font-size: inEm(60px);
+		line-height: 0.95em;
+		letter-spacing: lh(-2.4px, 60px);
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	&__price-wrapper {
+		margin-left: inEm(100px);
+		color: $red;
+
+		span {
+			display: block;
+		}
+	}
+
+	&__price-title {
+		font-size: inEm(15px);
+		line-height: 1.1em;
+		font-weight: 500;
+	}
+
+	&__price-value {
+		font-size: inEm(38px);
+		line-height: 1.1em;
+		letter-spacing: lh(-1.52px, 38px);
+		font-weight: 800;
+	}
+
+	&__items {
+		column-count: 2;
+		column-gap: inEm(271px);
+		margin-top: inEm(104px);
+		margin-bottom: inEm(-60px);
+	}
+
+	&__item {
+		margin-bottom: inEm(60px);
+
+		&:nth-child(1) {
+			break-after: column;
+		}
+	}
+}

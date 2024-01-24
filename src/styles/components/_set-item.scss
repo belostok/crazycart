@@ -1,0 +1,90 @@
+.cc-set-item {
+	color: $black;
+
+	&_main & {
+
+		&__item {
+			border: none;
+
+			&:nth-child(odd) {
+
+				&::before {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					right: calc(-100% - #{inEm(40px)});
+					height: 1px;
+					background: $red;
+				}
+			}
+		}
+	}
+
+	&_short & {
+
+		&__items {
+			margin-top: 0;
+		}
+
+		&__item {
+			border: none;
+		}
+	}
+
+	&__index-container {
+		margin-bottom: inEm(10px);
+	}
+
+	&__index {
+		font-size: inEm(32px);
+		font-weight: 800;
+		letter-spacing: lh(-1.28px, 32px);
+		line-height: 0.95em;
+		color: $red;
+		text-transform: uppercase;
+	}
+
+	&__items {
+		margin-top: inEm(45px);
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: inEm(40px);
+		row-gap: inEm(45px);
+	}
+
+	&__item {
+		position: relative;
+		border-top: 1px solid $red;
+	}
+
+	&__item-index-container {
+		position: absolute;
+		top: inEm(15px);
+	}
+
+	&__item-index {
+		display: block;
+		font-size: inEm(18px);
+		letter-spacing: lh(-0.72px, 18px);
+		line-height: 0.95em;
+		text-transform: uppercase;
+		font-weight: 800;
+		color: $red;
+	}
+
+	&__item-title-container {
+		padding-top: inEm(47px);
+	}
+
+	&__item-value-container {
+		margin-top: inEm(10px);
+	}
+
+	&__item-value {
+		font-size: inEm(18px);
+		line-height: 1.1em;
+		letter-spacing: lh(-0.198px, 18px);
+		font-weight: 500;
+	}
+}
