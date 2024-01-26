@@ -1,6 +1,21 @@
 .cc-events-extra {
 	margin-top: inEm(458px);
 
+	&_birthday {
+		position: relative;
+		z-index: 1;
+		margin-top: inEm(423px);
+	}
+	&_birthday & {
+
+		&__image-container {
+			width: inEm(766px);
+			height: inEm(661px);
+			bottom: 0;
+			left: inEm(176px);
+		}
+	}
+
 	&__title {
 		color: $black;
 		text-align: left;

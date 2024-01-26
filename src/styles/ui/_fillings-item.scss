@@ -1,0 +1,30 @@
+.cc-fillings-item {
+	border-top: 1px solid $red;
+
+	&__title-container,
+	&__description-container,
+	&__details-container {
+		margin-top: inEm(15px);
+	}
+
+	&__title {
+		font-size: inEm(18px);
+		letter-spacing: lh(-0.72px, 18px);
+		line-height: 0.95em;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	&__description {
+		font-size: max(#{inEm(13px)}, 12px);
+		line-height: 1.25em;
+		font-weight: 500;
+	}
+
+	&__details {
+		font-size: inEm(18px);
+		line-height: 1.1em;
+		font-weight: 700;
+		letter-spacing: lh(-0.198px, 18px);
+	}
+}

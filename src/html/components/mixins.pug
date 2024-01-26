@@ -87,13 +87,17 @@ mixin detailsButton(cl, title, button)
 			else
 				span._title Подробнее
 
-mixin formButton(cl, title)
-	if title
-		a.cc-button-form(href='#', class=cl)
+mixin formButton(cl, title, button)
+	if button
+		button.cc-button-form(class=cl)
 			span._title= title
 	else
-		button.cc-button-form(type='submit', class=cl)
-			span._title Отправить
+		if title
+			a.cc-button-form(href='#', class=cl)
+				span._title= title
+		else
+			button.cc-button-form(type='submit', class=cl)
+				span._title Отправить
 
 mixin feedbackButton(title, cl)
 	a.cc-button-feedback(href='#', class=cl)

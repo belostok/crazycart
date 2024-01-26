@@ -1,0 +1,173 @@
+.cc-animators {
+	margin-top: inEm(180px);
+	color: $black;
+
+	&_birthday & {
+
+		&__wrapper {
+
+			&::after {
+				content: '';
+				position: absolute;
+				right: inEm(-160px);
+				bottom: inEm(-308px);
+				border-radius: 50%;
+				width: inEm(510px);
+				height: inEm(510px);
+				opacity: 0.8;
+				background: $turq;
+				filter: blur(inEm(189px));
+			}
+		}
+
+		&__description-container {
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: inEm(-209px);
+			border-radius: 50%;
+			width: inEm(629px);
+			height: inEm(629px);
+			opacity: 0.8;
+			background: $turq;
+			filter: blur(inEm(234px));
+		}
+	}
+
+	&__title-container {
+		position: relative;
+	}
+
+	&__title {
+		color: $black;
+		letter-spacing: lh(-4.4px, 110px);
+	}
+
+	&__columns {
+		position: relative;
+		display: grid;
+		grid-template-columns: repeat(2, inEm(490px));
+		column-gap: inEm(30px);
+		row-gap: inEm(30px);
+		justify-content: center;
+		margin-top: inEm(30px);
+	}
+
+	&__column {
+		font-size: inEm(22px);
+		line-height: 1.1em;
+	}
+
+	&__slider-container {
+		margin-top: inEm(60px);
+	}
+
+	&__slider {
+		overflow: hidden;
+		margin-inline: inEm(-10px);
+	}
+
+	&__slide {
+		width: 25%;
+		padding-inline: inEm(10px);
+	}
+
+	&__item {
+		width: 100%;
+	}
+
+	&__image-container {
+		width: 100%;
+		height: inEm(440px);
+		border-radius: inEm(20px);
+		overflow: hidden;
+	}
+
+	&__slide-title-container {
+		margin-top: inEm(15px);
+		text-align: center;
+	}
+
+	&__slide-title {
+		font-size: inEm(22px);
+		letter-spacing: lh(-0.22px, 22px);
+		line-height: 0.95em;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	&__nav {
+		position: absolute;
+		z-index: 1;
+		top: 0;
+		bottom: inEm(80px);
+		margin-block: auto;
+		width: inEm(160px);
+		height: inEm(160px);
+		background: $red;
+		border-color: $red;
+
+		@include mouseover {
+			background: $white;
+
+			svg {
+
+				path {
+					fill: $red;
+				}
+			}
+		}
+
+		&_prev {
+			left: inEm(-80px);
+		}
+
+		&_next {
+			right: inEm(-80px);
+		}
+
+		svg {
+			width: inEm(78px);
+			height: inEm(72px);
+		}
+	}
+
+	&__pagination {
+		margin-top: inEm(30px);
+	}
+
+	.cc-pagination {
+
+		&__bullet {
+
+			&::before {
+				background: $red;
+			}
+
+			&.swiper-pagination-bullet-active {
+				border-color: $red;
+			}
+		}
+	}
+
+	&__description-container {
+		margin-top: inEm(45px);
+		max-width: inEm(730px);
+		margin-inline: auto;
+		text-align: center;
+	}
+
+	&__description {
+		font-size: inEm(22px);
+		line-height: 1.1em;
+	}
+}

@@ -1,3 +1,78 @@
 .cc-dish-slider {
 	margin-top: inEm(120px);
+
+	&__slider {
+		overflow: hidden;
+	}
+
+	&__item {
+		height: inEm(629px);
+	}
+
+	&__image-container {
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+
+	&__nav {
+		position: absolute;
+		z-index: 1;
+		width: inEm(160px);
+		height: inEm(160px);
+		border-radius: 50%;
+		background: $red;
+		border: 1px solid $red;
+		top: 0;
+		bottom: inEm(90px);
+		margin-block: auto;
+		transition: background $transition-duration;
+
+		@include mouseover {
+			background: $white;
+
+			svg {
+
+				path {
+					fill: $red;
+				}
+			}
+		}
+
+		&_prev {
+			left: inEm(-81px);
+		}
+
+		&_next {
+			right: inEm(-81px);
+		}
+
+		svg {
+			width: inEm(78px);
+			height: inEm(72px);
+
+			path {
+				transition: fill $transition-duration;
+			}
+		}
+	}
+
+	.cc-pagination {
+		margin: inEm(40px) auto 0;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+
+		&__bullet {
+
+			&::before {
+				background: $red;
+			}
+
+			&.swiper-pagination-bullet-active {
+				border-color: $red;
+			}
+		}
+	}
 }

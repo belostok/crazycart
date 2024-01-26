@@ -1,8 +1,9 @@
-mixin eventsExtra(cl)
+mixin eventsExtra(cl, image)
+	- image = image || '../images/rocket.svg'
 	section.cc-events-extra.cc-outer(class= cl)
 		._wrapper.cc-wrapper.relative
 			._image-container.absolute.img-contain
-				img._image(src='../images/rocket.svg', alt='#', loading='lazy')
+				img._image(src= image, alt='#', loading='lazy')
 
 			._title-container
 				h2._title.cc-heading-2 Дополнительно

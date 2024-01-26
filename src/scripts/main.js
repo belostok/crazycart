@@ -13,21 +13,27 @@ import faq from './modules/faq.js';
 import eventsHeroSlider from './modules/events-hero-slider.js';
 import shows from './modules/shows.js';
 import banquetSlider from './modules/banquet-slider.js';
+import dishSlider from './modules/dish-slider.js';
+import popup from './modules/popup.js';
+import animatorsSlider from './modules/animators-slider.js';
 
 flsFunctions.isWebp();
 
 documentReady(() => {
 	lazyImages();
-	heroSlider();
 	datePicker();
 	autoComplete();
 	forms();
 	inputMask();
 	video();
+	faq();
+	shows();
+	popup();
+	heroSlider();
 	emotionsSlider();
 	feedbackSlider();
-	faq();
 	eventsHeroSlider();
-	shows();
 	banquetSlider();
+	dishSlider();
+	animatorsSlider();
 });
