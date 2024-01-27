@@ -1,4 +1,4 @@
-mixin eventItems(title, cl)
+mixin eventItems(title, cl, button)
 	section.cc-event-items.cc-outer(class= cl)
 		._wrapper.cc-wrapper
 			._title-container
@@ -15,5 +15,9 @@ mixin eventItems(title, cl)
 							img._image(src='../images/event-items-' + m + '.jpg', alt='#', loading='lazy')
 						- m++;
 						- n++;
+
+			if button
+				._button-container
+					+formButton('cc-button-form_big', 'узнать цены на билет')
 
 

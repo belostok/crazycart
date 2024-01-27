@@ -1,0 +1,39 @@
+.cc-quests {
+	margin-top: inEm(180px);
+	color: $black;
+	min-height: inEm(607px);
+	padding-top: inEm(158px);
+
+	&__image-container {
+		top: inEm(-213px);
+		width: inEm(728px);
+		height: inEm(729px);
+	}
+
+	&__title-container {
+		margin-left: inEm(536px);
+	}
+
+	&__title {
+		text-align: left;
+		color: $black;
+	}
+
+	&__description-wrapper {
+		margin-top: inEm(60px);
+		margin-left: inEm(804px);
+	}
+
+	&__description-container {
+		max-width: inEm(382px);
+	}
+
+	&__description {
+		font-size: inEm(22px);
+		line-height: 1.1em;
+	}
+
+	&__button-container {
+		margin-top: inEm(60px);
+	}
+}

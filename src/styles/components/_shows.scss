@@ -3,6 +3,31 @@
 
 	margin-top: inEm(250px);
 
+	&_expanded {
+
+		.cc-button-show {
+			background: $red;
+
+			@include mouseover {
+				background: $white;
+
+				.cc-button-show__title {
+					color: $red;
+				}
+			}
+
+			&__title {
+				color: $white;
+			}
+		}
+	}
+	&_expanded & {
+
+		&__expanded-button-container {
+			margin-top: inEm(100px);
+		}
+	}
+
 	&__title-first {
 		width: max-content;
 		margin-inline: auto;

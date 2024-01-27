@@ -1,0 +1,14 @@
+mixin quests(cl)
+	section.cc-quests.cc-outer(class= cl)
+		._wrapper.cc-wrapper.relative
+			._image-container.absolute.img-contain
+				img._image(src='../images/quests.svg', alt='#', loading='lazy')
+			._title-container.relative
+				h2._title.cc-heading-2 Квесты
+
+			._description-wrapper.relative
+				._description-container
+					p._description Помимо игр и шоу программ, у нас есть увлекательные квесты
+				._button-container
+					+ctaButton('cc-button-cta_red', 'подробнее о квестах')
+

@@ -1,4 +1,6 @@
 .cc-button-cta {
+	$root: &;
+
 	position: relative;
 	display: inline-flex;
 	justify-content: center;
@@ -7,6 +9,40 @@
 	height: inEm(42px);
 	border-radius: inEm(100px);
 	background: $white;
+	transition: background $transition-duration;
+
+	@include mouseover {
+		background: $red;
+
+		#{$root} {
+
+			&__title {
+				color: $white;
+			}
+		}
+	}
+
+	&_red {
+		background: $red;
+		padding: 0 inEm(30px);
+		height: inEm(46px);
+		border-radius: inEm(90px);
+		border: 1px solid $red;
+
+		@include mouseover {
+			background: $white;
+
+			.cc-button-cta__title {
+				color: $red;
+			}
+		}
+	}
+	&_red & {
+
+		&__title {
+			color: $white;
+		}
+	}
 
 	&__title {
 		pointer-events: none;
@@ -15,5 +51,6 @@
 		font-weight: 700;
 		line-height: 1em;
 		text-transform: uppercase;
+		transition: color $transition-duration;
 	}
 }

@@ -12,6 +12,61 @@
 		}
 	}
 
+	&_phone#{&}_block {
+
+		.cc-contacts-item__item-icon {
+			position: relative;
+			width: inEm(24px);
+			height: inEm(24px);
+			margin-right: inEm(5px);
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../images/phone-alt.svg');
+			}
+
+			svg {
+				display: none;
+			}
+		}
+
+		.cc-contacts-item__item-value {
+			color: $red;
+			font-size: inEm(18px);
+			font-weight: 700;
+		}
+	}
+
+	&_time#{&}_block {
+
+		.cc-contacts-item__item-icon {
+			position: relative;
+			width: inEm(24px);
+			height: inEm(24px);
+			margin-right: inEm(5px);
+
+			svg {
+
+				path {
+					fill: $black;
+				}
+			}
+		}
+
+		.cc-contacts-item__item-value {
+			color: $black;
+			font-size: inEm(18px);
+			font-weight: 700;
+		}
+	}
+
 	&__item-icon {
 		margin-right: inEm(3px);
 

@@ -73,6 +73,30 @@
 		}
 	}
 
+	&_big {
+		background: $red;
+		border-color: $red;
+		padding-block: inEm(32px);
+
+		@include mouseover {
+			background: $white;
+
+			#{$root} {
+
+				&__title {
+					color: $black;
+				}
+			}
+		}
+	}
+	&_big & {
+
+		&__title {
+			font-size: inEm(22px);
+			color: $white;
+		}
+	}
+
 	&__title {
 		pointer-events: none;
 		text-transform: uppercase;

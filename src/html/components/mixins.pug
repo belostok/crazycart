@@ -33,16 +33,17 @@ mixin addresses
 				<path d="M11.3333 7.33325L10.1684 8.50856C9.23946 9.44585 8.77498 9.9145 8.20885 9.98666C8.07014 10.0043 7.92978 10.0043 7.79107 9.98666C7.22494 9.9145 6.76046 9.44585 5.8315 8.50857L4.66663 7.33325" stroke="white" stroke-linecap="round"/>
 				</svg>
 
-mixin ctaButton
-	a.cc-button-cta(href='#')
-		span._title Заказать билет
+mixin ctaButton(cl, title)
+	- title = title || 'Заказать билет'
+	a.cc-button-cta(href='#', class= cl)
+		span._title= title
 
 mixin heroButton
 	a.cc-button-hero(href='#')
 		span._title Подробнее
 
-mixin timeItem
-	.cc-contacts-item.-time.flex.aic
+mixin timeItem(cl)
+	.cc-contacts-item.-time.flex.aic(class= cl)
 		span._item-icon.img-contain.cc-icon
 			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<g clip-path="url(#clip0_537_1206)">
@@ -56,8 +57,8 @@ mixin timeItem
 			</svg>
 		span._item-value 11:00-22:00
 
-mixin phoneItem
-	a.cc-contacts-item.-phone.flex.aic.cc-hover(href='#')
+mixin phoneItem(cl)
+	a.cc-contacts-item.-phone.flex.aic.cc-hover(href='#', class= cl)
 		span._item-icon.img-contain.cc-icon
 			<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<path d="M3.1739 2.44125C3.221 2.39415 3.24455 2.3706 3.26529 2.35154C3.7754 1.88282 4.55947 1.88282 5.06958 2.35154C5.09032 2.3706 5.11387 2.39415 5.16097 2.44125L6.1331 3.41338C6.6678 3.94808 6.82072 4.75557 6.51856 5.44876C6.21641 6.14195 6.36933 6.94944 6.90403 7.48414L8.5019 9.08202C9.03661 9.61672 9.8441 9.76964 10.5373 9.46748C11.2305 9.16532 12.038 9.31825 12.5727 9.85295L13.5448 10.8251C13.5919 10.8722 13.6154 10.8957 13.6345 10.9165C14.1032 11.4266 14.1032 12.2107 13.6345 12.7208C13.6154 12.7415 13.5919 12.765 13.5448 12.8121L12.9539 13.403C12.4727 13.8842 11.779 14.0862 11.1147 13.9386C6.58832 12.9327 3.0533 9.39773 2.04743 4.87133C1.89981 4.20702 2.10181 3.51334 2.58301 3.03214L3.1739 2.44125Z" stroke="white" stroke-width="1.5"/>

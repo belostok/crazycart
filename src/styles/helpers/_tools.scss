@@ -152,3 +152,17 @@
 .swiper-button-lock {
 	display: none !important;
 }
+
+.cc-desktop {
+
+	@include md-down {
+		display: none;
+	}
+}
+
+.cc-mobile {
+
+	@include md-up {
+		display: none;
+	}
+}

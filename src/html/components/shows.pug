@@ -1,4 +1,5 @@
-mixin shows(cl)
+mixin shows(cl, expanded)
+	- var jsClass = expanded ? '' : 'cc-shows__items_hide-items js-cc-shows-items'
 	section.cc-shows.cc-outer(class= cl)
 		._wrapper.cc-wrapper
 			._title-container
@@ -9,7 +10,7 @@ mixin shows(cl)
 					span шоу-программы
 
 			- var n = 0;
-			._items.-hide-items.relative.js-cc-shows-items
+			._items.relative(class= jsClass)
 				while n < 15
 					a._item.relative.js-cc-shows-item(href='#')
 						._image-container.img-cover.absolute
@@ -20,5 +21,9 @@ mixin shows(cl)
 							+showButton('Подробнее')
 					- n++;
 
+			if expanded
+				._expanded-button-container.flex.jcc
+					+detailsButton('cc-button-details_more', 'заказать праздник')
+			else
 				._button.absolute.jcc.aife
 					+detailsButton('cc-button-details_more js-cc-shows-button', 'Посмотреть всё', true)
