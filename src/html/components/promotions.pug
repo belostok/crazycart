@@ -1,8 +1,23 @@
-mixin promotions(title, cl)
+mixin promotions(title, cl, extra)
 	section.cc-promotions.cc-outer(class= cl)
 		._wrapper.cc-wrapper
 			._title-container
 				h2._title= title
+
+			._extra-container
+				._item.flex.fdc
+					._item-upper
+						._item-icon-container
+							img._item-icon(src='../images/promo-icon-1.svg', alt='#')
+					._item-lower.fg1.flex.aife.jcspb
+						._item-text-container
+							._item-title-container
+								h3._item-title Сертификат на 3000₽ в подарок
+							._item-note-container
+								p._item-note При праздновании дня рождения у нас до 1.01.2024
+						._item-button
+							+detailsButton('cc-button-details_promo')
+
 			._items.flex.fwrap
 				._item-wrapper
 					._item.flex.fdc

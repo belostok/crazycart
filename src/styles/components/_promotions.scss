@@ -32,6 +32,22 @@
 		}
 	}
 
+	&_promo {
+		padding-top: inEm(60px);
+		padding-bottom: inEm(175px);
+	}
+
+	&_promo & {
+
+		&__items {
+			margin-top: inEm(-10px);
+		}
+
+		&__item {
+			border: 1px solid #04062D;
+		}
+	}
+
 	&__title-container {
 		position: relative;
 		z-index: 2;
@@ -54,6 +70,21 @@
 		@include md-down {
 			font-size: inEmMob(95px);
 			letter-spacing: lh(-3.8px, 95px);
+		}
+	}
+
+	&__extra-container {
+		margin-bottom: inEm(20px);
+
+		#{$root} {
+
+			&__item-title-container {
+				max-width: inEm(693px);
+
+				@include md-down {
+					max-width: none;
+				}
+			}
 		}
 	}
 
@@ -126,10 +157,10 @@
 
 		&::after {
 			content: '';
-			width: inEm(843px);
+			width: inEm(1350px);
 			height: inEm(78px);
 			background-repeat: no-repeat;
-			background-size: inEm(843px) inEm(78px);
+			background-size: inEm(1350px) inEm(78px);
 			background-image: url('../images/promo-dec.svg');
 
 			@include md-down {
