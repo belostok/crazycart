@@ -1,0 +1,16 @@
+include ../components/news-item
+
+mixin news(title, cl, button)
+	section.cc-news.cc-outer(class= cl)
+		._wrapper.cc-wrapper
+			if title
+				._title-container
+					h2._title.cc-heading-2 новости CRAZY CART
+
+			- var n = 0;
+			._grid
+				while n < 9
+					+newsItem
+					-n ++;
+
+

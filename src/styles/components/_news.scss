@@ -1,0 +1,20 @@
+.cc-news {
+	margin-top: inEm(180px);
+
+	&_page {
+		margin-top: inEm(102px);
+		padding-bottom: inEm(175px);
+	}
+
+	&__title-container {
+		max-width: inEm(800px);
+		margin: 0 auto inEm(60px);
+	}
+
+	&__grid {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		column-gap: inEm(40px);
+		row-gap: inEm(40px);
+	}
+}

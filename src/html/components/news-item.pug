@@ -1,0 +1,11 @@
+mixin newsItem(cl)
+	a.cc-news-item(href='#')
+		._image-container.img-cover
+			img._image(src='../images/news-1.png', alt='#', loading='lazy')
+		._text-container
+			._title-container
+				h3._title Мы провели 1000 день рождения
+			._date-container
+				span._date [ 1.01.2024 ]
+			._button-container
+				+ctaButton('cc-button-cta_news', 'Подробнее', true)

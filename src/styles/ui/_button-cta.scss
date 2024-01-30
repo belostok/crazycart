@@ -44,6 +44,29 @@
 		}
 	}
 
+	&_news {
+		background: $red;
+		padding: 0 inEm(20px);
+		height: inEm(44px);
+		border-radius: inEm(130px);
+		border: 1px solid $red;
+
+		@include mouseover {
+			background: $white;
+
+			.cc-button-cta__title {
+				color: $red;
+			}
+		}
+	}
+	&_news & {
+
+		&__title {
+			font-size: inEm(14px);
+			color: $white;
+		}
+	}
+
 	&__title {
 		pointer-events: none;
 		color: $red;

@@ -33,10 +33,14 @@ mixin addresses
 				<path d="M11.3333 7.33325L10.1684 8.50856C9.23946 9.44585 8.77498 9.9145 8.20885 9.98666C8.07014 10.0043 7.92978 10.0043 7.79107 9.98666C7.22494 9.9145 6.76046 9.44585 5.8315 8.50857L4.66663 7.33325" stroke="white" stroke-linecap="round"/>
 				</svg>
 
-mixin ctaButton(cl, title)
+mixin ctaButton(cl, title, button)
 	- title = title || 'Заказать билет'
-	a.cc-button-cta(href='#', class= cl)
-		span._title= title
+	if button
+		button.cc-button-cta(class= cl)
+			span._title= title
+	else
+		a.cc-button-cta(href='#', class= cl)
+			span._title= title
 
 mixin heroButton
 	a.cc-button-hero(href='#')

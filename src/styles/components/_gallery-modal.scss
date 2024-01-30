@@ -116,16 +116,14 @@
 		position: absolute;
 		top: 32px;
 		right: 32px;
-		width: 28px;
-		height: 28px;
+		width: 24px;
+		height: 24px;
 		background-repeat: no-repeat;
 		background-size: contain;
 		background-image: url($img-path + '/exit.svg');
 		cursor: pointer;
 
 		@include md-down {
-			width: 26px;
-			height: 26px;
 			top: 20px;
 			right: 20px;
 		}
