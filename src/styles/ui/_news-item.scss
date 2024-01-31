@@ -4,4 +4,28 @@
 		border-radius: inEm(30px);
 		overflow: hidden;
 	}
+
+	&__text-container {
+		margin-top: inEm(30px);
+	}
+
+	&__title {
+		@include rows-limit(4);
+	}
+
+	&__date-container {
+		margin-top: inEm(15px);
+	}
+
+	&__date {
+		display: block;
+		color: $red;
+		font-size: inEm(15px);
+		line-height: 1em;
+		font-weight: 500;
+	}
+
+	&__button-container {
+		margin-top: inEm(30px);
+	}
 }

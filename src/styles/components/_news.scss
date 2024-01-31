@@ -17,4 +17,16 @@
 		column-gap: inEm(40px);
 		row-gap: inEm(40px);
 	}
+
+	&__button-container {
+		margin-top: inEm(40px);
+	}
+
+	.cc-button-form {
+		padding-block: inEm(32px);
+
+		&__title {
+			font-size: inEm(22px);
+		}
+	}
 }

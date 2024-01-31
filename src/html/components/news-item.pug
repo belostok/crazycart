@@ -1,11 +1,11 @@
 mixin newsItem(cl)
-	a.cc-news-item(href='#')
+	a.cc-news-item.flex.fdc(href='#')
 		._image-container.img-cover
 			img._image(src='../images/news-1.png', alt='#', loading='lazy')
-		._text-container
+		._text-container.flex.fdc.fg1
 			._title-container
-				h3._title Мы провели 1000 день рождения
-			._date-container
+				h3._title.cc-heading-6 Мы провели 1000 день рождения
+			._date-container.fg1
 				span._date [ 1.01.2024 ]
 			._button-container
 				+ctaButton('cc-button-cta_news', 'Подробнее', true)
