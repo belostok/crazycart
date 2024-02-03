@@ -1,0 +1,22 @@
+.cc-single-title {
+	margin-top: inEm(120px);
+	margin-bottom: inEm(60px);
+
+	&_big {
+		margin-top: inEm(30px);
+		margin-bottom: inEm(30px);
+	}
+	&_big & {
+		font-size: inEm(195px);
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-weight: 800;
+		color: $red;
+		font-size: inEm(180px);
+		line-height: lh(171px, 180px);
+		letter-spacing: -0.025em;
+		text-align: center;
+	}
+}

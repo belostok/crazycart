@@ -1,0 +1,87 @@
+include ../../components/simple-hero
+include ../../components/contact-item
+
++breadcrumbs
++simpleHero('../images/prices-hero.svg', '../images/prices-hero-mobile.svg')
+
+.cc-single-title.cc-outer
+	._wrapper.cc-wrapper
+		h1._title Билеты
+
++tabsNav
+
+section.cc-tickets.cc-outer
+	._wrapper.cc-wrapper
+		._items
+			._item
+				._item-title-container
+					h3._item-title.cc-heading-4 Будни
+
+				._prices-container.flex.fwrap.jcc
+					+priceItem('650 ₽', '// 7 минут', 'cc-tickets__price-item')
+					+priceItem('1 200 ₽', '// 14 минут', 'cc-tickets__price-item')
+					+priceItem('1 800 ₽', '// 21 минут', 'cc-tickets__price-item')
+
+				._button-container
+					+formButton('', 'Записаться онлайн')
+
+			._item
+				._item-title-container
+					h3._item-title.cc-heading-4 Выходные
+
+				._prices-container.flex.fwrap.jcc
+					+priceItem('650 ₽', '// 7 минут', 'cc-tickets__price-item')
+					+priceItem('1 200 ₽', '// 14 минут', 'cc-tickets__price-item')
+					+priceItem('1 800 ₽', '// 21 минут', 'cc-tickets__price-item')
+
+				._button-container
+					+formButton('', 'Записаться онлайн')
+
+section.cc-certificates.cc-outer
+	._wrapper.cc-wrapper
+		._title-container
+			h2._title.cc-heading-2 Подарочные сертификаты
+
+		- var n = 0;
+		- var m = 0;
+		._items
+			while n < 4
+				._item
+					._image-container.img-contain
+						img._image(src='../images/cert-7.png', alt='#', loading='lazy')
+					._item-title-container
+						h3._item-title.cc-heading-6 7 минут
+					._prices-container
+					._button-container
+						+formButton('cc-button-form_red-border', 'Купить')
+				- n ++;
+
+			while m < 2
+				._item.-big
+					._image-container.img-contain
+						img._image(src='../images/cert-unlimit.png', alt='#', loading='lazy')
+					._item-title-container
+						h3._item-title.cc-heading-6 безлимит на весь день
+					._prices-container
+						+priceItem('10 000 ₽', '// Будни', 'cc-price-item_blue cc-certificates__price-item')
+						+priceItem('15 000 ₽', '// Выходные', 'cc-price-item_red cc-certificates__price-item')
+					._button-container
+						+formButton('cc-button-form_red-border', 'Купить')
+				- m ++;
+
+section.cc-attractions.cc-outer
+	._wrapper.cc-wrapper
+		._title-container
+			h2._title.cc-heading-2 Аттракционы
+
+		- var n = 0;
+		._items
+			while n < 4
+				._item
+					._image-container.img-cover
+						img._image(src='../images/event-items-4.jpg', alt='#', loading='lazy')
+					._item-title-container
+						h3._item-title.cc-heading-6 300 ₽
+				- n ++;
+
++contact-item('', '', 'cc-contact-item_pre-footer')

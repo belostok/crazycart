@@ -34,6 +34,10 @@
 		}
 	}
 
+	&_no-padding {
+		padding-top: 0;
+	}
+
 	&__title-container {
 		position: relative;
 		margin-bottom: inEm(60px);

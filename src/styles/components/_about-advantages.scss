@@ -1,0 +1,45 @@
+.cc-about-advantages {
+	margin-top: inEm(191px);
+	color: $black;
+
+	&__title-container {
+		margin-bottom: inEm(114px);
+	}
+
+	&__title {
+		color: $black;
+		text-align: left;
+	}
+
+	&__items {
+		column-gap: inEm(20px);
+		row-gap: inEm(60px);
+	}
+
+	&__item {
+		width: inEm(516px);
+
+		&:nth-child(5n+3) {
+			margin-left: inEm(250px);
+		}
+
+		&:nth-child(5n+5) {
+			margin-left: inEm(536px);
+		}
+	}
+
+	&__image-container {
+		width: inEm(60px);
+		height: inEm(60px);
+		margin-bottom: inEm(15px);
+	}
+
+	&__item-title-container {
+		margin-bottom: inEm(15px);
+	}
+
+	&__item-description {
+		font-size: inEm(22px);
+		line-height: lh(26.4px, 22px);
+	}
+}

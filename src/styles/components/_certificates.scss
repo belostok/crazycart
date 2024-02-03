@@ -1,0 +1,60 @@
+.cc-certificates {
+	$root: &;
+
+	margin-top: inEm(180px);
+
+	&__title-container {
+		margin-bottom: inEm(60px);
+	}
+
+	&__title {
+		color: $black;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: inEm(40px);
+		row-gap: inEm(90px);
+	}
+
+	&__item {
+
+		&_big {
+			grid-column: span 2;
+
+			#{$root} {
+
+				&__image-container {
+					height: inEm(363px);
+				}
+
+				&__prices-container {
+					display: flex;
+					flex-wrap: wrap;
+					justify-content: center;
+					column-gap: inEm(5px);
+					row-gap: inEm(5px);
+					margin-top: inEm(30px);
+				}
+			}
+		}
+	}
+
+	&__image-container {
+		height: inEm(170px);
+	}
+
+	&__item-title-container {
+		text-align: center;
+		margin-top: inEm(30px);
+	}
+
+	&__prices-container {
+		display: none;
+	}
+
+	&__button-container {
+		margin-top: inEm(30px);
+	}
+}

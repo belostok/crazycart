@@ -4,6 +4,17 @@
 	margin-top: inEm(180px);
 	padding-bottom: inEm(66px);
 
+	&_about & {
+
+		&__title-container {
+			max-width: none;
+		}
+
+		&__items {
+			margin-top: inEm(91px);
+		}
+	}
+
 	&__title-container {
 		max-width: inEm(1042px);
 		margin-inline: auto;

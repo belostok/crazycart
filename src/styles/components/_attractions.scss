@@ -1,0 +1,29 @@
+.cc-attractions {
+	margin-top: inEm(180px);
+
+	&__title-container {
+		margin-bottom: inEm(60px);
+	}
+
+	&__title {
+		color: $black;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		column-gap: inEm(40px);
+		row-gap: inEm(40px);
+	}
+
+	&__image-container {
+		height: inEm(370px);
+		border-radius: inEm(15px);
+		overflow: hidden;
+	}
+
+	&__item-title-container {
+		text-align: center;
+		margin-top: inEm(30px);
+	}
+}

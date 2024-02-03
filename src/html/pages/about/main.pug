@@ -1,0 +1,69 @@
+include ../../components/video-section
+include ../../components/events
+include ../../components/gallery
+include ../../components/news
+include ../../components/vacancies
+include ../../components/contact-item
+
++breadcrumbs
+
+.cc-single-title.-big.cc-outer
+	._wrapper.cc-wrapper
+		h1._title CRAZY CART
+
++videoSection('', 'cc-video-section_no-padding')
+
+section.cc-about-emotions.cc-outer
+	._wrapper.cc-wrapper
+		._title-container
+			h2._title.cc-heading-3 Быстрые, яркие и красивые Crazy Cart подарят вашему ребёнку невероятное количество позитивных эмоций!
+
+		._items
+			._item
+				p Crazy Cart единственные в мире машинки, завоевавшие премию «Игрушка года», среди всех игрушек в мире в данном сегменте.
+				p В наших парках мы предоставляем всё необходимое для отличного времяпровождения всей семьей: классные трассы, яркие шлемы и позитивное настроение!
+				p С Crazy Cart вашего ребёнка ждёт самое улётное приключение, которое запомнится ему на годы вперёд!
+			._item
+				p А ещё мы на 100% уверены в безопасности всех гонок — машинка спроектирована так, что она физически неспособна перевернуться: колёса разнесены очень широко, а центр тяжести находится максимально низко.
+				p Специальная рама защищает райдера от случайных столкновений, а кресло поддерживает спину — достаточно надеть шлем, и всё будет в полном порядке.
+				p Быстрые, яркие и красивые Crazy Cart подарят вашему ребёнку невероятное количество позитивных эмоций!
+
+section.cc-about-secure.cc-outer
+	._wrapper.cc-wrapper
+		._title-container
+			h2._title.cc-heading-3 наш картинг безопасен
+
+		._columns.flex
+			._text-container
+				._column-title-container
+					h3._column-title.cc-heading-5 Машинка спроектирована так, что она физически не способна перевернуться
+				ul._column-list
+					li._column-item Колеса разнесены очень широко, а центр тяжести находится максимально низко
+					li._column-item Специальная рама защищает райдера от случайных столкновений, а кресло поддерживает спину
+					li._column-item Выдаём шлемы для детей
+
+			._image-container.relative
+				img._image(src='../images/kart.png', alt='#', loading='lazy')
+
+section.cc-about-advantages.cc-outer
+	._wrapper.cc-wrapper
+		._title-container
+			h2._title.cc-heading-2 преимущества
+
+		- var n = 0;
+		._items.flex.fwrap
+			while n < 5
+				._item
+					._image-container.img-contain
+						img._image(src='../images/adv-1.svg', alt='#', loading='lazy')
+					._item-title-container
+						h3._item-title.cc-heading-5 Праздник под ключ
+					._item-description-container
+						p._item-description Инструктор всегда рядом и проводит подробный инструктаж, настраивает скорость индивидуально для каждого гостя, учитывая возраст и опыт вождения
+				- n ++;
+
++events('Отмечайте праздники ваших детей в CRAZY CART', 'cc-events_about')
++gallery('cc-gallery_about', 'Галерея')
++news('новости CRAZY CART', 'cc-news_about', false, 3, 'читать больше новостей')
++vacancies('вакансии в центральный офис CRAZY CART', 'cc-vacancies_about', true, 3)
++contact-item('Контакты', '', 'cc-contact-item_pre-footer')

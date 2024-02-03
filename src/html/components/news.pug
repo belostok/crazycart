@@ -1,6 +1,8 @@
 include ../components/news-item
 
-mixin news(title, cl, button)
+mixin news(title, cl, button, count, buttonText)
+	- var count = count || 9
+	- var buttonText = buttonText || 'Больше новостей';
 	section.cc-news.cc-outer(class= cl)
 		._wrapper.cc-wrapper
 			if title
@@ -9,9 +11,9 @@ mixin news(title, cl, button)
 
 			- var n = 0;
 			._grid
-				while n < 9
+				while n < count
 					+newsItem
 					-n ++;
 
 			._button-container
-				+formButton('cc-button-form_red-border', 'Больше новостей', true)
+				+formButton('cc-button-form_red-border', buttonText, button)

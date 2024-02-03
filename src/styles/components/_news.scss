@@ -6,6 +6,13 @@
 		padding-bottom: inEm(175px);
 	}
 
+	&_about & {
+
+		&__button-container {
+			margin-top: inEm(60px);
+		}
+	}
+
 	&__title-container {
 		max-width: inEm(800px);
 		margin: 0 auto inEm(60px);

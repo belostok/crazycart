@@ -1,0 +1,63 @@
+.cc-vacancies {
+	color: $black;
+
+	&_about {
+		margin-top: inEm(180px);
+	}
+	&_about & {
+
+		&__title-container {
+			max-width: inEm(1200px);
+			margin-inline: auto;
+		}
+
+		&__title {
+			color: $black;
+		}
+
+		&__grid {
+			display: flex;
+		}
+
+		&__item {
+			width: 27%;
+
+			&:not(:nth-child(-n+3)) {
+				display: none;
+			}
+		}
+	}
+
+	&__title-container {
+		margin-bottom: inEm(60px);
+	}
+
+	&__grid {
+		column-gap: inEm(40px);
+		row-gap: inEm(40px);
+	}
+
+	&__item-title {
+		font-weight: 700;
+	}
+
+	&__item-description-container {
+		margin-top: inEm(15px);
+
+		& > * {
+			font-size: inEm(15px);
+			line-height: lh(21px, 15px);
+			font-weight: 500;
+		}
+	}
+
+	&__item-description {
+		font-size: inEm(15px);
+		line-height: lh(21px, 15px);
+		font-weight: 500;
+	}
+
+	&__item-button-container {
+		margin-top: inEm(30px);
+	}
+}

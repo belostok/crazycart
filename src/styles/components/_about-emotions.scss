@@ -1,0 +1,49 @@
+.cc-about-emotions {
+	margin-top: inEm(180px);
+	color: $black;
+
+	&__title-container {
+		max-width: inEm(1180px);
+		margin: 0 auto inEm(60px);
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: inEm(70px);
+	}
+
+	&__item {
+		position: relative;
+
+		&:nth-child(1) {
+
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: inEm(-310px);
+				left: inEm(-47px);
+				width: inEm(322px);
+				height: inEm(322px);
+				background-repeat: no-repeat;
+				background-size: contain;
+				background-image: url('../images/heart.svg');
+			}
+		}
+
+		& > * {
+			font-size: inEm(22px);
+			line-height: lh(26.4px, 22px);
+			font-weight: 400;
+
+			&:not(:last-child) {
+				margin-bottom: inEm(15px, 22px);
+			}
+		}
+	}
+}

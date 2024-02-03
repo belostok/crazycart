@@ -149,3 +149,9 @@ mixin tabsNav(cl)
 					li._item(class= (index === 0 ? 'cc-tabs-nav__item_active' : ''))
 						a._link.cc-hover(href='#')= val
 
+mixin priceItem(price, descr, cl)
+	.cc-price-item(class= cl)
+		._price-container
+			span._price= price
+		._time-container
+			span._time= descr

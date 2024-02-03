@@ -16,6 +16,10 @@ export function removeClasses( container, active, prepare = '', timeout = 300 ) 
 	}
 }
 
+export const isNumeric = (n) => {
+	return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
 export function breakpoints(point, down = true) {
 	if ( !point || !isNumeric(point) ) {
 		return null;

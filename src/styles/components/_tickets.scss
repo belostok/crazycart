@@ -1,0 +1,87 @@
+.cc-tickets {
+	$root: &;
+
+	margin-top: inEm(60px);
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		column-gap: inEm(30px);
+		row-gap: inEm(30px);
+	}
+
+	&__item {
+		padding-top: inEm(60px);
+		border-top: 1px solid;
+
+		&:nth-child(odd) {
+			color: $blue;
+
+			#{$root} {
+
+				&__item-title {
+					color: $blue;
+				}
+			}
+
+			.cc-button-form {
+				border-color: $blue;
+				background: $blue;
+
+				@include mouseover {
+					background: $white;
+
+					.cc-button-form__title {
+						color: $blue;
+					}
+				}
+
+				&__title {
+					color: $white;
+				}
+			}
+		}
+
+		&:nth-child(even) {
+			color: $red;
+
+			#{$root} {
+
+				&__item-title {
+					color: $red;
+				}
+			}
+
+			.cc-button-form {
+				border-color: $red;
+				background: $red;
+
+				@include mouseover {
+					background: $white;
+
+					.cc-button-form__title {
+						color: $red;
+					}
+				}
+
+				&__title {
+					color: $white;
+				}
+			}
+		}
+	}
+
+	&__item-title-container {
+		text-align: center;
+		margin-bottom: inEm(45px);
+	}
+
+	&__prices-container {
+		column-gap: inEm(5px);
+		row-gap: inEm(5px);
+	}
+
+	&__button-container {
+		margin-top: inEm(45px);
+	}
+}

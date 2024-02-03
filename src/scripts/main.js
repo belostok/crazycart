@@ -16,6 +16,8 @@ import banquetSlider from './modules/banquet-slider.js';
 import dishSlider from './modules/dish-slider.js';
 import popup from './modules/popup.js';
 import animatorsSlider from './modules/animators-slider.js';
+import relatedSlider from './modules/related-slider.js';
+import gallerySlider from './modules/gallery-slider.js';
 
 flsFunctions.isWebp();
 
@@ -36,4 +38,6 @@ documentReady(() => {
 	banquetSlider();
 	dishSlider();
 	animatorsSlider();
+	relatedSlider();
+	gallerySlider();
 });

@@ -9,6 +9,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	transition: background $transition-duration;
 
 	@include md-down {
@@ -46,6 +47,18 @@
 	&_more {
 		width: inEm(240px);
 		height: inEm(240px);
+	}
+
+	&_about {
+		width: inEm(240px);
+		height: inEm(240px);
+	}
+	&_about & {
+
+		&__title {
+			width: inEm(158px, 18px);
+			margin-inline: auto;
+		}
 	}
 
 	&__title {

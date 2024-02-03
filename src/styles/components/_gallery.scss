@@ -1,0 +1,53 @@
+.cc-gallery {
+	margin-top: inEm(60px);
+
+	&_about {
+		margin-top: inEm(180px);
+	}
+
+	&__title-container {
+		margin-bottom: inEm(60px);
+	}
+
+	&__title {
+		color: $black;
+	}
+
+	&__grid {
+
+		@include sm-up {
+			display: block;
+			transform: none;
+			column-count: 3;
+			column-gap: inEm(20px);
+		}
+	}
+
+	&__item {
+		break-inside: avoid;
+		margin-bottom: inEm(20px);
+	}
+
+	&__image {
+		display: block;
+	}
+
+	&__nav-wrapper {
+
+		@include sm-up {
+			display: none;
+		}
+	}
+
+	&__button-container {
+		margin-top: inEm(60px);
+	}
+
+	.cc-button-form {
+		padding: inEm(32px);
+
+		&__title {
+			font-size: inEm(22px);
+		}
+	}
+}
