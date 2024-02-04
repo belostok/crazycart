@@ -19,10 +19,10 @@ import animatorsSlider from './modules/animators-slider.js';
 import relatedSlider from './modules/related-slider.js';
 import gallerySlider from './modules/gallery-slider.js';
 
-flsFunctions.isWebp();
+// flsFunctions.isWebp();
 
 documentReady(() => {
-	lazyImages();
+	// lazyImages();
 	datePicker();
 	autoComplete();
 	forms();

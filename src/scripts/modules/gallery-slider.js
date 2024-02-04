@@ -5,7 +5,7 @@ export default () => {
 	const breakpoint = 768;
 	const isMobile   = breakpoints( breakpoint );
 
-	const sliderContainers = document.querySelectorAll( '.js-cc-gallery-slider' );
+	const sliderContainers = document.querySelectorAll( '.js-cc-gallery-page-slider' );
 	if ( sliderContainers.length ) {
 		let sliders = [];
 

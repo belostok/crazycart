@@ -1,3 +1,4 @@
+import Swiper from 'swiper/bundle';
 import { insertAfter } from '../helpers/helpers.js';
 
 export default () => {
@@ -151,15 +152,6 @@ export default () => {
 			const items        = parent.querySelectorAll( '.js-cc-gallery-item' );
 			const currentIndex = [ ...parent.children ].indexOf( target ) || 0;
 
-			const currentItems = items[ currentIndex ]?.querySelectorAll( '[data-src]' );
-
-			if ( currentItems.length ) {
-				currentItems.forEach((item) => {
-					item.setAttribute( 'src', item.getAttribute( 'data-src' ) );
-					item.removeAttribute( 'data-src' );
-				});
-			}
-
 			if ( ! items.length ) {
 				return null;
 			}
@@ -168,19 +160,21 @@ export default () => {
 				const isVideo = item.querySelector( 'video' ) || item.querySelector( 'iframe' );
 
 				const slide      = document.createElement( 'div' );
-				const pagination = document.createElement( 'div' );
 				slide.classList.add( 'swiper-slide' );
-				pagination.classList.add( 'cc-gallery-modal__pagination' );
-				pagination.innerHTML = `${ i + 1 }<span class="cc-gallery-modal__pagination-total">/${ items.length }</span>`;
 				const itemClone      = item.cloneNode( true );
 				itemClone.classList  = 'cc-gallery-modal__slide-item';
 				isVideo && itemClone.classList.add( 'cc-gallery-modal__slide-item_video' );
-				const imageContainer = itemClone.querySelector( '.cc-gallery-grid__item-image-container' );
+				const imageContainer = itemClone.querySelector( '.cc-gallery__image-container' );
 				if ( imageContainer ) imageContainer.classList = 'cc-gallery-modal__image-container';
-				const caption = itemClone.querySelector( '.js-cc-gallery-item-caption' );
-				if ( caption ) caption.classList = 'cc-gallery-modal__caption';
 
-				caption.appendChild( pagination );
+				if ( i === currentIndex ) {
+					const currentImage = imageContainer.querySelector('img');
+
+					if ( currentImage && ( currentImage.getAttribute('src') !== currentImage.getAttribute( 'data-src' ) ) ) {
+						currentImage.setAttribute( 'src', currentImage.getAttribute( 'data-src' ) );
+					}
+				}
+
 				slide.appendChild( itemClone );
 				wrapper.appendChild( slide );
 			} );
@@ -198,13 +192,9 @@ export default () => {
 			}
 
 			const swiper = new Swiper( container, {
-				slidesPerView: 'auto',
-				loopedSlides: slides.length,
+				slidesPerView: 1,
+				// loopedSlides: slides.length,
 				initialSlide: currentIndex,
-				effect: 'fade',
-				fadeEffect: {
-					crossFade: true
-				},
 				navigation: {
 					nextEl: '.js-cc-gallery-modal-next',
 					prevEl: '.js-cc-gallery-modal-prev',
@@ -212,18 +202,14 @@ export default () => {
 				loop: true
 			} );
 
-			swiper.on('activeIndexChange', function () {
-				const currentSlide = swiper?.slides[swiper.activeIndex];
-				const currentItems = currentSlide?.querySelectorAll( '[data-src]' );
+			swiper.on( 'activeIndexChange', function() {
+				const currentSlide = swiper?.slides[ swiper.activeIndex ];
+				const currentImage = currentSlide.querySelector( 'img' );
 
-				if ( ! currentItems.length ) {
-					return null;
+
+				if ( currentImage && ( currentImage.getAttribute( 'src' ) !== currentImage.getAttribute( 'data-src' ) ) ) {
+					currentImage.setAttribute( 'src', currentImage.getAttribute( 'data-src' ) );
 				}
-
-				currentItems.forEach( ( item ) => {
-					item.setAttribute( 'src', item.getAttribute( 'data-src' ) );
-					item.removeAttribute( 'data-src' );
-				} );
 			} );
 		} );
 	}
