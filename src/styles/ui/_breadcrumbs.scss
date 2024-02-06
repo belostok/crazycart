@@ -30,3 +30,24 @@
 		}
 	}
 }
+
+body.cc-dark {
+
+	.cc-breadcrumbs {
+
+		&__item {
+			color: $gold;
+
+			&:not(:last-child) {
+
+				&::after {
+					background-image: url('../images/breadcrumbs-white.svg');
+				}
+			}
+		}
+
+		&__link {
+			color: $white;
+		}
+	}
+}

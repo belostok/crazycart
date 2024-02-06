@@ -1,0 +1,57 @@
+.cc-vip-limousine {
+	margin-top: inEm(180px);
+
+	&__container {
+		padding-bottom: inEm(161px);
+	}
+
+	&__title {
+		text-align: left;
+		color: $white;
+
+		span {
+			display: block;
+
+			&:nth-child(1) {
+				margin-left: inEm(268px, 110px);
+			}
+
+			&:nth-child(3) {
+				margin-left: inEm(536px, 110px);
+			}
+		}
+	}
+
+	&__description-container {
+		margin-top: inEm(90px);
+		margin-left: inEm(536px);
+		max-width: inEm(728px);
+	}
+
+	&__description {
+		font-size: inEm(60px);
+		line-height: 1em;
+		letter-spacing: -0.02em;
+		font-weight: 800;
+		text-transform: uppercase;
+		color: $gold;
+	}
+
+	&__note-container {
+		margin-top: inEm(60px);
+		margin-left: inEm(804px);
+	}
+
+	&__note {
+		font-size: inEm(22px);
+		line-height: 1.1em;
+	}
+
+	&__limousine-container {
+		width: inEm(1364px);
+		height: inEm(306px);
+		left: inEm(-580px);
+		transform: translateX(-77%);
+		bottom: 0;
+	}
+}

@@ -7,6 +7,10 @@
 		padding-bottom: inEm(155px);
 	}
 
+	&_inner {
+		padding-inline: 0;
+	}
+
 	&__title-container {
 		max-width: inEm(1006px);
 		margin-bottom: inEm(60px);
@@ -29,6 +33,14 @@
 		border-top: 1px solid $red;
 	}
 
+	&__extra-title-container {
+		margin-bottom: inEm(30px);
+	}
+
+	&__place-container {
+		margin-bottom: inEm(15px);
+	}
+
 	&__place {
 		display: block;
 		font-size: inEm(18px);
@@ -36,10 +48,6 @@
 		line-height: 0.95em;
 		font-weight: 800;
 		text-transform: uppercase;
-	}
-
-	&__address-container {
-		margin-top: inEm(15px);
 	}
 
 	&__address {

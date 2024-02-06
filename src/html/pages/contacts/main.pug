@@ -1,0 +1,35 @@
+include ../../components/contact-item
+
++breadcrumbs
+
+.cc-single-title.-big.cc-outer
+	._wrapper.cc-wrapper
+		h1._title Контакты
+
+section.cc-contacts.cc-outer
+	._wrapper.cc-wrapper
+		._select-container.js-cc-select-container.relative
+			button._select.js-cc-select
+				span._select-title.js-cc-select-title Москва
+				span._select-image.img-contain
+					<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<path d="M15.5846 10.084L13.9829 11.7C12.7056 12.9888 12.067 13.6332 11.2885 13.7324C11.0978 13.7567 10.9048 13.7567 10.7141 13.7324C9.93565 13.6332 9.29699 12.9888 8.01967 11.7L6.41797 10.084" stroke="white" stroke-width="2" stroke-linecap="round"/>
+					</svg>
+
+			ul._select-list.absolute
+				li._select-item.js-cc-select-item(data-item='msc') Mосква
+				li._select-item.js-cc-select-item(data-item='spb') Санкт-Петербург
+				li._select-item.js-cc-select-item(data-item='arh') Архангельск
+
+		._items
+			._items-group.-prepare.-active.js-cc-select-group(data-group='msc')
+				+contact-item('', 'ТРЦ АВИАПАРК', 'cc-contact-item_inner cc-contacts__item')
+				+contact-item('', 'ТРЦ САЛАРИС', 'cc-contact-item_inner cc-contacts__item')
+
+			._items-group.js-cc-select-group(data-group='spb')
+				+contact-item('', 'ТРЦ АВИАПАРК-2', 'cc-contact-item_inner cc-contacts__item')
+				+contact-item('', 'ТРЦ САЛАРИС-2', 'cc-contact-item_inner cc-contacts__item')
+				+contact-item('', 'ТРЦ САЛАРИС-3', 'cc-contact-item_inner cc-contacts__item')
+
+			._items-group.js-cc-select-group(data-group='arh')
+				+contact-item('', 'ТРЦ АВИАПАРК-3', 'cc-contact-item_inner cc-contacts__item')

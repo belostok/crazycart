@@ -28,6 +28,21 @@
 		}
 	}
 
+	&_page {
+		margin-top: inEm(60px);
+	}
+	&_page & {
+
+		&__grid {
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		&__item-title-container {
+			max-width: inEm(537px);
+		}
+	}
+
 	&__title-container {
 		margin-bottom: inEm(60px);
 	}
@@ -48,6 +63,12 @@
 			font-size: inEm(15px);
 			line-height: lh(21px, 15px);
 			font-weight: 500;
+		}
+
+		ul, ol {
+			list-style-type: disc;
+			list-style-position: inside;
+			padding-left: 0;
 		}
 	}
 

@@ -25,6 +25,11 @@ body {
 	overflow-x: hidden;
 	display: flex;
 	flex-direction: column;
+
+	&.cc-dark {
+		background: $black;
+		color: $white;
+	}
 }
 
 .cc-main {

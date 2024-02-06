@@ -1,11 +1,9 @@
 mixin vacancies(title, cl, button, count)
 	section.cc-vacancies.cc-outer(class= cl)
 		._wrapper.cc-wrapper
-			._title-container
-				if button
+			if button
+				._title-container
 					h2._title.cc-heading-2= title
-				else
-					h1._title= title
 
 			._content-container.flex.aic.jcspb
 				- var n = 0;
@@ -16,6 +14,10 @@ mixin vacancies(title, cl, button, count)
 								h3._item-title.cc-heading-6 вакансия
 							._item-description-container.fg1
 								p Лидерство в продажах масштабирует культурный отраслевой стандарт, не считаясь с затратами. Спонсорство непосредственно допускает формирование имиджа. Согласно предыдущему, информационная связь с потребителем интегрирована.
+								ul
+									li ст. м. Дубровка, ТРЦ Мозайка
+									li ст. м. Алтуфьево, ТРЦ Весна
+									li ст. м. Саларьево, ТРЦ Саларис
 							._item-button-container
 								+ctaButton('cc-button-cta_news', 'откликнуться')
 						- n ++;

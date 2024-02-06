@@ -13,6 +13,40 @@
 		border-radius: 0 0 inEmMob(20px) inEmMob(20px);
 	}
 
+	&_dark {
+		background: $dark;
+		border-bottom: 1px solid $gold;
+
+		.cc-city-picker {
+
+			&__button {
+				background: $gold;
+			}
+		}
+
+		.cc-button-cta {
+			background: $gold;
+
+			@include mouseover {
+				background: $white;
+
+				.cc-button-cta__title {
+					color: $gold;
+				}
+			}
+
+			&__title {
+				color: $white;
+			}
+		}
+	}
+	&_dark & {
+
+		&__submenu {
+			background: $dark;
+		}
+	}
+
 	&__wrapper {
 		width: 100%;
 		max-width: calc($base-container-width - $paddings);

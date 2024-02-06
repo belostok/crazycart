@@ -156,13 +156,13 @@
 .cc-desktop {
 
 	@include md-down {
-		display: none;
+		display: none !important;
 	}
 }
 
 .cc-mobile {
 
 	@include md-up {
-		display: none;
+		display: none !important;
 	}
 }

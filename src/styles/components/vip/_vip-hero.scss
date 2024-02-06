@@ -1,0 +1,27 @@
+.cc-vip-hero {
+
+	&__container {
+		margin-top: inEm(56px);
+		opacity: 0;
+		transform: translateY(10%);
+	}
+
+	&__title-container {
+		width: inEm(1209px);
+		height: inEm(588px);
+	}
+
+	&__crown-container {
+		top: inEm(247px);
+		left: inEm(22px);
+		width: inEm(330px);
+		height: inEm(330px);
+	}
+
+	&__trophy-container {
+		top: inEm(-59px);
+		right: inEm(-23px);
+		width: inEm(610px);
+		height: inEm(610px);
+	}
+}

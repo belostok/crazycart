@@ -32,6 +32,24 @@
 		}
 	}
 
+	&_about & {
+
+		&__title {
+			font-size: inEm(110px);
+			line-height: lh(104.5px, 110px);
+			letter-spacing: -0.025em;
+			color: $red;
+		}
+
+		&__items {
+			margin-top: inEm(50px);
+		}
+
+		&__item {
+			border: 1px solid #04062D;
+		}
+	}
+
 	&_promo {
 		padding-top: inEm(60px);
 		padding-bottom: inEm(175px);
@@ -240,5 +258,9 @@
 
 	&__item-button {
 		margin-top: inEmMob(10px);
+	}
+
+	&__button-container {
+		margin-top: inEm(20px);
 	}
 }

@@ -1,0 +1,23 @@
+include ../data/config.pug
+include ../components/mixins
+include ../components/parts
+
+block variables
+
+doctype html
+html(lang='ru')
+	head
+		include ../parts/head.pug
+
+	body(class=bodyClass)
+		block header
+			include ../parts/dark/header.pug
+
+		main.cc-main(class=mainClass)
+			block content
+
+		block footer
+			include ../parts/dark/footer.pug
+
+		block scripts
+			script(src='js/main.js?v=' + siteVersion)

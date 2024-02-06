@@ -1,5 +1,4 @@
 mixin contact-item(title, itemTitle, cl)
-	- title = title || 'Контакты парка'
 	.cc-contact-item.cc-outer(class= cl)
 		._wrapper.cc-wrapper
 			if title
@@ -8,9 +7,13 @@ mixin contact-item(title, itemTitle, cl)
 
 			._grid
 				._contacts-container
+					if itemTitle
+						._extra-title-container
+							h3._extra-title.cc-heading-5= itemTitle
 					._item
-						._place-container
-							span._place ТРЦ АВИАПАРК
+						if !itemTitle
+							._place-container
+								span._place ТРЦ АВИАПАРК
 						._address-container
 							span._address ул. Ходынский бульвар, д.4, метро ЦСКА
 

@@ -18,11 +18,16 @@ import popup from './modules/popup.js';
 import animatorsSlider from './modules/animators-slider.js';
 import relatedSlider from './modules/related-slider.js';
 import gallerySlider from './modules/gallery-slider.js';
+import contacts from './modules/contacts.js';
+import animations from './modules/animations.js';
 
 // flsFunctions.isWebp();
 
 documentReady(() => {
 	// lazyImages();
+
+	animations();
+
 	datePicker();
 	autoComplete();
 	forms();
@@ -40,4 +45,5 @@ documentReady(() => {
 	animatorsSlider();
 	relatedSlider();
 	gallerySlider();
+	contacts();
 });
