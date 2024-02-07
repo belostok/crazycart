@@ -33,4 +33,28 @@ export default () => {
 			gsap.to( '.js-cc-vip-limousine', { transform: 'translateX(0)', duration: 1.5, ease: 'power2.out' } );
 		}
 	} );
+
+	// VIP Photo Zone
+	gsap.to( '.js-cc-vip-photo-zone', {
+		xPercent: -100, // Adjust this value to control the parallax effect
+		ease: 'none',
+		scrollTrigger: {
+			trigger: '.js-cc-vip-photo-zone-container',
+			start: 'top bottom',
+			end: 'bottom top',
+			scrub: true // Smooth scrolling effect
+		}
+	} );
+
+	// VIP Video Photo
+	gsap.to( '.js-cc-vip-video-photo', {
+		transform: 'translateX(0)',
+		ease: 'none',
+		scrollTrigger: {
+			trigger: '.js-cc-vip-video-photo-container',
+			start: 'top bottom',
+			end: 'bottom 80%',
+			scrub: true // Smooth scrolling effect
+		}
+	} );
 }

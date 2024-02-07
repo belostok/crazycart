@@ -1,0 +1,52 @@
+.cc-vip-video-photo {
+	$root: &;
+
+	margin-top: inEm(480px);
+
+	&__container {
+		height: inEm(538px);
+	}
+
+	&__side {
+		top: 0;
+		bottom: 0;
+		width: max-content;
+		display: flex;
+
+		&_video {
+			left: 0;
+
+			#{$root} {
+
+				&__image-container {
+					width: inEm(410px);
+					height: inEm(410px);
+					top: inEm(14px);
+					right: inEm(23px);
+					transform: translateX(-67%);
+				}
+			}
+		}
+
+		&_photo {
+			right: 0;
+			align-items: flex-end;
+
+			#{$root} {
+
+				&__image-container {
+					width: inEm(504px);
+					height: inEm(504px);
+					left: inEm(-50px);
+					bottom: inEm(-25px);
+					transform: translateX(52%);
+				}
+			}
+		}
+	}
+
+	&__title {
+		text-align: left;
+		color: $white;
+	}
+}

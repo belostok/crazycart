@@ -1,0 +1,18 @@
+.cc-vip-photo-zone {
+	margin-top: inEm(360px);
+
+	&__container {
+		padding-top: inEm(203px);
+	}
+
+	&__title {
+		color: $white;
+	}
+
+	&__image-container {
+		width: inEm(340px);
+		height: inEm(337px);
+		top: 0;
+		left: inEm(650px);
+	}
+}
