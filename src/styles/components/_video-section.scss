@@ -38,6 +38,32 @@
 		padding-top: 0;
 	}
 
+	&_vip & {
+
+		&__title-container {
+			max-width: inEm(1087px);
+			margin-inline: auto;
+		}
+
+		&__title {
+			color: $white;
+		}
+
+		&__button {
+
+			@include mouseover {
+				background: $gold;
+			}
+
+			svg {
+
+				path {
+					stroke: $gold;
+				}
+			}
+		}
+	}
+
 	&__title-container {
 		position: relative;
 		margin-bottom: inEm(60px);

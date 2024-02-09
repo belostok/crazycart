@@ -1,4 +1,19 @@
 .cc-parallax-main-container {
+	position: relative;
+
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 15%;
+		bottom: 0;
+		left: -100%;
+		right: -100%;
+		transform: rotate(-20deg);
+		background: linear-gradient(to bottom, rgba(#1B1918, 0) 0%, #C3961E 50%, #1B1918 100%) no-repeat;
+		background-size: 100% 90%;
+		background-position-y: 10%;
+	}
 
 	&__ball {
 

@@ -1,6 +1,24 @@
 .cc-vip-disco {
 	margin-top: inEm(290px);
 
+	&__wrapper {
+		position: relative;
+
+		&::before {
+			content: '';
+			position: absolute;
+			z-index: -2;
+			top: -45%;
+			bottom: -78%;
+			left: -200%;
+			right: -200%;
+			transform: rotate(-20deg);
+			background: linear-gradient(to bottom, rgba(#1B1918, 0) 0%, #C3961E 50%, #1B1918 100%) no-repeat;
+			background-size: 100% 90%;
+			background-position-y: 10%;
+		}
+	}
+
 	&__title-container {
 
 		&::after {
