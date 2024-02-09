@@ -1,4 +1,4 @@
-mixin eventsExtra(cl, image)
+mixin eventsExtra(cl, image, isVip)
 	- image = image || '../images/rocket.svg'
 	section.cc-events-extra.cc-outer(class= cl)
 		._wrapper.cc-wrapper.relative
@@ -6,9 +6,15 @@ mixin eventsExtra(cl, image)
 				img._image(src= image, alt='#', loading='lazy')
 
 			._title-container
-				h2._title.cc-heading-2 Дополнительно
-					span для вашего
-					span праздника
+				if isVip
+					h2._title.cc-heading-2 Дополнения
+						span к вашему
+						span празднику
+				else
+					h2._title.cc-heading-2 Дополнительно
+						span для вашего
+						span праздника
 
-			._description-container
-				p._description В дополнение можно заказать ведущего, диджея, кенди-бар, бьюти-бар с аквагримом, чтобы праздник стал еще ярче.
+			if !isVip
+				._description-container
+					p._description В дополнение можно заказать ведущего, диджея, кенди-бар, бьюти-бар с аквагримом, чтобы праздник стал еще ярче.

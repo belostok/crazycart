@@ -1,0 +1,65 @@
+.cc-vip-disco {
+	margin-top: inEm(290px);
+
+	&__title-container {
+
+		&::after {
+			content: '';
+			position: absolute;
+			top: inEm(-87px);
+			right: inEm(-15.5px);
+			width: inEm(312.5px);
+			height: inEm(287px);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url('../images/notes.png');
+		}
+	}
+
+	&__headphones {
+		top: inEm(-100px);
+		left: inEm(-44px);
+		width: inEm(402px);
+		height: inEm(402px);
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			top: 0;
+			bottom: 0;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&::before {
+			left: 0;
+			width: inEm(221px);
+			background-image: url('../images/headphones-left.png');
+		}
+
+		&::after {
+			z-index: -1;
+			right: 0;
+			width: inEm(181px);
+			background-image: url('../images/headphones-right.png');
+		}
+	}
+
+	&__title {
+		text-align: center;
+		color: $white;
+	}
+
+	&__image-container {
+		margin-top: inEm(60px);
+		border-radius: inEm(20px);
+		overflow: hidden;
+	}
+
+	&__image {
+		display: block;
+		width: 100%;
+		height: auto;
+	}
+}

@@ -20,11 +20,12 @@ import relatedSlider from './modules/related-slider.js';
 import gallerySlider from './modules/gallery-slider.js';
 import contacts from './modules/contacts.js';
 import animations from './modules/animations.js';
+import vipShowSlider from './modules/vip-show-slider.js';
 
-// flsFunctions.isWebp();
+flsFunctions.isWebp();
 
 documentReady(() => {
-	// lazyImages();
+	lazyImages();
 
 	animations();
 
@@ -36,6 +37,7 @@ documentReady(() => {
 	faq();
 	shows();
 	popup();
+	contacts();
 	heroSlider();
 	emotionsSlider();
 	feedbackSlider();
@@ -45,5 +47,5 @@ documentReady(() => {
 	animatorsSlider();
 	relatedSlider();
 	gallerySlider();
-	contacts();
+	vipShowSlider();
 });

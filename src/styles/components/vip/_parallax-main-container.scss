@@ -1,0 +1,89 @@
+.cc-parallax-main-container {
+
+	&__ball {
+
+		&_i1 {
+			z-index: 1;
+			width: inEm(168px);
+			height: inEm(168px);
+			top: 22.6%;
+			left: inEm(193px);
+		}
+
+		&_i2 {
+			z-index: 1;
+			width: inEm(119px);
+			height: inEm(119px);
+			top: 37.7%;
+			left: inEm(54px);
+		}
+
+		&_i3 {
+			width: inEm(94px);
+			height: inEm(94px);
+			top: 39.3%;
+			left: inEm(547px);
+			filter: blur(inEm(5px));
+		}
+
+		&_i4 {
+			width: inEm(180px);
+			height: inEm(180px);
+			top: 43.1%;
+			right: inEm(-20px);
+			filter: blur(inEm(5px));
+		}
+
+		&_i5 {
+			z-index: 1;
+			width: inEm(419px);
+			height: inEm(419px);
+			top: 54.6%;
+			left: inEm(-164px);
+			filter: blur(inEm(13px));
+		}
+
+		&_i6 {
+			z-index: 1;
+			width: inEm(63px);
+			height: inEm(63px);
+			top: 55.3%;
+			right: inEm(467px);
+		}
+
+		&_i7 {
+			width: inEm(38px);
+			height: inEm(38px);
+			top: 64.9%;
+			right: inEm(610px);
+			filter: blur(inEm(3px));
+		}
+	}
+
+	&__heart {
+
+		&_i1 {
+			z-index: 1;
+			width: inEm(78px);
+			height: inEm(78px);
+			top: 37.4%;
+			right: inEm(287px);
+		}
+
+		&_i2 {
+			z-index: 1;
+			width: inEm(78px);
+			height: inEm(78px);
+			top: 58.7%;
+			left: inEm(268px);
+		}
+
+		&_i3 {
+			z-index: 1;
+			width: inEm(210px);
+			height: inEm(210px);
+			top: 62.5%;
+			right: inEm(38px);
+		}
+	}
+}

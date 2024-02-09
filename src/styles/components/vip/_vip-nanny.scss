@@ -1,0 +1,51 @@
+.cc-vip-nanny {
+	margin-top: inEm(160px);
+
+	&__container {
+		column-gap: inEm(40px);
+	}
+
+	&__image-container {
+		flex-shrink: 0;
+		width: inEm(496px);
+		height: inEm(640px);
+		border-radius: inEm(20px);
+		overflow: hidden;
+	}
+
+	&__title-container {
+		position: relative;
+		padding-block: inEm(50px);
+
+		&::before,
+		&::after {
+			content: '';
+			position: absolute;
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		&::before {
+			width: inEm(319px);
+			height: inEm(319px);
+			top: inEm(-160px);
+			left: inEm(-90px);
+			background-image: url('../images/nanny-dec-1.png');
+		}
+
+		&::after {
+			z-index: -1;
+			width: inEm(235px);
+			height: inEm(162px);
+			top: inEm(149px);
+			right: inEm(-3px);
+			background-image: url('../images/nanny-dec-2.png');
+		}
+	}
+
+	&__title {
+		position: relative;
+		text-align: left;
+		color: $white;
+	}
+}

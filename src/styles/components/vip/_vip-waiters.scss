@@ -1,0 +1,23 @@
+.cc-vip-waiters {
+	margin-top: inEm(180px);
+
+	&__title-container {
+		max-width: inEm(800px);
+	}
+
+	&__title {
+		text-align: left;
+		color: $white;
+	}
+
+	&__image-container {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: inEm(-32px);
+	}
+
+	&__image {
+		width: inEm(809px);
+		height: auto;
+	}
+}

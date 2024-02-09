@@ -57,4 +57,37 @@ export default () => {
 			scrub: true // Smooth scrolling effect
 		}
 	} );
+
+	const mainParallaxContainers = document.querySelectorAll('.js-cc-parallax-main-container');
+
+	if ( mainParallaxContainers.length ) {
+		mainParallaxContainers.forEach((container) => {
+			const items = container.querySelectorAll('.js-cc-parallax-main-item');
+
+			if ( ! items.length ) {
+				return null;
+			}
+
+			items.forEach((item) => {
+				const data = item.getAttribute('data-range');
+
+				if ( ! data ) {
+					return null;
+				}
+
+				item.style.transform = `translateY(${data / 2}%)`;
+
+				gsap.to( item, {
+					yPercent: `-${data}`, // Adjust this value to control the parallax effect
+					ease: 'none',
+					scrollTrigger: {
+						trigger: container,
+						start: 'top bottom',
+						end: 'bottom top',
+						scrub: true // Smooth scrolling effect
+					}
+				} );
+			} );
+		});
+	}
 }

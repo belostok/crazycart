@@ -1,0 +1,60 @@
+.cc-vip-rooms {
+	$root: &;
+
+	margin-top: inEm(180px);
+
+	&__title {
+		color: $white;
+	}
+
+	&__container {
+		margin-top: inEm(90px);
+	}
+
+	&__item {
+		column-gap: inEm(40px);
+
+		&:not(:first-child) {
+			margin-top: inEm(-140px);
+		}
+
+		&:nth-child(even) {
+
+			#{$root} {
+
+				&__image-container {
+					order: 1;
+				}
+
+				&__item-title-container {
+					text-align: right;
+					align-items: flex-end;
+					padding-top: inEm(173px);
+					padding-bottom: inEm(33px);
+				}
+			}
+		}
+	}
+
+	&__image-container {
+		flex-shrink: 0;
+		width: inEm(720px);
+		height: inEm(427px);
+		border-radius: inEm(20px);
+		overflow: hidden;
+	}
+
+	&__item-title-container {
+		word-spacing: 100vw;
+		padding-top: inEm(24px);
+		padding-bottom: inEm(173px);
+	}
+
+	&__item-title {
+		font-size: inEm(60px);
+		line-height: 1em;
+		letter-spacing: -0.02em;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+}

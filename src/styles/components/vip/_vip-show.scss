@@ -1,3 +1,66 @@
 .cc-vip-show {
+	$root: &;
+
 	margin-top: inEm(180px);
+
+	&__title-wrapper {
+		column-gap: inEm(47px);
+	}
+
+	&__title-container {
+		flex-shrink: 0;
+		width: inEm(760px);
+	}
+
+	&__title {
+		text-align: left;
+		color: $white;
+	}
+
+	&__pagination-container {
+		column-gap: inEm(10px);
+		row-gap: inEm(10px);
+	}
+
+	&__pagination-item {
+		border-radius: inEm(20px);
+		padding: inEm(6px) inEm(12px);
+		border: 1px solid $white;
+		transition: background $transition-duration;
+
+		&_active {
+			pointer-events: none;
+			background: $white;
+
+			#{$root} {
+
+				&__pagination-title {
+					color: $black;
+				}
+			}
+		}
+	}
+
+	&__pagination-title {
+		pointer-events: none;
+		display: block;
+		color: $white;
+		font-size: inEm(22px);
+		line-height: 1.1em;
+		transition: color $transition-duration;
+	}
+
+	&__slider {
+		margin-top: inEm(60px);
+		overflow: hidden;
+	}
+
+	&__image-container {
+		border-radius: inEm(20px);
+		overflow: hidden;
+	}
+
+	&__image {
+		display: block;
+	}
 }

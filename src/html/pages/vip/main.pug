@@ -1,3 +1,5 @@
+include ../../components/events-extra
+
 +breadcrumbs
 
 section.cc-vip-hero.cc-outer
@@ -27,39 +29,160 @@ section.cc-vip-limousine.cc-outer
 			._limousine-container.absolute.img-contain.js-cc-vip-limousine
 				img._limousine(src='../images/limousine.png', alt='#', loading='lazy')
 
-.cc-parallax-main-container.js-cc-parallax-main-container
+.cc-parallax-main-container.cc-outer.js-cc-parallax-main-container
+	._wrapper.cc-wrapper.relative
+		img._ball.-i1.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='300')
+		img._ball.-i2.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='300')
+		img._ball.-i3.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='200')
+		img._ball.-i4.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='500')
+		img._ball.-i5.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='300')
+		img._ball.-i6.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='200')
+		img._ball.-i7.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='400')
 
-	section.cc-vip-animation-programs.cc-outer
-		._wrapper.cc-wrapper
-			._title-container
-				h2._title.cc-heading-2 Две анимационные программы
-			._content.flex.jcspb
-				._note-container
-					span._note Аниматор и ростовая кукла
-				._image-container.img-contain.relative
-					img._image(src='../images/vip-animations.png', alt='#', loading='lazy')
+		img._heart.-i1.absolute.js-cc-parallax-main-item(src='../images/vip-heart.png', alt='#', loading='lazy', data-range='400')
+		img._heart.-i2.absolute.js-cc-parallax-main-item(src='../images/vip-heart.png', alt='#', loading='lazy', data-range='200')
+		img._heart.-i3.absolute.js-cc-parallax-main-item(src='../images/vip-heart.png', alt='#', loading='lazy', data-range='200')
 
-	section.cc-vip-photo-zone.cc-outer
-		._wrapper.cc-wrapper
-			._container.relative.js-cc-vip-photo-zone-container
-				._image-container.absolute.img-contain.js-cc-vip-photo-zone
-					img._image(src='../images/vip-photo-zone.png', alt='#', loading='lazy')
-				._title-container.relative
-					h2._title.cc-heading-2 Организация фотозоны
+		section.cc-vip-animation-programs
+			._wrapper
+				._title-container
+					h2._title.cc-heading-2 Две анимационные программы
+				._content.flex.jcspb
+					._note-container
+						span._note Аниматор и ростовая кукла
+					._image-container.img-contain.relative
+						img._image(src='../images/vip-animations.png', alt='#', loading='lazy')
 
-	section.cc-vip-video-photo.cc-outer
-		._wrapper.cc-wrapper
-			._container.relative.flex.js-cc-vip-video-photo-container
-				._side.-video.absolute
-					._title-container
-						h2._title.cc-heading-2 видеограф
-					._image-container.img-contain.absolute.js-cc-vip-video-photo
-						img._image(src='../images/camera.png', alt='#', loading='lazy')
-				._side.-photo.absolute
-					._title-container
-						h2._title.cc-heading-2 Фотограф
-					._image-container.img-contain.absolute.js-cc-vip-video-photo
-						img._image(src='../images/photo.png', alt='#', loading='lazy')
+		section.cc-vip-photo-zone
+			._wrapper
+				._container.relative.js-cc-vip-photo-zone-container
+					._image-container.absolute.img-contain.js-cc-vip-photo-zone
+						img._image(src='../images/vip-photo-zone.png', alt='#', loading='lazy')
+					._title-container.relative
+						h2._title.cc-heading-2 Организация фотозоны
+
+		section.cc-vip-video-photo
+			._wrapper
+				._container.relative.flex.js-cc-vip-video-photo-container
+					._side.-video.absolute
+						._title-container
+							h2._title.cc-heading-2 видеограф
+						._image-container.img-contain.absolute.js-cc-vip-video-photo
+							img._image(src='../images/camera.png', alt='#', loading='lazy')
+					._side.-photo.absolute
+						._title-container
+							h2._title.cc-heading-2 Фотограф
+						._image-container.img-contain.absolute.js-cc-vip-video-photo
+							img._image(src='../images/photo.png', alt='#', loading='lazy')
 
 section.cc-vip-show.cc-outer
+	._wrapper.cc-wrapper.js-cc-vip-show
+		._title-wrapper.flex
+			._title-container
+				h2._title.cc-heading-2 Любое шоу на выбор
+			._pagination-container.flex.fwrap.jcfe
+				button._pagination-item.-active.js-cc-vip-show-pagination-item
+					span._pagination-title Химическое шоу
+				button._pagination-item.js-cc-vip-show-pagination-item
+					span._pagination-title Шоу с жидким азотом
+				button._pagination-item.js-cc-vip-show-pagination-item
+					span._pagination-title Научная магия
+				button._pagination-item.js-cc-vip-show-pagination-item
+					span._pagination-title Крио-шоу
+				button._pagination-item.js-cc-vip-show-pagination-item
+					span._pagination-title Невероятная физика и химия
+				button._pagination-item.js-cc-vip-show-pagination-item
+					span._pagination-title Тесла шоу
+				button._pagination-item.js-cc-vip-show-pagination-item
+					span._pagination-title Крио-мороженое
+				button._pagination-item.js-cc-vip-show-pagination-item
+					span._pagination-title Для самых маленьких
+				button._pagination-item.js-cc-vip-show-pagination-item
+					span._pagination-title Шоу для взрослых
+				button._pagination-item.js-cc-vip-show-pagination-item
+					span._pagination-title Мастер-классы
+
+		- var n = 0;
+		._slider.js-cc-vip-show-slider
+			._slider-wrapper.swiper-wrapper
+				while n < 10
+					._slide.swiper-slide
+						._image-container
+							img._image(src='../images/vip-show.jpg', alt='#', loading='lazy')
+					-n ++;
+
+section.cc-vip-rooms.cc-outer
 	._wrapper.cc-wrapper
+		._title-container
+			h2._title.cc-heading-2 Раздельные банкетные комнаты
+		._container
+			._item.flex
+				._image-container.img-cover
+					img._image(src='../images/vip-room-1.jpg', alt='#', loading='lazy')
+				._item-title-container.fg1.flex
+					h3._item-title для детей
+			._item.flex
+				._image-container.img-cover
+					img._image(src='../images/vip-room-2.jpg', alt='#', loading='lazy')
+				._item-title-container.fg1.flex
+					h3._item-title для родителей
+
+section.cc-vip-waiters.cc-outer
+	._wrapper.cc-wrapper
+		._title-container
+			h2._title.cc-heading-2 Личные официанты и кейтеринг
+		._image-container
+			img._image(src='../images/waiters.png', alt='#', loading='lazy')
+
+section.cc-vip-nanny.cc-outer
+	._wrapper.cc-wrapper
+		._container.flex.aife
+			._image-container.img-cover
+				img._image(src='../images/nanny.jpg', alt='#', loading='lazy')
+			._title-container
+				h2._title.cc-heading-2 Няня для самых маленьких
+
+section.cc-vip-disco.cc-outer.js-cc-parallax-main-container
+	._wrapper.cc-wrapper
+		._title-container.relative
+			._headphones.absolute
+			h2._title.cc-heading-1 Бумажная дискотека или мюзикл в стиле Дисней
+		._image-container
+			img._image(src='../images/vip-disco.jpg', alt='#', loading='lazy')
+
++eventsExtra('cc-events-extra_vip', '../images/rocket-vip.png', true)
+
+section.cc-vip-prices.cc-outer
+	._wrapper.cc-wrapper
+		._item.flex
+			._text-container
+				._title-container
+					h3._title Безлимит на аттракционы и полностью закрытый от других клиентов картинг
+				ul._list
+					li._list-item Банкетные комнаты
+					li._list-item Призовой тир
+					li._list-item Игровые аппараты
+					li._list-item Незабываемые гонки
+					li._list-item Виртуальная реальность
+
+			._prices-container
+				._prices-title-container
+					h3._prices-title Стоимость
+				._prices.flex.fwrap
+					+priceItem('50 000 ₽/ч', '// Будни')
+					+priceItem('100 000 ₽/ч', '// Выходные', 'cc-price-item_gold')
+				._note-container
+					span._note [ *еда не входит в стоимость ]
+
+		._item.flex
+			._text-container
+				._title-container
+					h3._title Индивидуальный диджей и сладкий бар
+				._description-container
+					p._description В дополнение можно заказать ведущего, диджея, кенди-бар, бьюти-бар с аквагримом, чтобы праздник стал еще ярче
+
+			._prices-container
+				._prices-title-container
+					h3._prices-title Стоимость
+				._single-container
+					span._single Цена рассчитывается индивидуально

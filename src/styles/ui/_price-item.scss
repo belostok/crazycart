@@ -11,6 +11,11 @@
 		color: $blue;
 	}
 
+	&_gold {
+		border-color: $gold;
+		background: $gold;
+	}
+
 	span {
 		display: block;
 	}

@@ -16,6 +16,21 @@
 		}
 	}
 
+	&_vip & {
+
+		&__title {
+			color: $white;
+		}
+
+		&__image-container {
+			bottom: inEm(-252px);
+		}
+
+		&__description-container {
+			display: none;
+		}
+	}
+
 	&__title {
 		color: $black;
 		text-align: left;
