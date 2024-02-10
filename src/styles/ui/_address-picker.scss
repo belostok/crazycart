@@ -1,5 +1,19 @@
 .cc-address-picker {
 
+	&.cc-dropdown-active & {
+
+		&__arrow-container {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__button {
+
+		span {
+			pointer-events: none;
+		}
+	}
+
 	&__title {
 		font-size: inEm(14px);
 		line-height: 1em;
@@ -8,6 +22,7 @@
 
 	&__arrow-container {
 		margin-left: inEm(3px);
+		transition: transform $transition-duration;
 
 		svg {
 			transition: transform $transition-duration;

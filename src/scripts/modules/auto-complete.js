@@ -37,7 +37,7 @@ export default () => {
 						list.prepend( message );
 					}
 				},
-				noResults: true,
+				noResults: true
 			},
 			trigger: ( query ) => {
 				return true

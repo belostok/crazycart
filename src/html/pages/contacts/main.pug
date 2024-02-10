@@ -16,10 +16,12 @@ section.cc-contacts.cc-outer
 					<path d="M15.5846 10.084L13.9829 11.7C12.7056 12.9888 12.067 13.6332 11.2885 13.7324C11.0978 13.7567 10.9048 13.7567 10.7141 13.7324C9.93565 13.6332 9.29699 12.9888 8.01967 11.7L6.41797 10.084" stroke="white" stroke-width="2" stroke-linecap="round"/>
 					</svg>
 
-			ul._select-list.absolute
-				li._select-item.js-cc-select-item(data-item='msc') Mосква
-				li._select-item.js-cc-select-item(data-item='spb') Санкт-Петербург
-				li._select-item.js-cc-select-item(data-item='arh') Архангельск
+			._select-list-container.absolute
+				._select-list-wrapper
+					ul._select-list
+						li._select-item.-active.js-cc-select-item(data-item='msc') Mосква
+						li._select-item.js-cc-select-item(data-item='spb') Санкт-Петербург
+						li._select-item.js-cc-select-item(data-item='arh') Архангельск
 
 		._items
 			._items-group.-prepare.-active.js-cc-select-group(data-group='msc')

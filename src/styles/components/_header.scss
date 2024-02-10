@@ -39,6 +39,10 @@
 				color: $white;
 			}
 		}
+
+		.cc-dropdown__list-button_active {
+			background: $gold;
+		}
 	}
 	&_dark & {
 

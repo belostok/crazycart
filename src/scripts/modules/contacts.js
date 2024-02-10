@@ -1,11 +1,13 @@
 export default () => {
 	const container         = document.querySelector( '.js-cc-select-container' );
+	const items = container?.querySelectorAll('.js-cc-select-item');
 	const groups = document.querySelectorAll('.js-cc-select-group');
 	const containerActiveCl = 'cc-contacts__select-container_active';
 	const groupPrepareCl = 'cc-contacts__items-group_prepare';
 	const groupActiveCl = 'cc-contacts__items-group_active';
+	const itemActiveCl = 'cc-contacts__select-item_active';
 
-	if ( ! container || ! groups.length ) {
+	if ( ! container || ! groups.length || ! items || ! items.length ) {
 		return null;
 	}
 
@@ -34,13 +36,14 @@ export default () => {
 					setTimeout(() => group.classList.add(groupActiveCl), 0);
 				}
 			});
+
+			items.forEach((item) => item.classList.remove(itemActiveCl));
+			target.classList.add(itemActiveCl);
 		}
 
 		container.classList.remove( containerActiveCl );
 	}
 
 	document.addEventListener( 'click', selectHandler );
-	window.addEventListener( 'scroll', () => container.classList.remove( containerActiveCl ) );
-
-
+	// window.addEventListener( 'scroll', () => container.classList.remove( containerActiveCl ) );
 }

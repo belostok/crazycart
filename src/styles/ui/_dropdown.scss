@@ -1,0 +1,73 @@
+.cc-dropdown {
+	z-index: 1;
+	visibility: hidden;
+	opacity: 0;
+	background: $white;
+	position: absolute;
+	top: calc(100% + #{inEm(10px)});
+	left: 0;
+	min-width: inEm(350px);
+	width: max-content;
+	border-radius: inEm(20px);
+	box-shadow: 0 inEm(7px) inEm(22px) 0 #00000066;
+	padding: inEm(20px) inEm(5px) inEm(20px) 0;
+	transition: opacity $transition-duration;
+
+	&_active {
+		visibility: visible;
+		opacity: 1;
+	}
+
+	&_addresses {
+		top: calc(100% + #{inEm(14px)});
+	}
+
+	&__list-wrapper {
+		padding-left: inEm(20px);
+		padding-right: inEm(15px);
+		max-height: 70dvh;
+		overflow-y: auto;
+		scroll-behavior: smooth;
+		scrollbar-color: $red transparent;
+		scrollbar-width: thin;
+
+		&::-webkit-scrollbar {
+			width: inEm(5px);
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $red;
+			border-radius: inEm(50px);
+		}
+	}
+
+	&__list {
+		display: flex;
+		flex-direction: column;
+		row-gap: inEm(10px);
+		height: max-content;
+	}
+
+	&__list-button {
+		font-size: inEm(16px);
+		line-height: 1em;
+		font-weight: 700;
+		color: $black;
+		text-transform: uppercase;
+		width: 100%;
+		text-align: left;
+		padding: inEm(17px, 16px) inEm(20px, 16px);
+		border-radius: inEm(40px, 16px);
+		transition: background $transition-duration, color $transition-duration;
+
+		&_active {
+			pointer-events: none;
+			background: $red;
+			color: $white;
+		}
+	}
+}

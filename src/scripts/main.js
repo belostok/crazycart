@@ -21,6 +21,7 @@ import gallerySlider from './modules/gallery-slider.js';
 import contacts from './modules/contacts.js';
 import animations from './modules/animations.js';
 import vipShowSlider from './modules/vip-show-slider.js';
+import dropdown from './modules/dropdown.js';
 
 flsFunctions.isWebp();
 
@@ -38,6 +39,7 @@ documentReady(() => {
 	shows();
 	popup();
 	contacts();
+	dropdown();
 	heroSlider();
 	emotionsSlider();
 	feedbackSlider();

@@ -95,7 +95,7 @@ export default () => {
 	const discoContainer = document.querySelector('.js-cc-parallax-disco-container');
 	const discoItems = discoContainer?.querySelectorAll( '.js-cc-parallax-main-item' );
 
-	if ( ! discoItems.length ) {
+	if ( ! discoItems || ! discoItems.length ) {
 		return null;
 	}
 
