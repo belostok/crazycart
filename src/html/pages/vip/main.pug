@@ -1,5 +1,6 @@
 include ../../components/events-extra
 include ../../components/video-section
+include ../../components/red-form
 
 +breadcrumbs
 
@@ -143,12 +144,22 @@ section.cc-vip-nanny.cc-outer
 			._title-container
 				h2._title.cc-heading-2 Няня для самых маленьких
 
-section.cc-vip-disco.cc-outer.js-cc-parallax-main-container
-	._wrapper.cc-wrapper
+section.cc-vip-disco.cc-outer.js-cc-parallax-disco-container
+	._wrapper.cc-wrapper.relative
+
+		img._ball.-i1.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='200')
+		img._ball.-i2.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='50')
+		img._ball.-i3.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='400')
+		img._ball.-i4.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='100')
+		img._ball.-i5.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='200')
+		img._ball.-i6.absolute.js-cc-parallax-main-item(src='../images/vip-ball.png', alt='#', loading='lazy', data-range='400')
+
 		._title-container.relative
 			._headphones.absolute
 			h2._title.cc-heading-1 Бумажная дискотека или мюзикл в стиле Дисней
 		._image-container
+
+
 			img._image(src='../images/vip-disco.jpg', alt='#', loading='lazy')
 
 +eventsExtra('cc-events-extra_vip', '../images/rocket-vip.png', true)
@@ -189,3 +200,4 @@ section.cc-vip-prices.cc-outer
 					span._single Цена рассчитывается индивидуально
 
 +videoSection('как проходят VIP-праздники', 'cc-video-section_vip')
++redForm('cc-red-form_vip', 0)

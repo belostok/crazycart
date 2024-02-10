@@ -92,6 +92,21 @@
 		overflow: hidden;
 	}
 
+	&_vip {
+		border-radius: inEm(20px);
+		overflow: hidden;
+		background: linear-gradient(98.46deg, $gold 18.71%, $black 100%);
+	}
+	&_vip & {
+	
+		&__title-container {
+			
+			&::before {
+				background-image: url('../images/form-bg-gold.svg');
+			}
+		}
+	}
+
 	&__wrapper {
 		display: flex;
 		justify-content: space-between;

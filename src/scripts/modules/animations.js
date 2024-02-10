@@ -58,6 +58,7 @@ export default () => {
 		}
 	} );
 
+	// Main parallax
 	const mainParallaxContainers = document.querySelectorAll('.js-cc-parallax-main-container');
 
 	if ( mainParallaxContainers.length ) {
@@ -90,4 +91,32 @@ export default () => {
 			} );
 		});
 	}
+
+	const discoContainer = document.querySelector('.js-cc-parallax-disco-container');
+	const discoItems = discoContainer?.querySelectorAll( '.js-cc-parallax-main-item' );
+
+	if ( ! discoItems.length ) {
+		return null;
+	}
+
+	discoItems.forEach( ( item ) => {
+		const data = item.getAttribute( 'data-range' );
+
+		if ( ! data ) {
+			return null;
+		}
+
+		item.style.transform = `translateY(${ data / 2 }%)`;
+
+		gsap.to( item, {
+			y: `-${ data }`, // Adjust this value to control the parallax effect
+			ease: 'none',
+			scrollTrigger: {
+				trigger: discoContainer,
+				start: 'top 60%',
+				end: 'bottom',
+				scrub: true, // Smooth scrolling effect
+			}
+		} );
+	} );
 }

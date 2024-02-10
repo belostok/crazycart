@@ -19,6 +19,54 @@
 		}
 	}
 
+	&__ball {
+
+		&_i1 {
+			width: inEm(168px);
+			height: inEm(168px);
+			top: 36.6%;
+			left: inEm(73px);
+		}
+
+		&_i2 {
+			width: inEm(94px);
+			height: inEm(94px);
+			top: 40.5%;
+			right: inEm(335px);
+			filter: blur(inEm(5px));
+		}
+
+		&_i3 {
+			width: inEm(419px);
+			height: inEm(419px);
+			top: 74.4%;
+			left: inEm(-38px);
+			filter: blur(inEm(13px));
+		}
+
+		&_i4 {
+			width: inEm(59px);
+			height: inEm(59px);
+			top: 105.2%;
+			left: inEm(598px);
+		}
+
+		&_i5 {
+			width: inEm(119px);
+			height: inEm(119px);
+			top: 97.5%;
+			right: inEm(297px);
+		}
+
+		&_i6 {
+			width: inEm(180px);
+			height: inEm(180px);
+			top: 57.9%;
+			right: inEm(-60px);
+			filter: blur(inEm(5px));
+		}
+	}
+
 	&__title-container {
 
 		&::after {
