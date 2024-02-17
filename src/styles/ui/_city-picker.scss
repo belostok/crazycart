@@ -15,6 +15,24 @@
 		}
 	}
 
+	&_mobile {
+
+		.cc-dropdown__list-wrapper {
+			max-height: 50dvh;
+		}
+	}
+
+	&_mobile & {
+
+		&__list-container {
+			top: auto;
+			left: -100%;
+			right: -100%;
+			bottom: calc(100% + #{inEm(10px)});
+			margin-inline: auto;
+		}
+	}
+
 	&__button {
 		background: $red;
 		border-radius: inEm(100px);

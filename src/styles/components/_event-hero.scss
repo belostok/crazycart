@@ -1,6 +1,11 @@
 .cc-event-hero {
 	margin-top: inEm(30px);
 
+	@include md-down {
+		margin-top: inEmMob(50px);
+		padding-inline: 0;
+	}
+
 	&_birthday & {
 
 		&__image-container {
@@ -8,6 +13,14 @@
 			right: inEm(-45px);
 			width: inEm(680px);
 			height: inEm(644px);
+
+			@include md-down {
+				top: inEmMob(-76px);
+				right: auto;
+				left: inEmMob(20px);
+				width: inEmMob(366px);
+				height: inEmMob(325px);
+			}
 		}
 	}
 
@@ -16,14 +29,29 @@
 		border-radius: inEm(20px);
 		background: linear-gradient(262deg, #4EE3FF 0%, #65C7F7 50%, #0052D4 100%);
 		padding: inEm(30px);
+
+		@include md-down {
+			height: inEmMob(320px);
+			border-radius: inEmMob(20px);
+			padding: inEmMob(20px);
+		}
 	}
 
 	&__title-container {
 		max-width: inEm(1043px);
+
+		@include md-down {
+			max-width: none;
+		}
 	}
 
 	&__title {
 		color: $white;
 		letter-spacing: lh(-3.125px, 125px);
+
+		@include md-down {
+			font-size: inEmMob(36px);
+			letter-spacing: -0.02em;
+		}
 	}
 }

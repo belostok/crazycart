@@ -84,6 +84,7 @@
 		height: inEm(56px);
 
 		@include md-down {
+			z-index: 1;
 			width: inEmMob(83px);
 			height: inEmMob(44px);
 		}
@@ -143,6 +144,10 @@
 				width: inEmMob(24px);
 				height: inEmMob(24px);
 			}
+		}
+
+		svg {
+			pointer-events: none;
 		}
 	}
 

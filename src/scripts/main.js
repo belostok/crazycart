@@ -22,6 +22,7 @@ import contacts from './modules/contacts.js';
 import animations from './modules/animations.js';
 import vipShowSlider from './modules/vip-show-slider.js';
 import dropdown from './modules/dropdown.js';
+import mobileMenu from './modules/mobile-menu.js';
 
 flsFunctions.isWebp();
 
@@ -50,4 +51,5 @@ documentReady(() => {
 	relatedSlider();
 	gallerySlider();
 	vipShowSlider();
+	mobileMenu();
 });

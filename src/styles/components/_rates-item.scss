@@ -11,6 +11,13 @@
 	padding-top: inEm(45px);
 	color: $black;
 
+	@include md-down {
+		grid-template-areas:
+				'title title'
+				'right right'
+                'left left';
+	}
+
 	&_max {
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: inEm(30px);

@@ -58,6 +58,28 @@
 		font-weight: 500;
 	}
 
+	&__subway-container {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+
+		&::before {
+			content: '';
+			width: inEm(19px);
+			height: inEm(24px);
+			background-repeat: no-repeat;
+			background-size: contain;
+			background-image: url('../images/subway.svg');
+			margin-right: inEm(10px);
+		}
+	}
+
+	&__subway {
+		font-size: max(12px, inEm(13px));
+		line-height: lh(16.25px, 13px);
+		letter-spacing: -0.011em;
+	}
+
 	&__social {
 		column-gap: inEm(15px);
 		row-gap: inEm(15px);

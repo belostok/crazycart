@@ -3,8 +3,16 @@
 
 	margin-top: inEm(60px);
 
+	@include md-down {
+		margin-top: inEmMob(90px);
+	}
+
 	&__title-container {
 		margin: 0 inEm(-40px) inEm(60px);
+
+		@include md-down {
+			margin: 0 0 inEmMob(60px);
+		}
 	}
 
 	&__title {
@@ -15,6 +23,10 @@
 		text-transform: uppercase;
 		color: $red;
 		text-align: center;
+
+		@include md-down {
+			font-size: inEmMob(46px);
+		}
 	}
 
 	&__section {

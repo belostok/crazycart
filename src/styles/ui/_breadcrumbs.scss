@@ -7,6 +7,10 @@
 		line-height: 1.4em;
 		color: $red;
 
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
+
 		&:not(:last-child) {
 
 			&::after {
@@ -17,6 +21,12 @@
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-image: url('../images/breadcrumbs.svg');
+
+				@include md-down {
+					width: inEmMob(6px, 15px);
+					height: inEmMob(6px, 15px);
+					margin-inline: inEm(8px, 15px);
+				}
 			}
 		}
 	}

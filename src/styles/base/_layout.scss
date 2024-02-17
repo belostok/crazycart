@@ -46,6 +46,10 @@ body {
 .cc-page {
 	padding-top: inEm(86px);
 	padding-bottom: inEm(21px);
+
+	@include md-down {
+		padding-top: inEmMob(36px);
+	}
 }
 
 .cc-outer {

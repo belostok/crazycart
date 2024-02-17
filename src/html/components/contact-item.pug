@@ -1,4 +1,4 @@
-mixin contact-item(title, itemTitle, cl)
+mixin contact-item(title, itemTitle, cl, subway)
 	.cc-contact-item.cc-outer(class= cl)
 		._wrapper.cc-wrapper
 			if title
@@ -16,6 +16,11 @@ mixin contact-item(title, itemTitle, cl)
 								span._place ТРЦ АВИАПАРК
 						._address-container
 							span._address ул. Ходынский бульвар, д.4, метро ЦСКА
+
+					if subway
+						._item
+							._subway-container
+								span._subway= subway
 
 					._item
 						+phoneItem('cc-contacts-item_block')
