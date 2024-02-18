@@ -97,6 +97,21 @@
 		}
 	}
 
+	&_white {
+		padding-block: inEm(32px);
+
+		@include mouseover {
+			background: $red;
+			border-color: $red;
+		}
+	}
+	&_white & {
+
+		&__title {
+			font-size: inEm(22px);
+		}
+	}
+
 	&__title {
 		pointer-events: none;
 		text-transform: uppercase;

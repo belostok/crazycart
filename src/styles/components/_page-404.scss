@@ -1,0 +1,37 @@
+.cc-page-404 {
+	padding-top: inEm(30px);
+	padding-bottom: inEm(175px);
+
+	&__title-wrapper {
+		color: $white;
+	}
+
+	&__title-container {
+		flex-shrink: 0;
+	}
+
+	&__title {
+		font-size: inEm(320px);
+		line-height: lh(304px, 320px);
+		letter-spacing: -0.025em;
+		font-weight: 800;
+	}
+
+	&__description-container {
+		margin-left: inEm(60px);
+		margin-bottom: inEm(26px);
+		max-width: inEm(400px);
+	}
+
+	&__description {
+		font-size: inEm(38px);
+		line-height: lh(36.1px, 38px);
+		letter-spacing: -0.04em;
+		font-weight: 800;
+		text-transform: uppercase;
+	}
+
+	&__button-container {
+		margin-top: inEm(20px);
+	}
+}

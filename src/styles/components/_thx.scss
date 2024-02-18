@@ -1,0 +1,37 @@
+.cc-thx {
+	padding-bottom: inEm(175px);
+	color: $black;
+
+	&__button-container {
+		margin-top: inEm(60px);
+	}
+
+	&__image-container {
+		margin-top: inEm(-70px);
+	}
+
+	&__image {
+		display: block;
+		margin-left: inEm(-15px);
+		max-width: 106%;
+	}
+
+	&__description-container {
+		max-width: inEm(392px);
+		margin-top: inEm(19px);
+		margin-left: auto;
+		margin-right: inEm(129px);
+	}
+
+	&__description {
+		font-size: inEm(22px);
+		line-height: lh(24.2px, 22px);
+	}
+
+	.cc-button-form {
+
+		&__title {
+			font-size: inEm(22px);
+		}
+	}
+}

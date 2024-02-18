@@ -1,4 +1,23 @@
 .cc-breadcrumbs {
+	position: relative;
+
+	&_light & {
+
+		&__item {
+			color: $white;
+
+			&:not(:last-child) {
+
+				&::after {
+					background-image: url('../images/breadcrumbs-white.svg');
+				}
+			}
+		}
+
+		&__link {
+			color: $white;
+		}
+	}
 
 	&__item {
 		display: flex;

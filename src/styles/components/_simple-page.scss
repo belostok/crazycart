@@ -1,0 +1,28 @@
+.cc-simple-page {
+	padding-top: inEm(30px);
+	padding-bottom: inEm(60px);
+
+	&__title-container {
+		margin-bottom: inEm(60px);
+	}
+
+	&__title {
+		font-size: inEm(125px);
+		font-weight: 800;
+		line-height: lh(118.75px, 125px);
+		letter-spacing: -0.025em;
+		text-transform: uppercase;
+		background: -webkit-linear-gradient(180deg, #4EE3FF 0%, #65C7F7 50%, #0052D4 100%);
+		-webkit-background-clip: text;
+		-webkit-text-fill-color: transparent;
+	}
+
+	&__content {
+		max-width: inEm(784px);
+		margin-inline: auto;
+
+		strong {
+			font-weight: 700;
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.cc-text-format {
+
+	& > * {
+
+		&:not(:last-child) {
+			margin-bottom: inEm(20px);
+		}
+	}
+
+	p, a, li {
+		font-size: inEm(22px);
+		line-height: lh(24.2px, 22px);
+	}
+}
