@@ -7,6 +7,10 @@
 		margin-top: inEmMob(90px);
 	}
 
+	&_age {
+		margin-top: inEmMob(20px);
+	}
+
 	&__list {
 		column-gap: inEm(10px);
 		row-gap: inEm(10px);
@@ -37,5 +41,48 @@
 		padding: inEm(10px, 18px) inEm(15px, 18px);
 		border: 1px solid $black;
 		border-radius: inEm(70px, 18px);
+	}
+
+	.cc-city-picker {
+
+		&__label-container {
+			margin-bottom: inEmMob(10px);
+		}
+
+		&__label {
+			color: $black;
+			font-size: inEmMob(15px);
+			line-height: lh(16.5px, 15px);
+		}
+
+		&__button {
+			width: 100%;
+			height: inEmMob(68px);
+			padding-inline: inEmMob(15px);
+			justify-content: space-between;
+		}
+
+		&__title {
+			font-size: inEmMob(18px);
+			font-weight: 700;
+			@include ellipse(100%);
+			max-width: calc(100% - #{inEmMob(20px)});
+		}
+
+		&__arrow-container {
+			flex-shrink: 0;
+			width: inEmMob(18px);
+			height: inEmMob(18px);
+		}
+	}
+
+	.cc-dropdown {
+		min-width: auto;
+		width: auto;
+		right: 0;
+
+		&__list-button {
+			display: block;
+		}
 	}
 }
