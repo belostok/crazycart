@@ -16,6 +16,7 @@
 				'title title'
 				'right right'
                 'left left';
+		padding-top: inEmMob(30px);
 	}
 
 	&_max {
@@ -24,29 +25,77 @@
 		grid-template-areas:
             'title title'
             'left right';
+
+        @include md-down {
+            border-top: none;
+	        padding-top: 0;
+	        margin-top: inEmMob(120px) !important;
+            grid-template-areas:
+	            'title title'
+	            'left left'
+	            'right right';
+        }
 	}
 	&_max & {
 
 		&__title-section {
 			margin-bottom: inEm(60px);
+
+			@include md-down {
+				display: none;
+				margin-bottom: inEmMob(30px);
+			}
+		}
+
+		&__info-title {
+
+			@include md-down {
+				color: $red;
+			}
+		}
+
+		&__side {
+
+			.cc-rates-item__title-section {
+
+				@include md-down {
+					display: block !important;
+				}
+			}
 		}
 
 		&__side_right {
 			width: auto;
+
+			@include md-down {
+				margin-top: inEmMob(120px);
+			}
 		}
 	}
 
 	&__title-section {
 		grid-area: title;
 		width: max-content;
+
+		@include md-down {
+			width: 100%;
+		}
 	}
 
 	&__title {
 		letter-spacing: lh(-3px, 75px);
+
+		@include md-down {
+			letter-spacing: -0.02em;
+		}
 	}
 
 	&__title-details {
 		margin-top: inEm(15px);
+
+		@include md-down {
+			margin-top: inEmMob(15px);
+		}
 	}
 
 	&__title-details-side {
@@ -64,6 +113,10 @@
 	&__title-details-item {
 		font-size: inEm(22px);
 		line-height: 1.1em;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 	}
 
 	&__side {
@@ -79,11 +132,23 @@
 			width: inEm(560px);
 			min-height: inEm(333px);
 			justify-content: space-between;
+
+			@include md-down {
+				width: 100%;
+				min-height: auto;
+				margin-top: inEmMob(30px);
+			}
 		}
 	}
 
 	&__info-title-container {
 		margin-bottom: inEm(45px);
+
+		@include md-down {
+			margin-bottom: inEmMob(30px);
+			padding-bottom: inEmMob(60px);
+			border-bottom: 1px solid $red;
+		}
 	}
 
 	&__info-title {
@@ -92,10 +157,20 @@
 		letter-spacing: lh(-2.4px, 60px);
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(46px);
+			letter-spacing: -0.025em;
+			text-align: center;
+		}
 	}
 
 	&__prices {
 		margin-top: inEm(60px);
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+		}
 	}
 
 	&__prices-title,
@@ -105,21 +180,40 @@
 		letter-spacing: lh(-1.52px, 32px);
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(26px);
+			letter-spacing: -0.04em;
+		}
 	}
 
 	&__prices-title-container {
 		margin-bottom: inEm(15px);
+
+		@include md-down {
+			margin-bottom: inEmMob(15px);
+		}
 	}
 
 	&__prices-items {
 		column-gap: inEm(5px);
 		row-gap: inEm(5px);
+
+		@include md-down {
+			column-gap: inEmMob(5px);
+			row-gap: inEmMob(5px);
+		}
 	}
 
 	&__prices-item {
 		padding: inEm(15px);
 		border-radius: inEm(12px);
 		border: 1px solid $black;
+
+		@include md-down {
+			padding: inEmMob(15px);
+			border-radius: inEmMob(12px);
+		}
 
 		&_holiday {
 			border-color: $red;
@@ -139,10 +233,19 @@
 		letter-spacing: lh(-0.6px, 24px);
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+			letter-spacing: -0.02em;
+		}
 	}
 
 	&__prices-item-description-container {
 		margin-top: inEm(5px);
+
+		@include md-down {
+			margin-top: inEmMob(5px);
+		}
 	}
 
 	&__prices-item-description {
@@ -150,12 +253,21 @@
 		font-size: inEm(15px);
 		line-height: 1em;
 		font-weight: 500;
+
+		@include md-down {
+			font-size: max(12px, inEmMob(13px));
+		}
 	}
 
 	&__list {
 		columns: 2;
 		column-gap: inEm(20px);
 		margin-top: inEm(30px);
+
+		@include md-down {
+			columns: 1;
+			margin-top: inEmMob(20px);
+		}
 	}
 
 	&__list-item,
@@ -167,6 +279,10 @@
 		font-size: inEm(15px);
 		line-height: 1em;
 		font-weight: 500;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 
 		span {
 			display: inline-block;
@@ -197,15 +313,28 @@
 	}
 
 	&__list-extra-container {
-		margin-top: inEm(10px);
+
+		@include md-up {
+			margin-top: inEm(10px);
+		}
 	}
 
 	&__list-extra-description-container {
 		margin-top: inEm(5px);
 		padding-left: inEm(15px);
+
+		@include md-down {
+			margin-top: inEmMob(5px);
+			padding-left: inEmMob(15px);
+		}
 	}
 
 	&__button {
 		margin-top: inEm(45px);
+
+		@include md-down {
+			grid-column: 1 / 3;
+			margin-top: inEmMob(30px);
+		}
 	}
 }

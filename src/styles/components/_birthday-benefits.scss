@@ -1,18 +1,33 @@
 .cc-birthday-benefits {
 	margin-top: inEm(180px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+	}
+
 	&__title-container {
 		position: relative;
 		z-index: 1;
+
+		@include md-down {
+			margin-inline: inEmMob(-10px);
+		}
 	}
 
 	&__title {
 		color: $black;
 		text-align: left;
 
+		@include md-down {
+			text-align: center;
+		}
+
 		span {
 			display: block;
-			text-align: right;
+
+			@include md-up {
+				text-align: right;
+			}
 		}
 	}
 
@@ -21,6 +36,30 @@
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: inEm(30px);
 		margin-top: inEm(114px);
+
+		@include md-down {
+			grid-template-columns: 1fr;
+			margin-top: inEmMob(-12px);
+		}
+	}
+
+	&__side {
+
+		&_left {
+
+			@include md-down {
+				width: inEmMob(305px);
+				height: inEmMob(305px);
+				margin-inline: auto;
+			}
+		}
+
+		&_right {
+
+			@include md-down {
+				margin-top: inEmMob(6px);
+			}
+		}
 	}
 
 	&__image-container {
@@ -28,6 +67,13 @@
 		left: inEm(-72px);
 		width: inEm(773px);
 		height: inEm(824px);
+
+		@include md-down {
+			top: 0;
+			left: inEmMob(5px);
+			width: 100%;
+			height: 100%;
+		}
 
 		&::before {
 			content: '';
@@ -40,6 +86,17 @@
 			opacity: 0.6;
 			background: $red;
 			filter: blur(inEm(249.4px));
+
+			@include md-down {
+				top: 0;
+				left: inEmMob(-5px);
+				right: 0;
+				bottom: 0;
+				margin: auto;
+				width: inEmMob(215px);
+				height: inEmMob(215px);
+				filter: blur(4em);
+			}
 		}
 	}
 
@@ -51,21 +108,41 @@
 		position: relative;
 		row-gap: inEm(45px);
 		min-height: inEm(484px);
+
+		@include md-down {
+			row-gap: inEmMob(30px);
+			min-height: auto;
+		}
 	}
 
 	&__icon-container {
 		width: inEm(60px);
 		height: inEm(60px);
+
+		@include md-down {
+			width: inEmMob(60px);
+			height: inEmMob(60px);
+		}
 	}
 
 	&__description-container {
 		margin-top: inEm(15px);
 		max-width: inEm(548px);
+
+		@include md-down {
+			margin-top: inEmMob(15px);
+			max-width: none;
+		}
 	}
 
 	&__description {
 		font-size: inEm(22px);
 		line-height: 1.1em;
 		color: $black;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			line-height: lh(19.5px, 15px);
+		}
 	}
 }

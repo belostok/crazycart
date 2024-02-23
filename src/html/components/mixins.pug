@@ -177,7 +177,7 @@ mixin breadcrumbs(cl)
 					a._link(href='#') Выбрать праздник
 				li._item День рождения
 
-mixin tabsNav(cl, arr, label)
+mixin tabsNav(cl, arr, label, age)
 	- label = label || 'Выберите филиал';
 	- var items = arr || ['ТРЦ АВИАПАРК', 'ТРЦ САЛАРИС', 'ТРК ВЕСНА', 'ТРК VEGAS КРОКУС', 'ТРЦ ГОРОД КОСИНО', 'ТРЦ VEGAS КУНЦЕВО', 'БУТОВО МОЛЛ', 'ТРЦ ГОРОД ЛЕФОРТОВО', 'ТЦ ОТРАДА', 'ТРК КРАСНЫЙ КИТ', 'ТЦ СИТИ'];
 	nav.cc-tabs-nav.cc-outer(class= cl)
@@ -201,12 +201,21 @@ mixin tabsNav(cl, arr, label)
 						<path d="M11.3333 7.33325L10.1684 8.50856C9.23946 9.44585 8.77498 9.9145 8.20885 9.98666C8.07014 10.0043 7.92978 10.0043 7.79107 9.98666C7.22494 9.9145 6.76046 9.44585 5.8315 8.50857L4.66663 7.33325" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
 						</svg>
 
-				.cc-dropdown._list-container.js-cc-dropdown-list
-					._list-wrapper
-						ul._list
-							each val, index in items
-								li._list-item
-									a._list-button.cc-hover.js-cc-dropdown-button(href='#', class= ( index === 0 ? 'cc-dropdown__list-button_active' : '' ))= val
+				if age
+					.cc-dropdown._list-container.js-cc-dropdown-list
+						._list-wrapper
+							ul._list
+								each val, index in items
+									li._list-item
+										button._list-button.cc-hover.js-cc-dropdown-button(class= ( index === 0 ? 'cc-dropdown__list-button_active' : '' ) data-age-button-id= index)= val
+
+				else
+					.cc-dropdown._list-container.js-cc-dropdown-list
+						._list-wrapper
+							ul._list
+								each val, index in items
+									li._list-item
+										a._list-button.cc-hover.js-cc-dropdown-button(href='#', class= ( index === 0 ? 'cc-dropdown__list-button_active' : '' ))= val
 
 mixin priceItem(price, descr, cl)
 	.cc-price-item(class= cl)

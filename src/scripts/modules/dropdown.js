@@ -1,9 +1,14 @@
+import { addClasses, breakpoints, removeClasses } from '../helpers/helpers.js';
+
 export default () => {
 	const containerActiveCl = 'cc-dropdown-active';
 	const itemActiveCl = 'cc-dropdown__list-button_active';
 	const listActiveCl = 'cc-dropdown_active';
+	const tabSectionPrepareCl = 'cc-rates__section_prepare';
+	const tabSectionActiveCl = 'cc-rates__section_active';
 
 	const containers = document.querySelectorAll( '.js-cc-dropdown' );
+	const tabSections = document.querySelectorAll('.js-cc-age-section');
 
 	if ( ! containers || ! containers.length ) {
 		return null;
@@ -53,6 +58,7 @@ export default () => {
 			const items = container?.querySelectorAll('.js-cc-dropdown-button');
 			const currentTitleContainer = container?.querySelector('.js-cc-dropdown-title');
 			const currentTitle = currentTitleContainer?.textContent;
+			const dataButtonId = target.dataset.ageButtonId;
 
 			if ( ! items || ! items.length || ! buttonTitle || ! currentTitle ||
 				buttonTitle.toLowerCase() === currentTitle.toLowerCase() ) {
@@ -63,6 +69,22 @@ export default () => {
 			target.classList.add(itemActiveCl);
 
 			currentTitleContainer.innerText = buttonTitle;
+
+			if ( dataButtonId !== null && tabSections && tabSections.length && breakpoints(992) ) {
+				tabSections.forEach((section) => {
+					const dataAttr = section.dataset.ageId;
+
+					if ( dataAttr === null ) {
+						return null;
+					}
+
+					if ( dataAttr === dataButtonId ) {
+						addClasses(section, tabSectionActiveCl, tabSectionPrepareCl);
+					} else {
+						removeClasses(section, tabSectionActiveCl, tabSectionPrepareCl);
+					}
+				});
+			}
 		}
 	});
 }

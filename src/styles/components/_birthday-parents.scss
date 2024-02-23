@@ -1,6 +1,18 @@
 .cc-birthday-parents {
 	margin-top: inEm(163px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+	}
+
+	&__title-container {
+
+		@include md-down {
+			max-width: inEmMob(351px);
+			margin-inline: auto;
+		}
+	}
+
 	&__title {
 		display: flex;
 		flex-direction: column;
@@ -10,9 +22,22 @@
 		span {
 			position: relative;
 
-			&:nth-child(1),
+			&:nth-child(1) {
+				margin-left: inRem(268px);
+
+				@include md-down {
+					margin-left: 0;
+					text-align: center;
+				}
+			}
+
 			&:nth-child(3) {
 				margin-left: inRem(268px);
+
+				@include md-down {
+					margin-left: 0;
+					text-align: right;
+				}
 			}
 
 			&:nth-child(3) {
@@ -27,6 +52,15 @@
 		width: inEm(384px);
 		height: inEm(384px);
 
+		@include md-down {
+			width: inEmMob(176px);
+			height: inEmMob(176px);
+			top: inEmMob(11px);
+			right: inEmMob(-165px);
+			left: 0;
+			margin-inline: auto;
+		}
+
 		&::before {
 			content: '';
 			position: absolute;
@@ -38,6 +72,14 @@
 			opacity: 0.4;
 			background: $d-blue;
 			filter: blur(inEm(187px));
+
+			@include md-down {
+				top: inEmMob(40px);
+				right: inEmMob(-18px);
+				width: inEmMob(189px);
+				height: inEmMob(189px);
+				filter: blur(4em);
+			}
 		}
 	}
 
@@ -47,11 +89,21 @@
 		column-gap: inEm(47px);
 		row-gap: inEm(47px);
 		margin-top: inEm(60px);
+
+		@include md-down {
+			grid-template-columns: 1fr;
+			row-gap: inEmMob(30px);
+			margin-top: inEmMob(113px);
+		}
 	}
 
 	&__item {
 		position: relative;
 		padding-left: inEm(75px);
+
+		@include md-down {
+			padding-left: 0;
+		}
 
 		&::before {
 			content: '';
@@ -63,6 +115,14 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-image: url('../images/heart-list-item.svg');
+
+			@include md-down {
+				position: relative;
+				display: block;
+				width: inEmMob(60px);
+				height: inEmMob(60px);
+				margin-bottom: inEmMob(15px);
+			}
 		}
 	}
 
@@ -70,5 +130,10 @@
 		font-size: inEm(22px);
 		line-height: 1.1em;
 		color: $black;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			line-height: lh(19.5px, 15px);
+		}
 	}
 }

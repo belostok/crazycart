@@ -31,6 +31,21 @@
 
 	&__section {
 
+		@include md-down {
+
+			display: none;
+			opacity: 0;
+			transition: opacity $transition-duration;
+
+			&_prepare {
+				display: block;
+			}
+
+			&_active {
+				opacity: 1;
+			}
+		}
+
 		&_blue {
 
 			#{$root} {
@@ -44,6 +59,23 @@
 				$item-root: &;
 
 				border-color: $d-blue;
+
+				&_max {
+
+					.cc-rates-item__info-title {
+
+						@include md-down {
+							color: $blue;
+						}
+					}
+				}
+
+				&__info-title-container {
+
+					@include md-down {
+						border-color: $blue;
+					}
+				}
 
 				&__title-details-side_right {
 
@@ -98,6 +130,10 @@
 
 		&:not(:first-child) {
 			margin-top: inEm(90px);
+
+			@include md-down {
+				margin-top: inEmMob(60px);
+			}
 		}
 	}
 }

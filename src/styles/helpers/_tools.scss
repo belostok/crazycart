@@ -62,6 +62,10 @@
 	font-weight: 800;
 	color: $black;
 	text-transform: uppercase;
+
+	@include md-down {
+		font-size: inEmMob(36px);
+	}
 }
 
 .cc-heading-4 {

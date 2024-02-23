@@ -14,6 +14,14 @@ mixin ratesItem(title, max, cl)
 			if max
 				._info-title-container
 					h3._info-title Дети 4-5 лет
+				._title-section.cc-mobile
+					._title-container
+						h3._title.cc-heading-3= title
+					._title-details.flex.jcspb
+						._title-details-side.-left.flex
+							span._title-details-item Тариф
+							span._title-details-item На 6 детей
+						._title-details-side.-right.flex
 
 				+ratesList
 
@@ -28,6 +36,15 @@ mixin ratesItem(title, max, cl)
 			if max
 				._info-title-container
 					h3._info-title Дети 6-8 лет
+				._title-section.cc-mobile
+					._title-container
+						h3._title.cc-heading-3= title
+					._title-details.flex.jcspb
+						._title-details-side.-left.flex
+							span._title-details-item Тариф
+							span._title-details-item На 6 детей
+						._title-details-side.-right.flex
+							span._title-details-item [ 4-5 часов ]
 
 			+ratesList
 
@@ -35,5 +52,13 @@ mixin ratesItem(title, max, cl)
 				._prices
 					+prices
 
-			._button
+			if max
+				._button
+					+formButton('cc-button-form_red-border', 'Заказать')
+			else
+				._button.cc-desktop
+					+formButton('cc-button-form_red-border', 'Заказать')
+
+		if ! max
+			._button.cc-mobile
 				+formButton('cc-button-form_red-border', 'Заказать')
