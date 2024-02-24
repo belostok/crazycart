@@ -4,13 +4,26 @@
 	margin-top: inEm(173px);
 	color: $black;
 
+	@include md-down {
+		margin-top: inEmMob(130px);
+	}
+
 	&__title-container {
 		max-width: inEm(1006px);
+
+		@include md-down {
+			max-width: inEmMob(330px);
+			margin-inline: auto;
+		}
 	}
 
 	&__title {
 		text-align: left;
 		color: $black;
+
+		@include md-down {
+			text-align: center;
+		}
 	}
 
 	&__grid {
@@ -18,20 +31,61 @@
 		grid-template-columns: inEm(714px) inEm(516px);
 		justify-content: space-between;
 		margin-top: inEm(60px);
+
+		@include md-down {
+			display: block;
+			margin-top: 0;
+		}
+	}
+
+	&__side {
+
+		@include md-down {
+			margin-top: inEmMob(60px);
+		}
+
+		&_right {
+
+			#{$root} {
+
+				&__slider-container {
+
+					@include md-down {
+						padding-top: inEmMob(20px);
+					}
+				}
+			}
+		}
 	}
 
 	&__item-title-wrapper {
 		margin-bottom: inEm(25px);
+
+		@include md-down {
+			margin-bottom: inEmMob(30px);
+		}
 	}
 
 	&__item-title-container {
 		flex-shrink: 0;
 	}
 
+	&__item-title {
+
+		@include md-down {
+			font-size: inEmMob(26px);
+			letter-spacing: -0.02em;
+		}
+	}
+
 	&__item-note-container {
 		margin-left: inEm(10px);
 		margin-bottom: inEm(4px);
 		max-width: inEm(161px);
+
+		@include md-down {
+			display: none;
+		}
 	}
 
 	&__item-note {
@@ -44,6 +98,10 @@
 	}
 
 	&__slider-container {
+
+		@include md-down {
+			border-top: 1px solid $red;
+		}
 
 		&_fillings {
 
@@ -84,13 +142,29 @@
 		}
 	}
 
+	&__slide {
+
+		@include md-down {
+			height: auto;
+		}
+	}
+
 	&__nav-wrapper {
-		display: none;
+		margin-top: inEmMob(20px);
+
+		@include md-up {
+			display: none;
+		}
 	}
 
 	&__button-container {
 		grid-column: 1 / 3;
 		margin-top: inEm(60px);
+
+		@include md-down {
+			grid-column: auto;
+			margin-top: inEmMob(30px);
+		}
 	}
 
 	.cc-button-form {
@@ -98,6 +172,45 @@
 
 		&__title {
 			font-size: inEm(22px);
+		}
+	}
+
+	.cc-pagination {
+		max-width: inEmMob(170px);
+
+		&__bullet {
+			width: inEmMob(20px);
+			height: inEmMob(20px);
+
+			&::before {
+				background: $red;
+				width: 4px;
+				height: 4px;
+			}
+
+			&.swiper-pagination-bullet-active {
+				border-color: $red;
+			}
+		}
+	}
+
+	&__nav-container {
+		column-gap: inEmMob(10px);
+	}
+
+	&__nav {
+		width: inEmMob(50px);
+		height: inEmMob(50px);
+		background: $red;
+		border-color: $red;
+
+		svg {
+			width: inEmMob(24px);
+			height: inEmMob(22px);
+
+			path {
+				fill: $white;
+			}
 		}
 	}
 }

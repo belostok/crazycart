@@ -84,6 +84,10 @@
 	font-weight: 800;
 	color: $black;
 	text-transform: uppercase;
+
+	@include md-down {
+		font-size: inEmMob(26px);
+	}
 }
 
 .cc-heading-6 {
@@ -93,6 +97,12 @@
 	font-weight: 800;
 	color: $black;
 	text-transform: uppercase;
+
+	@include md-down {
+		font-size: inEmMob(26px);
+		line-height: lh(24px, 26px);
+		letter-spacing: -0.02em;
+	}
 }
 
 .cc-title-22 {
@@ -120,6 +130,10 @@
 	font-weight: 800;
 	color: $black;
 	text-transform: uppercase;
+
+	@include md-down {
+		font-size: inEmMob(15px);
+	}
 }
 
 .cc-title-14 {

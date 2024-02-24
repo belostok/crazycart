@@ -90,6 +90,10 @@
 		margin-top: inEm(180px);
 		border-radius: inEm(20px);
 		overflow: hidden;
+
+		@include md-down {
+			margin-top: inEmMob(120px);
+		}
 	}
 
 	&_vip {

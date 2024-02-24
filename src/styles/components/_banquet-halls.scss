@@ -1,6 +1,18 @@
 .cc-banquet-halls {
 	margin-top: inEm(180px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+	}
+
+	&__title-container {
+
+		@include md-down {
+			max-width: inEmMob(300px);
+			margin-inline: auto;
+		}
+	}
+
 	&__title {
 		color: $black;
 	}
@@ -9,16 +21,46 @@
 		column-gap: inEm(40px);
 		row-gap: inEm(40px);
 		margin-top: inEm(60px);
+
+		@include md-down {
+			margin-top: inEmMob(60px);
+			row-gap: inEmMob(45px);
+		}
 	}
 
 	&__item {
 		width: calc(50% - #{inEm(20px)});
-		border-radius: inEm(20px);
-		overflow: hidden;
+
+		@include md-down {
+			width: 100%;
+		}
 	}
 
 	&__item-title-container {
 		margin-bottom: inEm(15px);
+
+		@include md-down {
+			margin-bottom: inEmMob(15px);
+		}
+	}
+
+	&__slider {
+
+		@include md-up {
+			overflow: hidden;
+		}
+	}
+
+	&__image-container {
+		height: inEm(380px);
+		border-radius: inEm(20px);
+		overflow: hidden;
+
+		@include md-down {
+			width: 100%;
+			height: 53.4vw;
+			border-radius: inEmMob(20px);
+		}
 	}
 
 	&__slide-title-container {
@@ -28,6 +70,13 @@
 		padding: inEm(6px) inEm(10px);
 		border-radius: inEm(20px);
 		background: $white;
+
+		@include md-down {
+			top: inEmMob(10px);
+			right: inEmMob(10px);
+			padding: inEmMob(6px) inEmMob(12px);
+			border-radius: inEmMob(20px);
+		}
 	}
 
 	&__slide-title {
@@ -36,6 +85,12 @@
 		line-height: 1em;
 		font-weight: 500;
 		color: $black;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			line-height: lh(19.5px, 15px);
+			font-weight: 400;
+		}
 	}
 
 	&__nav {
@@ -49,12 +104,25 @@
 		background: $red;
 		transition: background $transition-duration;
 
+		@include md-down {
+			width: inEmMob(50px);
+			height: inEmMob(50px);
+		}
+
 		&_prev {
 			left: inEm(20px);
+
+			@include md-down {
+				left: inEmMob(-10px);
+			}
 		}
 
 		&_next {
 			right: inEm(20px);
+
+			@include md-down {
+				right: inEmMob(-10px);
+			}
 		}
 
 		@include mouseover {
@@ -71,6 +139,11 @@
 		svg {
 			width: inEm(22px);
 			height: inEm(20px);
+
+			@include md-down {
+				width: inEmMob(22px);
+				height: inEmMob(20px);
+			}
 
 			path {
 				transition: fill $transition-duration;

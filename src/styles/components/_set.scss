@@ -2,17 +2,30 @@
 	margin-top: inEm(180px);
 	color: $black;
 
+	@include md-down {
+		margin-top: inEmMob(60px);
+	}
+
 	&__title {
 		font-size: inEm(60px);
 		line-height: 0.95em;
 		letter-spacing: lh(-2.4px, 60px);
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(36px);
+		}
 	}
 
 	&__price-wrapper {
 		margin-left: inEm(100px);
 		color: $red;
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+			margin-left: 0;
+		}
 
 		span {
 			display: block;
@@ -23,6 +36,18 @@
 		font-size: inEm(15px);
 		line-height: 1.1em;
 		font-weight: 500;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			line-height: 1em;
+		}
+	}
+
+	&__price-value-container {
+
+		@include md-down {
+			margin-top: inEmMob(6px);
+		}
 	}
 
 	&__price-value {
@@ -30,6 +55,12 @@
 		line-height: 1.1em;
 		letter-spacing: lh(-1.52px, 38px);
 		font-weight: 800;
+
+		@include md-down {
+			font-size: inEmMob(26px);
+			line-height: lh(24.7px, 26px);
+			letter-spacing: -0.04em;
+		}
 	}
 
 	&__items {
@@ -37,13 +68,27 @@
 		column-gap: inEm(271px);
 		margin-top: inEm(104px);
 		margin-bottom: inEm(-60px);
+
+		@include md-down {
+			column-count: 1;
+			margin-top: inEmMob(60px);
+			margin-bottom: inEmMob(-60px);
+
+		}
 	}
 
 	&__item {
 		margin-bottom: inEm(60px);
 
+		@include md-down {
+			margin-bottom: inEmMob(60px);
+		}
+
 		&:nth-child(1) {
-			break-after: column;
+
+			@include md-up {
+				break-after: column;
+			}
 		}
 	}
 }

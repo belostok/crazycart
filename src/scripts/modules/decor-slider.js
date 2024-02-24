@@ -1,7 +1,12 @@
 import Swiper from 'swiper/bundle';
+import { breakpoints } from '../helpers/helpers.js';
 
 export default () => {
-	const sliderContainers = document.querySelectorAll( '.js-cc-animators-slider' );
+	if ( breakpoints(992, false) ) {
+		return null;
+	}
+
+	const sliderContainers = document.querySelectorAll( '.js-cc-decor-slider' );
 	if ( sliderContainers.length ) {
 		let sliders = [];
 		sliderContainers.forEach( ( el, index ) => {
@@ -17,26 +22,21 @@ export default () => {
 					disableOnInteraction: false
 				};
 				sliders[ index ] = new Swiper( sliderContainer, {
+					slidesPerView: 1,
+					spaceBetween: 20,
 					loopedSlides: slides.length,
 					loop: slides.length > 1,
-					spaceBetween: 20,
 					// autoplay: slides.length > 1 ? autoplay : false,
 					navigation: {
-						prevEl: parent.querySelector( '.jc-cc-animators-prev' ),
-						nextEl: parent.querySelector( '.jc-cc-animators-next' ),
+						prevEl: parent.querySelector( '.jc-cc-decor-prev' ),
+						nextEl: parent.querySelector( '.jc-cc-decor-next' )
 					},
 					pagination: {
-						el: parent.querySelector( '.js-cc-animators-pagination' ),
+						el: parent.querySelector( '.js-cc-decor-pagination' ) || null,
 						clickable: true,
 						renderBullet: ( index, className ) => {
 							return '<button class="swiper-pagination-bullet cc-pagination__bullet"></button>';
 						},
-					},
-					breakpoints: {
-						992: {
-							spaceBetween: 0,
-							slidesPerView: 'auto',
-						}
 					}
 				} );
 			}

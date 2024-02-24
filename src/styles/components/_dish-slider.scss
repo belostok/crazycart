@@ -1,12 +1,21 @@
 .cc-dish-slider {
 	margin-top: inEm(120px);
 
+	@include md-down {
+		margin-top: inEmMob(60px);
+		padding-inline: 0;
+	}
+
 	&__slider {
 		overflow: hidden;
 	}
 
 	&__item {
 		height: inEm(629px);
+
+		@include md-down {
+			height: 63.8vw;
+		}
 	}
 
 	&__image-container {
@@ -14,6 +23,51 @@
 		left: 0;
 		width: 100%;
 		height: 100%;
+	}
+
+	&__slide-items {
+		position: relative;
+		margin-bottom: inEm(40px);
+		padding-inline: inEm(40px);
+		column-gap: inEm(10px);
+		row-gap: inEm(10px);
+
+		@include md-down {
+			margin-bottom: inEmMob(10px);
+			padding-inline: inEmMob(20px);
+			column-gap: inEmMob(10px);
+			row-gap: inEmMob(10px);
+		}
+	}
+
+	&__slide-item {
+		background: $white;
+		font-size: inEm(18px);
+		line-height: 0.95em;
+		letter-spacing: -0.04em;
+		font-weight: 800;
+		padding: inEm(6px, 18px) inEm(12px, 18px);
+		border-radius: inEm(30px, 18px);
+		text-transform: uppercase;
+
+		@include md-down {
+			font-size: max(12px, inEmMob(13px));
+			letter-spacing: -0.02em;
+			padding: inEmMob(6px, 13px) inEmMob(12px, 13px);
+			border-radius: inEmMob(30px, 13px);
+		}
+	}
+
+	&__nav-wrapper {
+		margin-top: inEm(40px);
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+			padding-inline: inEmMob(20px);
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+		}
 	}
 
 	&__nav {
@@ -29,6 +83,13 @@
 		margin-block: auto;
 		transition: background $transition-duration;
 
+		@include md-down {
+			width: inEmMob(50px);
+			height: inEmMob(50px);
+			top: calc(63.8vw + #{inEmMob(20px)});
+			bottom: auto;
+		}
+
 		@include mouseover {
 			background: $white;
 
@@ -42,15 +103,29 @@
 
 		&_prev {
 			left: inEm(-81px);
+
+			@include md-down {
+				left: auto;
+				right: inEmMob(80px);
+			}
 		}
 
 		&_next {
 			right: inEm(-81px);
+
+			@include md-down {
+				right: inEmMob(20px);
+			}
 		}
 
 		svg {
 			width: inEm(78px);
 			height: inEm(72px);
+
+			@include md-down {
+				width: inEmMob(24px);
+				height: inEmMob(22px);
+			}
 
 			path {
 				transition: fill $transition-duration;
@@ -59,10 +134,16 @@
 	}
 
 	.cc-pagination {
-		margin: inEm(40px) auto 0;
+		margin-inline: auto;
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: center;
+
+		@include md-down {
+			justify-content: flex-start;
+			margin-inline: initial;
+			max-width: calc(100% - #{inEmMob(130px)});
+		}
 
 		&__bullet {
 

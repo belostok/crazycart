@@ -23,6 +23,8 @@ import animations from './modules/animations.js';
 import vipShowSlider from './modules/vip-show-slider.js';
 import dropdown from './modules/dropdown.js';
 import mobileMenu from './modules/mobile-menu.js';
+import fillingsSlider from './modules/fillings-slider.js';
+import decorSlider from './modules/decor-slider.js';
 
 flsFunctions.isWebp();
 
@@ -41,6 +43,8 @@ documentReady(() => {
 	popup();
 	contacts();
 	dropdown();
+	mobileMenu();
+
 	heroSlider();
 	emotionsSlider();
 	feedbackSlider();
@@ -51,5 +55,6 @@ documentReady(() => {
 	relatedSlider();
 	gallerySlider();
 	vipShowSlider();
-	mobileMenu();
+	fillingsSlider();
+	decorSlider();
 });

@@ -16,6 +16,10 @@
 					right: calc(-100% - #{inEm(40px)});
 					height: 1px;
 					background: $red;
+
+					@include md-down {
+						right: calc(-100% - #{inEmMob(30px)});
+					}
 				}
 			}
 		}
@@ -34,6 +38,10 @@
 
 	&__index-container {
 		margin-bottom: inEm(10px);
+
+		@include md-down {
+			margin-bottom: inEmMob(10px);
+		}
 	}
 
 	&__index {
@@ -43,6 +51,11 @@
 		line-height: 0.95em;
 		color: $red;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(26px);
+			letter-spacing: -0.02em;
+		}
 	}
 
 	&__items {
@@ -51,6 +64,12 @@
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: inEm(40px);
 		row-gap: inEm(45px);
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+			column-gap: inEmMob(30px);
+			row-gap: inEmMob(30px);
+		}
 	}
 
 	&__item {
@@ -61,6 +80,10 @@
 	&__item-index-container {
 		position: absolute;
 		top: inEm(15px);
+
+		@include md-down {
+			top: inEmMob(15px);
+		}
 	}
 
 	&__item-index {
@@ -71,20 +94,37 @@
 		text-transform: uppercase;
 		font-weight: 800;
 		color: $red;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+		}
 	}
 
 	&__item-title-container {
 		padding-top: inEm(47px);
+
+		@include md-down {
+			padding-top: inEmMob(47px);
+		}
 	}
 
 	&__item-value-container {
 		margin-top: inEm(10px);
+
+		@include md-down {
+			margin-top: inEmMob(10px);
+		}
 	}
 
 	&__item-value {
+		display: block;
 		font-size: inEm(18px);
 		line-height: 1.1em;
 		letter-spacing: lh(-0.198px, 18px);
 		font-weight: 500;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+		}
 	}
 }

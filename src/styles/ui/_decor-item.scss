@@ -3,6 +3,11 @@
 
 	cursor: pointer;
 
+	@include md-down {
+		display: flex;
+		flex-direction: column;
+	}
+
 	@include mouseover {
 
 		#{$root} {
@@ -22,6 +27,14 @@
 		height: inEm(248px);
 		border-radius: inEm(20px);
 		overflow: hidden;
+
+		@include md-down {
+			width: 100%;
+			height: auto;
+			aspect-ratio: 1 / 1;
+			order: 1;
+			border-radius: inEmMob(20px);
+		}
 
 		&::after {
 			content: '';
@@ -45,6 +58,11 @@
 
 	&__title-container {
 		margin-top: inEm(15px);
+
+		@include md-down {
+			margin-top: 0;
+			margin-bottom: inEmMob(15px);
+		}
 	}
 
 	&__title {
@@ -53,5 +71,9 @@
 		line-height: 0.95em;
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+		}
 	}
 }

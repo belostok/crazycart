@@ -2,21 +2,28 @@
 	margin-top: inEm(180px);
 	color: $black;
 
+	@include md-down {
+		margin-top: inEmMob(123px);
+	}
+
 	&_birthday & {
 
 		&__wrapper {
 
-			&::after {
-				content: '';
-				position: absolute;
-				right: inEm(-160px);
-				bottom: inEm(-308px);
-				border-radius: 50%;
-				width: inEm(510px);
-				height: inEm(510px);
-				opacity: 0.8;
-				background: $turq;
-				filter: blur(inEm(189px));
+			@include md-up {
+
+				&::after {
+					content: '';
+					position: absolute;
+					right: inEm(-160px);
+					bottom: inEm(-308px);
+					border-radius: 50%;
+					width: inEm(510px);
+					height: inEm(510px);
+					opacity: 0.8;
+					background: $turq;
+					filter: blur(inEm(189px));
+				}
 			}
 		}
 
@@ -29,27 +36,39 @@
 	&__wrapper {
 		position: relative;
 
-		&::before {
-			content: '';
-			position: absolute;
-			top: 0;
-			left: inEm(-209px);
-			border-radius: 50%;
-			width: inEm(629px);
-			height: inEm(629px);
-			opacity: 0.8;
-			background: $turq;
-			filter: blur(inEm(234px));
+		@include md-up {
+
+			&::before {
+				content: '';
+				position: absolute;
+				top: 0;
+				left: inEm(-209px);
+				border-radius: 50%;
+				width: inEm(629px);
+				height: inEm(629px);
+				opacity: 0.8;
+				background: $turq;
+				filter: blur(inEm(234px));
+			}
 		}
 	}
 
 	&__title-container {
 		position: relative;
+
+		@include md-down {
+			max-width: inEmMob(280px);
+			margin-inline: auto;
+		}
 	}
 
 	&__title {
 		color: $black;
 		letter-spacing: lh(-4.4px, 110px);
+
+		@include md-down {
+			letter-spacing: -0.02em;
+		}
 	}
 
 	&__columns {
@@ -60,29 +79,58 @@
 		row-gap: inEm(30px);
 		justify-content: center;
 		margin-top: inEm(30px);
+
+		@include md-down {
+			grid-template-columns: 1fr;
+			row-gap: inEmMob(10px);
+			margin-top: inEmMob(20px);
+		}
 	}
 
 	&__column {
 		font-size: inEm(22px);
 		line-height: 1.1em;
+
+		@include md-down {
+			text-align: center;
+			font-size: inEmMob(15px);
+			line-height: lh(19.5px, 15px);
+		}
 	}
 
 	&__slider-container {
 		margin-top: inEm(60px);
+
+		@include md-down {
+			margin-top: inEmMob(45px);
+		}
 	}
 
 	&__slider {
 		overflow: hidden;
 		margin-inline: inEm(-10px);
+
+		@include md-down {
+			margin-inline: 0;
+		}
 	}
 
 	&__slide {
 		width: 25%;
 		padding-inline: inEm(10px);
+
+		@include md-down {
+			width: 100px;
+			padding-inline: 0;
+		}
 	}
 
 	&__item {
 		width: 100%;
+
+		@include md-down {
+			position: relative;
+		}
 	}
 
 	&__image-container {
@@ -90,11 +138,29 @@
 		height: inEm(440px);
 		border-radius: inEm(20px);
 		overflow: hidden;
+
+		@include md-down {
+			height: 119.7vw;
+			border-radius: inEmMob(20px);
+		}
 	}
 
 	&__slide-title-container {
 		margin-top: inEm(15px);
 		text-align: center;
+
+		@include md-down {
+			margin-top: 0;
+			position: absolute;
+			bottom: inEmMob(20px);
+			left: inEmMob(20px);
+			right: inEmMob(20px);
+			margin-inline: auto;
+			padding: inEmMob(6px) inEmMob(12px);
+			background: $white;
+			border-radius: inEmMob(20px);
+			width: max-content;
+		}
 	}
 
 	&__slide-title {
@@ -103,6 +169,11 @@
 		line-height: 0.95em;
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: max(12px, #{inEmMob(13px)});
+			letter-spacing: -0.02em;
+		}
 	}
 
 	&__nav {
@@ -115,6 +186,13 @@
 		height: inEm(160px);
 		background: $red;
 		border-color: $red;
+
+		@include md-down {
+			bottom: auto;
+			top: calc(119.7vw + #{inEmMob(20px)});
+			width: inEmMob(50px);
+			height: inEmMob(50px);
+		}
 
 		@include mouseover {
 			background: $white;
@@ -129,28 +207,61 @@
 
 		&_prev {
 			left: inEm(-80px);
+
+			@include md-down {
+				left: auto;
+				right: inEmMob(60px);
+			}
 		}
 
 		&_next {
 			right: inEm(-80px);
+
+			@include md-down {
+				right: 0;
+			}
 		}
 
 		svg {
 			width: inEm(78px);
 			height: inEm(72px);
+
+			@include md-down {
+				width: inEmMob(24px);
+				height: inEmMob(22px);
+			}
 		}
 	}
 
-	&__pagination {
+	&__nav-wrapper {
 		margin-top: inEm(30px);
+
+		@include md-down {
+			margin-top: inEmMob(35px);
+		}
 	}
 
 	.cc-pagination {
 
+		@include md-down {
+			justify-content: flex-start;
+			max-width: inEmMob(170px);
+		}
+
 		&__bullet {
+
+			@include md-down {
+				width: inEmMob(20px);
+				height: inEmMob(20px);
+			}
 
 			&::before {
 				background: $red;
+
+				@include md-down {
+					width: 4px;
+					height: 4px;
+				}
 			}
 
 			&.swiper-pagination-bullet-active {
@@ -164,10 +275,20 @@
 		max-width: inEm(730px);
 		margin-inline: auto;
 		text-align: center;
+
+		@include md-down {
+			margin-top: inEmMob(60px);
+			max-width: none;
+		}
 	}
 
 	&__description {
 		font-size: inEm(22px);
 		line-height: 1.1em;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			line-height: lh(19.5px, 15px);
+		}
 	}
 }

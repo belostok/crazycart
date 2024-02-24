@@ -5,6 +5,10 @@
 		position: relative;
 		z-index: 1;
 		margin-top: inEm(423px);
+
+		@include md-down {
+			margin-top: inEmMob(183px);
+		}
 	}
 	&_birthday & {
 
@@ -13,6 +17,16 @@
 			height: inEm(661px);
 			bottom: 0;
 			left: inEm(176px);
+
+			@include md-down {
+				top: inEmMob(-103px);
+				bottom: auto;
+				left: 0;
+				right: inEmMob(45px);
+				margin-inline: auto;
+				width: inEmMob(228px);
+				height: inEmMob(204px);
+			}
 		}
 	}
 
@@ -31,6 +45,14 @@
 		}
 	}
 
+	&__title-container {
+
+		@include md-down {
+			max-width: inEmMob(351px);
+			margin-inline: auto;
+		}
+	}
+
 	&__title {
 		color: $black;
 		text-align: left;
@@ -45,6 +67,11 @@
 			&:nth-of-type(2) {
 				text-align: center;
 				padding-right: inRem(100px);
+
+				@include md-down {
+					text-align: left;
+					padding-right: 0;
+				}
 			}
 		}
 	}
@@ -61,11 +88,22 @@
 		margin-top: inEm(30px);
 		margin-left: inEm(804px);
 		max-width: inEm(392px);
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+			margin-left: 0;
+			max-width: none;
+		}
 	}
 
 	&__description {
 		font-size: inEm(22px);
 		line-height: 1.1em;
 		color: $black;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			line-height: lh(16.5px, 15px);
+		}
 	}
 }

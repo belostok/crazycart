@@ -1,10 +1,18 @@
 .cc-fillings-item {
 	border-top: 1px solid $red;
 
+	@include md-down {
+		border: none;
+	}
+
 	&__title-container,
 	&__description-container,
 	&__details-container {
 		margin-top: inEm(15px);
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+		}
 	}
 
 	&__title {
@@ -13,18 +21,35 @@
 		line-height: 0.95em;
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+		}
 	}
 
 	&__description {
 		font-size: max(#{inEm(13px)}, 12px);
 		line-height: 1.25em;
 		font-weight: 500;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			font-weight: 400;
+		}
 	}
 
 	&__details {
+		display: block;
 		font-size: inEm(18px);
 		line-height: 1.1em;
 		font-weight: 700;
 		letter-spacing: lh(-0.198px, 18px);
+
+		@include md-down {
+			font-size: inEmMob(18px);
+			line-height: 0.95em;
+			letter-spacing: -0.02em;
+			font-weight: 800;
+		}
 	}
 }

@@ -49,6 +49,7 @@ body {
 
 	@include md-down {
 		padding-top: inEmMob(36px);
+		padding-bottom: inEmMob(21px);
 	}
 }
 
