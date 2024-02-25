@@ -4,6 +4,13 @@
 	margin-top: inEm(180px);
 	padding-bottom: inEm(66px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+		padding-bottom: inEmMob(35px);
+		padding-left: 0;
+		padding-right: 0;
+	}
+
 	&_about & {
 
 		&__title-container {
@@ -19,6 +26,11 @@
 		max-width: inEm(1042px);
 		margin-inline: auto;
 		text-align: center;
+
+		@include md-down {
+			max-width: none;
+			padding-inline: inEmMob(20px);
+		}
 	}
 
 	&__title {
@@ -27,12 +39,23 @@
 		font-weight: 800;
 		text-transform: uppercase;
 		letter-spacing: lh(-1.88px, 75px);
+
+		@include md-down {
+			font-size: inEmMob(36px);
+			letter-spacing: -0.02em;
+		}
 	}
 
 	&__items {
 		margin-top: inEm(100px);
 		column-gap: inEm(60px);
 		row-gap: inEm(100px);
+
+		@include md-down {
+			margin: inEmMob(90px) auto 0;
+			row-gap: inEmMob(90px);
+			max-width: inEmMob(391px);
+		}
 	}
 
 	&__item {
@@ -43,6 +66,17 @@
 		padding: inEm(45px) inEm(45px) inEm(130px);
 		background: linear-gradient(262deg, #4EE3FF 0%, #65C7F7 50%, #0052D4 100%);
 		color: $white;
+
+		@include md-down {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
+			border-radius: inEmMob(20px);
+			width: 100%;
+			height: inEmMob(224px);
+			padding: inEmMob(25px) inEmMob(20px);
+			background: linear-gradient(262.11deg, #4EE3FF 0%, #65C7F7 50%, #0052D4 100%);
+		}
 
 		&_main {
 			height: inEm(361px);
@@ -62,10 +96,26 @@
 			width: 100% !important;
 			order: -1;
 
+			@include md-down {
+				height: inEmMob(224px) !important;
+				padding-bottom: inEmMob(64px);
+			}
+
 			#{$root} {
 
 				&__text-container {
 					width: inEm(450px);
+
+					@include md-down {
+						width: inEmMob(225px);
+					}
+				}
+
+				&__item-title-container {
+
+					@include md-down {
+						text-align: right;
+					}
 				}
 
 				&__item-description-container {
@@ -74,6 +124,14 @@
 					position: absolute;
 					top: 0;
 					right: inEm(-25px);
+
+					@include md-down {
+						max-width: inEmMob(130px);
+						right: auto;
+						left: inEmMob(8px);
+						top: calc(100% + #{inEmMob(5px)});
+						margin-top: 0;
+					}
 				}
 
 				&__image {
@@ -82,6 +140,14 @@
 					width: inEm(829px);
 					height: inEm(841px);
 					background-image: url('../images/birthday-icon.svg');
+
+					@include md-down {
+						width: inEmMob(260px);
+						height: inEmMob(260px);
+						top: inEmMob(-75px);
+						right: inEmMob(30px);
+						transform: rotate(280deg);
+					}
 				}
 			}
 		}
@@ -96,6 +162,32 @@
 					width: inEm(446px);
 					height: inEm(600px);
 					background-image: url('../images/vip-icon.svg');
+
+					@include md-down {
+						top: inEmMob(-93px);
+						right: auto;
+						left: inEmMob(-30px);
+						width: inEmMob(225px);
+						height: inEmMob(310px);
+					}
+				}
+
+				&__text-container {
+
+					@include md-down {
+						margin-left: inEmMob(80px);
+					}
+				}
+
+				&__item-title {
+					font-size: inEmMob(48px);
+				}
+
+				&__item-description-container {
+
+					@include md-down {
+						max-width: inEmMob(160px);
+					}
 				}
 			}
 		}
@@ -143,6 +235,20 @@
 					width: inEm(350px);
 					height: inEm(471px);
 					background-image: url('../images/graduation-icon.svg');
+
+					@include md-down {
+						width: inEmMob(175px);
+						height: inEmMob(208px);
+						right: inEmMob(35px);
+						bottom: inEmMob(77px);
+					}
+				}
+
+				&__item-description-container {
+
+					@include md-down {
+						max-width: inEmMob(215px);
+					}
 				}
 			}
 		}
@@ -160,6 +266,11 @@
 		line-height: 0.95em;
 		font-weight: 800;
 		letter-spacing: lh(-3px, 75px);
+
+		@include md-down {
+			font-size: inEmMob(36px);
+			letter-spacing: -0.02em;
+		}
 	}
 
 	&__item-title-add {
@@ -169,19 +280,39 @@
 	&__item-description-container {
 		margin-top: inEm(15px);
 		max-width: inEm(300px);
+
+		@include md-down {
+			margin-top: inEmMob(5px);
+			max-width: none;
+		}
 	}
 
 	&__item-description {
 		font-size: inEm(22px);
 		line-height: 1.1em;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 	}
 
 	&__button {
 		bottom: inEm(-66px);
+
+		@include md-down {
+			bottom: inEmMob(-35px);
+			right: inEmMob(20px);
+		}
 	}
 
 	.cc-button-details {
 		width: inEm(160px);
 		height: inEm(160px);
+
+		@include md-down {
+			width: inEmMob(110px);
+			height: inEmMob(110px);
+			transform: rotate(10.4deg);
+		}
 	}
 }

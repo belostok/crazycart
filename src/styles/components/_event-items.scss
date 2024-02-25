@@ -64,6 +64,10 @@
 
 	&_events {
 		margin-top: inEm(180px);
+
+		@include md-down {
+			margin-top: inEmMob(120px);
+		}
 	}
 
 	&__title-container {

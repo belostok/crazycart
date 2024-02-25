@@ -32,3 +32,12 @@
 @function lh($num, $browser-font-size: $html-font-size) {
 	@return calc(1 / $browser-font-size) * $num * 1em;
 }
+
+@function round($value, $fraction-digits: 0) {
+	$power: math.pow(10, $fraction-digits);
+	@return math.div(math.round($power * $value), $power);
+}
+
+@function inVw( $size, $viewport-width: 390px ) {
+	@return round(math.div($size, math.div($viewport-width, 100)) * 1vw, 3);
+}

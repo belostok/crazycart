@@ -50,6 +50,11 @@
 		margin-top: inEm(123px);
 		background: transparent;
 
+		@include md-down {
+			margin-top: 0;
+			padding: inEmMob(110px) 0 0;
+		}
+
 		.cc-checkbox {
 
 			&__title {
@@ -64,25 +69,46 @@
 			border-radius: inEm(20px);
 			overflow: hidden;
 			padding-inline: inEm(60px);
+
+			@include md-down {
+				border-radius: inEmMob(20px);
+				padding: inEmMob(60px) inEmMob(20px);
+			}
 		}
 
 		&__form-container {
 			width: inEm(456px);
+
+			@include md-down {
+				width: 100%;
+			}
 		}
 
 		&__input {
 
 			&:nth-child(2) {
 				width: inEm(226px);
+
+				@include md-down {
+					width: 100%;
+				}
 			}
 
 			&:nth-child(3) {
 				width: inEm(220px);
+
+				@include md-down {
+					width: 100%;
+				}
 			}
 		}
 
 		&__checkbox {
 			max-width: inEm(373px);
+
+			@include md-down {
+				max-width: none;
+			}
 		}
 	}
 
@@ -186,6 +212,10 @@
 	&__inputs {
 		column-gap: inEm(10px);
 		row-gap: inEm(10px);
+
+		@include md-down {
+			row-gap: inEmMob(10px);
+		}
 	}
 
 	&__input {

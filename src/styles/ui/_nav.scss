@@ -5,6 +5,13 @@
 	border: 1px solid $black;
 	transition: background $transition-duration, border-color $transition-duration;
 
+	@include md-down {
+		width: inEmMob(50px);
+		height: inEmMob(50px);
+		border-color: $red;
+		background: $red;
+	}
+
 	@include mouseover {
 		background: $red;
 		border-color: $red;
@@ -21,8 +28,17 @@
 		width: inEm(25px);
 		height: inEm(22px);
 
+		@include md-down {
+			width: inEmMob(24px);
+			height: inEmMob(22px);
+		}
+
 		path {
 			transition: fill $transition-duration;
+
+			@include md-down {
+				fill: $white;
+			}
 		}
 	}
 }
