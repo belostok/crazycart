@@ -70,6 +70,17 @@
 		}
 	}
 
+	&_events & {
+
+		&__button-container {
+			margin-top: inEmMob(10px);
+
+			@include md-up {
+				display: none;
+			}
+		}
+	}
+
 	&__title-container {
 		position: relative;
 		margin-bottom: inEm(60px);
@@ -94,7 +105,7 @@
 		@include md-down {
 			column-gap: inEmMob(10px);
 			grid-template-columns: repeat(2, 1fr);
-			margin-bottom: inEm(-10px);
+			margin-bottom: inEmMob(-10px);
 		}
 	}
 

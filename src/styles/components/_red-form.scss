@@ -51,8 +51,28 @@
 		background: transparent;
 
 		@include md-down {
+			overflow: visible;
 			margin-top: 0;
 			padding: inEmMob(110px) 0 0;
+		}
+
+		&::before {
+
+			@include md-down {
+				content: '';
+				position: absolute;
+				left: -100%;
+				right: -100%;
+				bottom: inEmMob(-141px);
+				margin-inline: auto;
+				width: inEmMob(443px);
+				height: inEmMob(443px);
+				border-radius: 50%;
+				background: $turq;
+				opacity: 0.7;
+				filter: blur(7em);
+				z-index: -1;
+			}
 		}
 
 		.cc-checkbox {

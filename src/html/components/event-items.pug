@@ -1,4 +1,6 @@
-mixin eventItems(title, cl, button)
+mixin eventItems(title, cl, button, buttonTitle)
+	- buttonTitle = buttonTitle || 'узнать цены на билет';
+
 	section.cc-event-items.cc-outer(class= cl)
 		._wrapper.cc-wrapper
 			._title-container
@@ -18,6 +20,6 @@ mixin eventItems(title, cl, button)
 
 			if button
 				._button-container
-					+formButton('cc-button-form_big', 'узнать цены на билет')
+					+formButton('cc-button-form_big', buttonTitle)
 
 

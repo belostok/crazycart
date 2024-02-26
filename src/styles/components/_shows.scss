@@ -3,6 +3,10 @@
 
 	margin-top: inEm(250px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+	}
+
 	&_expanded {
 
 		.cc-button-show {
