@@ -6,7 +6,7 @@
 	grid-template-areas:
             'title right'
             'left right';
-    column-gap: inEm(76px);
+    column-gap: inEm(50px);
 	border-top: 1px solid $red;
 	padding-top: inEm(45px);
 	color: $black;
@@ -73,12 +73,35 @@
 		}
 	}
 
+	&_prices-ver & {
+
+		&__prices-item-wrapper_additional {
+			display: none;
+		}
+
+		&__prices-items {
+			flex-direction: column;
+		}
+	}
+
+	&:not(&_prices-ver) {
+
+		.cc-rates-item__prices-item-wrapper:not(.cc-rates-item__prices-item-wrapper_additional) {
+
+			.cc-rates-item__prices-item_add {
+				display: none;
+			}
+		}
+	}
+
 	&__title-section {
 		grid-area: title;
 		width: max-content;
+		max-width: inEm(700px);
 
 		@include md-down {
 			width: 100%;
+			max-width: none;
 		}
 	}
 
@@ -175,15 +198,14 @@
 
 	&__prices-title,
 	&__list-title {
-		font-size: inEm(32px);
+		font-size: inEm(38px);
 		line-height: 0.95em;
-		letter-spacing: lh(-1.52px, 32px);
+		letter-spacing: -0.04em;
 		font-weight: 800;
 		text-transform: uppercase;
 
 		@include md-down {
 			font-size: inEmMob(26px);
-			letter-spacing: -0.04em;
 		}
 	}
 
@@ -197,11 +219,19 @@
 
 	&__prices-items {
 		column-gap: inEm(5px);
-		row-gap: inEm(5px);
+		row-gap: inEm(15px);
 
 		@include md-down {
 			column-gap: inEmMob(5px);
-			row-gap: inEmMob(5px);
+			row-gap: inEmMob(15px);
+		}
+	}
+
+	&__prices-item-wrapper {
+		column-gap: inEm(5px);
+
+		@include md-down {
+			column-gap: inEmMob(5px);
 		}
 	}
 
