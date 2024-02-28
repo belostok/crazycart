@@ -1,11 +1,18 @@
 mixin birthdayCake(cl)
+	- var title = cl ? 'праздничный стол на День Рождения' : 'Еда и торт на день рождения'
+
 	section.cc-birthday-cake.cc-outer(class= cl)
 		._wrapper.cc-wrapper.flex.jcspb.aife.relative
 			._title-container.relative
 				._image-container.absolute.img-contain
 					img._image(src='../images/cake.svg', alt='#', loading='lazy')
-				h2._title.cc-heading-2.relative Еда и торт на день рождения
+				h2._title.cc-heading-2.relative= title
 
-			._description-container
-				p Ресторан FoodMama специально для нас подготовил праздничные сеты. Официант примет заказ и принесёт все в вашу банкетную комнату.
-				p Также можно принести еду с собой.
+			if ! cl
+				._description-container
+					p Ресторан FoodMama специально для нас подготовил праздничные сеты. Официант примет заказ и принесёт все в вашу банкетную комнату.
+					p Также можно принести еду с собой.
+
+			else
+				._button-container
+					+formButton('cc-button-form_big', 'Заказать праздник', true)

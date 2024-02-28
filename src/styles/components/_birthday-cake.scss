@@ -5,6 +5,28 @@
 		margin-top: inEmMob(141px);
 	}
 
+	&_button & {
+
+		&__wrapper {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+		&__title-container {
+			width: auto;
+			max-width: inEm(984px);
+		}
+
+		&__button-container {
+			width: 100%;
+			margin-top: inEm(60px);
+		}
+
+		&__image-container {
+			right: inEm(-240px);
+		}
+	}
+
 	&__wrapper {
 
 		@include md-down {

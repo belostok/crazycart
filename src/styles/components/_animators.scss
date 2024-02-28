@@ -15,6 +15,7 @@
 				&::after {
 					content: '';
 					position: absolute;
+					z-index: -1;
 					right: inEm(-160px);
 					bottom: inEm(-308px);
 					border-radius: 50%;
@@ -290,5 +291,16 @@
 			font-size: inEmMob(15px);
 			line-height: lh(19.5px, 15px);
 		}
+	}
+
+	&__rounds-container {
+		max-width: inEm(1027px);
+		margin-inline: auto;
+	}
+
+	&__rounds-image {
+		display: block;
+		width: 100%;
+		height: auto;
 	}
 }
