@@ -1,8 +1,16 @@
 .cc-attractions {
 	margin-top: inEm(180px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+	}
+
 	&__title-container {
 		margin-bottom: inEm(60px);
+
+		@include md-down {
+			margin-bottom: inEmMob(30px);
+		}
 	}
 
 	&__title {
@@ -14,16 +22,31 @@
 		grid-template-columns: repeat(4, 1fr);
 		column-gap: inEm(40px);
 		row-gap: inEm(40px);
+
+		@include md-down {
+			grid-template-columns: repeat(2, 1fr);
+			column-gap: inEmMob(10px);
+			row-gap: inEmMob(30px);
+		}
 	}
 
 	&__image-container {
 		height: inEm(370px);
 		border-radius: inEm(15px);
 		overflow: hidden;
+
+		@include md-down {
+			height: inVw(210px);
+			border-radius: inVw(20px);
+		}
 	}
 
 	&__item-title-container {
 		text-align: center;
 		margin-top: inEm(30px);
+
+		@include md-down {
+			margin-top: inEmMob(15px);
+		}
 	}
 }

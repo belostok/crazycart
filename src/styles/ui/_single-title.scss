@@ -2,6 +2,11 @@
 	margin-top: inEm(120px);
 	margin-bottom: inEm(60px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+		margin-bottom: inEmMob(40px);
+	}
+
 	&_big {
 		margin-top: inEm(30px);
 		margin-bottom: inEm(30px);
@@ -18,5 +23,10 @@
 		line-height: lh(171px, 180px);
 		letter-spacing: -0.025em;
 		text-align: center;
+
+		@include md-down {
+			font-size: inEmMob(80px);
+			letter-spacing: -0.04em;
+		}
 	}
 }

@@ -3,8 +3,16 @@
 
 	margin-top: inEm(180px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+	}
+
 	&__title-container {
 		margin-bottom: inEm(60px);
+
+		@include md-down {
+			margin-bottom: inEmMob(60px);
+		}
 	}
 
 	&__title {
@@ -16,17 +24,28 @@
 		grid-template-columns: repeat(4, 1fr);
 		column-gap: inEm(40px);
 		row-gap: inEm(90px);
+
+		@include md-down {
+			grid-template-columns: 1fr;
+			row-gap: inEmMob(40px);
+		}
 	}
 
 	&__item {
 
 		&_big {
-			grid-column: span 2;
+
+			@include md-up {
+				grid-column: span 2;
+			}
 
 			#{$root} {
 
 				&__image-container {
-					height: inEm(363px);
+
+					@include md-up {
+						height: inEm(363px);
+					}
 				}
 
 				&__prices-container {
@@ -36,6 +55,12 @@
 					column-gap: inEm(5px);
 					row-gap: inEm(5px);
 					margin-top: inEm(30px);
+
+					@include md-down {
+						column-gap: inEmMob(5px);
+						row-gap: inEmMob(5px);
+						margin-top: inEmMob(30px);
+					}
 				}
 			}
 		}
@@ -43,11 +68,26 @@
 
 	&__image-container {
 		height: inEm(170px);
+
+		@include md-down {
+			height: inEmMob(170px);
+		}
 	}
 
 	&__item-title-container {
 		text-align: center;
 		margin-top: inEm(30px);
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+		}
+	}
+
+	&__item-title {
+
+		@include md-down {
+			font-size: inEmMob(32px);
+		}
 	}
 
 	&__prices-container {
@@ -56,5 +96,9 @@
 
 	&__button-container {
 		margin-top: inEm(30px);
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+		}
 	}
 }

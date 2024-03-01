@@ -3,36 +3,49 @@
 
 	margin-top: inEm(60px);
 
+	@include md-down {
+		margin-top: inEmMob(60px);
+	}
+
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: inEm(30px);
 		row-gap: inEm(30px);
+
+		@include md-down {
+			grid-template-columns: 1fr;
+			row-gap: inEmMob(60px);
+		}
 	}
 
 	&__item {
 		padding-top: inEm(60px);
 		border-top: 1px solid;
 
+		@include md-down {
+			padding-top: inEmMob(30px);
+		}
+
 		&:nth-child(odd) {
-			color: $blue;
+			color: $d-blue;
 
 			#{$root} {
 
 				&__item-title {
-					color: $blue;
+					color: $d-blue;
 				}
 			}
 
 			.cc-button-form {
-				border-color: $blue;
-				background: $blue;
+				border-color: $d-blue;
+				background: $d-blue;
 
 				@include mouseover {
 					background: $white;
 
 					.cc-button-form__title {
-						color: $blue;
+						color: $d-blue;
 					}
 				}
 
@@ -74,14 +87,28 @@
 	&__item-title-container {
 		text-align: center;
 		margin-bottom: inEm(45px);
+
+		@include md-down {
+			margin-bottom: inEmMob(30px);
+		}
 	}
 
 	&__prices-container {
 		column-gap: inEm(5px);
 		row-gap: inEm(5px);
+
+		@include md-down {
+			justify-content: flex-start;
+			column-gap: inEmMob(5px);
+			row-gap: inEmMob(5px);
+		}
 	}
 
 	&__button-container {
 		margin-top: inEm(45px);
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+		}
 	}
 }
