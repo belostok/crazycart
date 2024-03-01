@@ -5,6 +5,12 @@
 	&_pre-footer {
 		margin-top: inEm(180px);
 		padding-bottom: inEm(155px);
+
+		@include md-down {
+			margin-top: inEmMob(120px);
+			margin-bottom: inEmMob(-21px);
+			padding-bottom: 0;
+		}
 	}
 
 	&_inner {
@@ -14,23 +20,41 @@
 	&__title-container {
 		max-width: inEm(1006px);
 		margin-bottom: inEm(60px);
+
+		@include md-down {
+			max-width: none;
+			margin-bottom: inEmMob(60px);
+		}
 	}
 
 	&__title {
 		text-align: left;
 		color: $black;
+
+		@include md-down {
+			text-align: center;
+		}
 	}
 
 	&__grid {
 		display: grid;
 		grid-template-columns: inEm(516px) 1fr;
 		column-gap: inEm(20px);
+
+		@include md-down {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__item {
 		padding-block: inEm(15px);
 		margin-bottom: inEm(15px);
 		border-top: 1px solid $red;
+
+		@include md-down {
+			padding-block: inEmMob(15px);
+			margin-bottom: inEmMob(15px);
+		}
 	}
 
 	&__extra-title-container {
@@ -39,6 +63,10 @@
 
 	&__place-container {
 		margin-bottom: inEm(15px);
+
+		@include md-down {
+			margin-bottom: inEmMob(15px);
+		}
 	}
 
 	&__place {
@@ -48,6 +76,10 @@
 		line-height: 0.95em;
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+		}
 	}
 
 	&__address {
@@ -56,6 +88,10 @@
 		letter-spacing: inEm(-0.143px, 13px);
 		line-height: 1.25em;
 		font-weight: 500;
+
+		@include md-down {
+			font-size: max(#{inEmMob(13px)}, 12px);
+		}
 	}
 
 	&__subway-container {
@@ -71,6 +107,12 @@
 			background-size: contain;
 			background-image: url('../images/subway.svg');
 			margin-right: inEm(10px);
+
+			@include md-down {
+				width: inEmMob(19px);
+				height: inEmMob(24px);
+				margin-right: inEmMob(10px);
+			}
 		}
 	}
 
@@ -78,20 +120,41 @@
 		font-size: max(12px, inEm(13px));
 		line-height: lh(16.25px, 13px);
 		letter-spacing: -0.011em;
+
+		@include md-down {
+			font-size: max(12px, inEmMob(13px));
+		}
 	}
 
 	&__social {
 		column-gap: inEm(15px);
 		row-gap: inEm(15px);
+
+		@include md-down {
+			margin-top: inEmMob(4px);
+			margin-bottom: inEmMob(34px);
+			column-gap: inEmMob(5px);
+			row-gap: inEmMob(5px);
+		}
 	}
 
 	&__social-item {
 		width: inEm(50px);
 		height: inEm(50px);
+
+		@include md-down {
+			width: inEmMob(50px);
+			height: inEmMob(50px);
+		}
 	}
 
 	&__map-container {
 		height: inEm(441px);
+
+		@include md-down {
+			margin-inline: inEmMob(-20px);
+			height: inEmMob(420px);
+		}
 
 		iframe,
 		& > div {

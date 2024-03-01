@@ -59,6 +59,10 @@
 
 		&__expanded-button-container {
 			margin-top: inEm(100px);
+
+			@include md-down {
+				margin-top: inEmMob(40px);
+			}
 		}
 	}
 

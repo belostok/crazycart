@@ -29,6 +29,12 @@
 		border-radius: inEm(90px);
 		border: 1px solid $red;
 
+		@include md-down {
+			padding: 0 inEmMob(30px);
+			height: inEmMob(46px);
+			border-radius: inEmMob(90px);
+		}
+
 		@include mouseover {
 			background: $white;
 
@@ -75,5 +81,9 @@
 		line-height: 1em;
 		text-transform: uppercase;
 		transition: color $transition-duration;
+
+		@include md-down {
+			font-size: inEmMob(14px);
+		}
 	}
 }

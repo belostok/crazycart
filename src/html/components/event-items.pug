@@ -3,8 +3,9 @@ mixin eventItems(title, cl, button, buttonTitle)
 
 	section.cc-event-items.cc-outer(class= cl)
 		._wrapper.cc-wrapper
-			._title-container
-				h2._title.cc-heading-2= title
+			if title
+				._title-container
+					h2._title.cc-heading-2= title
 			- var n = 1;
 			._items.js-cc-event-items
 				while n < 11

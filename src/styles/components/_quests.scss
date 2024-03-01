@@ -4,36 +4,96 @@
 	min-height: inEm(607px);
 	padding-top: inEm(158px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+		padding-top: 0;
+		min-height: auto;
+	}
+
 	&__image-container {
 		top: inEm(-213px);
 		width: inEm(728px);
 		height: inEm(729px);
+
+		@include md-down {
+			top: inEmMob(54px);
+			width: inEmMob(184px);
+			height: inEmMob(184px);
+			left: 0;
+			right: 0;
+			margin-inline: auto;
+
+			&::before {
+				content: '';
+				position: absolute;
+				z-index: -1;
+				top: -100%;
+				right: -100%;
+				bottom: -100%;
+				left: -100%;
+				margin: auto;
+				width: inEmMob(191px);
+				height: inEmMob(191px);
+				background: $d-blue;
+				filter: blur(3em);
+				border-radius: 100%;
+				opacity: 0.5;
+			}
+		}
 	}
 
 	&__title-container {
 		margin-left: inEm(536px);
+
+		@include md-down {
+			margin-left: 0;
+		}
 	}
 
 	&__title {
 		text-align: left;
 		color: $black;
+
+		@include md-down {
+			text-align: center;
+		}
 	}
 
 	&__description-wrapper {
 		margin-top: inEm(60px);
 		margin-left: inEm(804px);
+
+		@include md-down {
+			margin-top: inEmMob(226px);
+			margin-left: 0;
+		}
 	}
 
 	&__description-container {
 		max-width: inEm(382px);
+
+		@include md-down {
+			max-width: none;
+		}
 	}
 
 	&__description {
 		font-size: inEm(22px);
 		line-height: 1.1em;
+
+		@include md-down {
+			text-align: center;
+			font-size: inEmMob(15px);
+		}
 	}
 
 	&__button-container {
 		margin-top: inEm(60px);
+
+		@include md-down {
+			display: flex;
+			justify-content: center;
+			margin-top: inEmMob(30px);
+		}
 	}
 }

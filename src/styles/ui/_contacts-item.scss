@@ -20,6 +20,12 @@
 			height: inEm(24px);
 			margin-right: inEm(5px);
 
+			@include md-down {
+				width: inEmMob(24px);
+				height: inEmMob(24px);
+				margin-right: inEmMob(5px);
+			}
+
 			&::before {
 				content: '';
 				position: absolute;
@@ -41,6 +47,10 @@
 			color: $red;
 			font-size: inEm(18px);
 			font-weight: 700;
+
+			@include md-down {
+				font-size: inEmMob(18px);
+			}
 		}
 	}
 
@@ -51,6 +61,12 @@
 			width: inEm(24px);
 			height: inEm(24px);
 			margin-right: inEm(5px);
+
+			@include md-down {
+				width: inEmMob(24px);
+				height: inEmMob(24px);
+				margin-right: inEmMob(5px);
+			}
 
 			svg {
 
@@ -64,6 +80,10 @@
 			color: $black;
 			font-size: inEm(18px);
 			font-weight: 700;
+
+			@include md-down {
+				font-size: inEmMob(18px);
+			}
 		}
 	}
 

@@ -81,6 +81,14 @@
 		}
 	}
 
+	&_no-title {
+		margin-top: inEm(60px);
+
+		@include md-down {
+			margin-top: inEmMob(60px);
+		}
+	}
+
 	&__title-container {
 		position: relative;
 		margin-bottom: inEm(60px);
@@ -200,5 +208,9 @@
 
 	&__button-container {
 		margin-top: inEm(40px);
+
+		@include md-down {
+			margin-top: inEmMob(10px);
+		}
 	}
 }
