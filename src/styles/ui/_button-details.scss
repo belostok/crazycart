@@ -47,6 +47,18 @@
 	&_more {
 		width: inEm(240px);
 		height: inEm(240px);
+
+		@include md-down {
+			width: inEmMob(190px);
+			height: inEmMob(190px);
+		}
+	}
+
+	&_more & {
+
+		&__title {
+			font-size: inEmMob(18px);
+		}
 	}
 
 	&_about {

@@ -21,6 +21,10 @@
 		}
 	}
 
+	&_events {
+		padding-top: inEmMob(120px);
+	}
+
 	&_events & {
 
 		&__title {
@@ -146,6 +150,13 @@
 				width: 100%;
 			}
 		}
+
+		&:not(:nth-child(-n+2)) {
+
+			@include md-down {
+				display: none;
+			}
+		}
 	}
 
 	&__item {
@@ -262,5 +273,9 @@
 
 	&__button-container {
 		margin-top: inEm(20px);
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+		}
 	}
 }

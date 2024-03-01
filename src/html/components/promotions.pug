@@ -69,6 +69,10 @@ mixin promotions(title, cl, extra, button)
 								._item-button
 									+detailsButton('cc-button-details_promo')
 
+			if !button
+				._button-container.cc-mobile
+					+formButton('cc-button-form_big', 'все акции')
+
 			if button
 				._button-container
 					+formButton('cc-button-form_big', 'больше акций')

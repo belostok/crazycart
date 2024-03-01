@@ -37,6 +37,7 @@
 		&::before {
 			content: '';
 			position: absolute;
+			z-index: -1;
 			left: inEm(-514px);
 			bottom: inEm(-30px);
 			width: inEm(782px);

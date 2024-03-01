@@ -10,8 +10,11 @@
 	&_footer & {
 
 		&__list-container {
-			top: auto;
-			bottom: calc(100% + #{inEm(10px)});
+
+			@include md-up {
+				top: auto;
+				bottom: calc(100% + #{inEm(10px)});
+			}
 		}
 	}
 

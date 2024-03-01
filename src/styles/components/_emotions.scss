@@ -44,7 +44,17 @@
 
 		&__title-container {
 			max-width: none;
-			margin-inline: inEm(-30px);
+
+			@include md-up {
+				margin-inline: inEm(-30px);
+			}
+		}
+
+		&__nav-container {
+
+			@include md-down {
+				margin-top: inEmMob(10px);
+			}
 		}
 
 		&__nav {
@@ -63,6 +73,13 @@
 			}
 
 			svg {
+				width: inEm(70.4px);
+				height: inEm(64px);
+
+				@include md-down {
+					width: inEmMob(24px);
+					height: inEmMob(22px);
+				}
 
 				path {
 					transition: fill $transition-duration;

@@ -1,16 +1,21 @@
 mixin shows(cl, expanded)
-	- var jsClass = expanded ? '' : 'cc-shows__items_hide-items js-cc-shows-items'
-	section.cc-shows.cc-outer(class= cl)
-		._wrapper.cc-wrapper
+	- var jsContainerClass = expanded ? '' : 'cc-shows_hide-items js-cc-shows'
+	section.cc-shows.cc-outer(class= cl + ' ' + jsContainerClass)
+		._wrapper.cc-wrapper.relative
 			._title-container
-				h2._title.cc-heading-2.flex.fdc
+				h2._title.cc-heading-2.flex.fdc.cc-desktop
 					span._title-first.relative.flex.aife Наши
 						span._count-container.absolute.flex.jcc.aic
 							span._count 21
 					span шоу-программы
+				h2._title.cc-heading-2.flex.fdc.cc-mobile
+					span._title-first.relative.flex.aife Наши шоу-
+						span._count-container.absolute.flex.jcc.aic
+							span._count 21
+					span программы
 
 			- var n = 0;
-			._items.relative(class= jsClass)
+			._items.relative
 				while n < 15
 					a._item.relative.js-cc-shows-item(href='#')
 						._image-container.img-cover.absolute

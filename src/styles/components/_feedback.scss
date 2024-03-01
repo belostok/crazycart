@@ -74,6 +74,11 @@
 		&__nav {
 			border-color: $black;
 
+			@include md-down {
+				border-color: $red;
+				background: $red;
+			}
+
 			@include mouseover {
 
 				svg {
@@ -86,9 +91,18 @@
 
 			svg {
 
+				@include md-down {
+					width: inEmMob(24px);
+					height: inEmMob(22px);
+				}
+
 				path {
 					fill: $black;
 					transition: fill $transition-duration;
+
+					@include md-down {
+						fill: $white;
+					}
 				}
 			}
 		}
