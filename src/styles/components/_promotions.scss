@@ -57,6 +57,11 @@
 	&_promo {
 		padding-top: inEm(60px);
 		padding-bottom: inEm(175px);
+
+		@include md-down {
+			padding-top: inEmMob(90px);
+			padding-bottom: inEmMob(115px);
+		}
 	}
 
 	&_promo & {
@@ -65,8 +70,22 @@
 			margin-top: inEm(-10px);
 		}
 
+		&__item-wrapper {
+
+			&:not(:nth-child(-n+2)) {
+
+				@include md-down {
+					display: block;
+				}
+			}
+		}
+
 		&__item {
 			border: 1px solid #04062D;
+		}
+
+		&__button-container {
+			display: none;
 		}
 	}
 
