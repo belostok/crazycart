@@ -4,6 +4,11 @@
 	&_page {
 		margin-top: inEm(102px);
 		padding-bottom: inEm(175px);
+
+		@include md-down {
+			margin-top: inEmMob(120px);
+			padding-bottom: inEmMob(115px);
+		}
 	}
 
 	&_about & {
@@ -23,17 +28,34 @@
 		grid-template-columns: repeat(3, 1fr);
 		column-gap: inEm(40px);
 		row-gap: inEm(40px);
+
+		@include md-down {
+			grid-template-columns: 1fr;
+			row-gap: inEmMob(40px);
+		}
 	}
 
 	&__button-container {
 		margin-top: inEm(40px);
+
+		@include md-down {
+			margin-top: inEmMob(40px);
+		}
 	}
 
 	.cc-button-form {
 		padding-block: inEm(32px);
 
+		@include md-down {
+			padding-block: inEmMob(25px);
+		}
+
 		&__title {
 			font-size: inEm(22px);
+
+			@include md-down {
+				font-size: inEmMob(18px);
+			}
 		}
 	}
 }

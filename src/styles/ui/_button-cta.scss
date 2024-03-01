@@ -57,6 +57,12 @@
 		border-radius: inEm(130px);
 		border: 1px solid $red;
 
+		@include md-down {
+			padding: 0 inEmMob(20px);
+			height: inEmMob(44px);
+			border-radius: inEmMob(130px);
+		}
+
 		@include mouseover {
 			background: $white;
 
@@ -70,6 +76,10 @@
 		&__title {
 			font-size: inEm(14px);
 			color: $white;
+
+			@include md-down {
+				font-size: inEmMob(14px);
+			}
 		}
 	}
 
