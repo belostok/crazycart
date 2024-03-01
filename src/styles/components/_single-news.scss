@@ -2,9 +2,18 @@
 	color: $black;
 	margin-bottom: inEm(60px);
 
+	@include md-down {
+		margin-bottom: inEmMob(60px);
+	}
+
 	&__title-container {
 		margin-top: inEm(60px);
 		max-width: inEm(784px);
+
+		@include md-down {
+			margin-top: inEmMob(40px);
+			max-width: none;
+		}
 	}
 
 	&__title {
@@ -13,13 +22,23 @@
 		letter-spacing: -0.025em;
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(36px);
+			text-align: center;
+		}
 	}
 
 	&__image-container {
 		margin-top: inEm(60px);
+
+		@include md-down {
+			margin-top: inEmMob(60px);
+		}
 	}
 
 	&__image {
+		display: block;
 		width: 100%;
 		height: auto;
 	}
@@ -32,10 +51,21 @@
 		max-width: inEm(784px, 18px);
 		margin-inline: auto;
 
+		@include md-down {
+			font-size: inEmMob(15px);
+			font-weight: 400;
+			margin-top: inEmMob(60px, 15px);
+			max-width: none;
+		}
+
 		& > * {
 
 			&:not(:last-child) {
 				margin-bottom: inEm(30px, 18px);
+
+				@include md-down {
+					margin-bottom: inEmMob(15px, 15px);
+				}
 			}
 		}
 	}

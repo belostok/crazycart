@@ -2,9 +2,14 @@
 	margin-top: inEm(60px);
 	padding-bottom: inEm(85px);
 
+	@include md-down {
+		margin-top: inEmMob(60px);
+		padding-bottom: inEmMob(115px);
+	}
+
 	&__slider-wrapper {
 
-		@include sm-up {
+		@include md-up {
 			display: grid;
 			grid-template-columns: repeat(3, 1fr);
 			column-gap: inEm(40px);
@@ -14,10 +19,19 @@
 
 	&__image-container {
 		height: inEm(330px);
+
+		@include md-down {
+			height: inVw(350px);
+		}
 	}
 
 	&__buttons {
 		margin-top: inEm(90px);
+
+		@include md-down {
+			margin-top: inEmMob(120px);
+			column-gap: inEmMob(10px);
+		}
 	}
 
 	&__button {
@@ -32,6 +46,11 @@
 		border-radius: inEm(130px, 18px);
 		background: $white;
 		transition: background $transition-duration, color $transition-duration, border-color $transition-duration;
+
+		@include md-down {
+			width: 100%;
+			font-size: inEmMob(18px);
+		}
 
 		span {
 			pointer-events: none;
@@ -61,8 +80,44 @@
 
 	&__nav-wrapper {
 
-		@include sm-up {
+		@include md-up {
 			display: none;
+		}
+
+		@include md-down {
+			margin-top: inEmMob(10px);
+		}
+	}
+
+	&__nav-container {
+
+		@include md-down {
+			column-gap: inEmMob(10px);
+		}
+	}
+
+	@include md-down {
+
+		&__pagination {
+			max-width: inEmMob(170px);
+		}
+
+		.cc-pagination {
+
+			&__bullet {
+				width: inEmMob(20px);
+				height: inEmMob(20px);
+
+				&::before {
+					width: 4px;
+					height: 4px;
+					background: $red;
+				}
+
+				&.swiper-pagination-bullet-active {
+					border-color: $red;
+				}
+			}
 		}
 	}
 }
