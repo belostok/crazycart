@@ -296,6 +296,12 @@
 	&__rounds-container {
 		max-width: inEm(1027px);
 		margin-inline: auto;
+
+		@include md-down {
+			max-width: none;
+			margin-top: inEmMob(45px);
+			margin-bottom: inEmMob(-15px);
+		}
 	}
 
 	&__rounds-image {
