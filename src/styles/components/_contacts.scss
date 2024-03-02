@@ -4,6 +4,35 @@
 	margin-top: inEm(60px);
 	padding-bottom: inEm(175px);
 
+	@include md-down {
+		margin-top: inEmMob(40px);
+		margin-bottom: inEmMob(-21px);
+		padding-bottom: 0;
+	}
+
+	&__select-heading-container {
+
+		@include md-down {
+			margin-bottom: inEmMob(10px);
+		}
+	}
+
+	&__select-heading {
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			line-height: 1.1em;
+			color: $black;
+		}
+	}
+
+	&__items {
+
+		@include md-down {
+			margin-top: inEmMob(90px);
+		}
+	}
+
 	&__select-container {
 
 		&_active {
@@ -31,6 +60,11 @@
 		width: 100%;
 		text-align: left;
 
+		@include md-down {
+			padding: inEmMob(25px) inEmMob(48px) inEmMob(25px) inEmMob(15px);
+			border-radius: inEmMob(70px);
+		}
+
 		span {
 			display: block;
 			pointer-events: none;
@@ -46,6 +80,12 @@
 		right: inEm(40px);
 		margin-block: auto;
 		transition: transform $transition-duration;
+
+		@include md-down {
+			width: inEmMob(18px);
+			height: inEmMob(18px);
+			right: inEmMob(15px);
+		}
 	}
 
 	&__select-title {
@@ -54,6 +94,10 @@
 		line-height: 1em;
 		font-weight: 700;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+		}
 	}
 
 	&__select-list-container {
@@ -67,6 +111,10 @@
 		padding: inEm(40px) inEm(5px) inEm(40px) 0;
 		border-radius: inEm(20px);
 		box-shadow: 0 inEm(7px) inEm(22px) 0 #00000066;
+
+		@include md-down {
+			padding: inEmMob(16px) inEmMob(4px) inEmMob(16px) 0;
+		}
 	}
 
 	&__select-list-wrapper {
@@ -79,8 +127,18 @@
 		scrollbar-color: $red transparent;
 		scrollbar-width: thin;
 
+		@include md-down {
+			padding-left: inEmMob(16px);
+			padding-right: inEmMob(12px);
+			height: auto;
+		}
+
 		&::-webkit-scrollbar {
 			width: inEm(5px);
+
+			@include md-down {
+				width: inEmMob(4px);
+			}
 		}
 
 		&::-webkit-scrollbar-track {
@@ -90,6 +148,10 @@
 		&::-webkit-scrollbar-thumb {
 			background-color: $red;
 			border-radius: inEm(50px);
+
+			@include md-down {
+				border-radius: inEmMob(50px);
+			}
 		}
 	}
 
@@ -100,6 +162,11 @@
 		flex-wrap: wrap;
 		column-gap: inEm(20px);
 		row-gap: inEm(20px);
+
+		@include md-down {
+			display: flex;
+			row-gap: inEmMob(8px);
+		}
 	}
 
 	&__select-item {
@@ -113,6 +180,13 @@
 		text-transform: uppercase;
 		border-radius: inEm(40px, 16px);
 		transition: background $transition-duration, color $transition-duration;
+
+		@include md-down {
+			font-size: inEmMob(13px);
+			width: 100%;
+			padding: inEmMob(14px, 13px) inEmMob(16px, 13px);
+			border-radius: inEmMob(32px, 13px);
+		}
 
 		&_active {
 			pointer-events: none;
@@ -139,6 +213,17 @@
 
 		&:not(:last-child) {
 			margin-bottom: inEm(60px);
+
+			@include md-down {
+				margin-bottom: inEmMob(60px);
+			}
+		}
+	}
+
+	.cc-contact-item__item:nth-child(2) {
+
+		@include md-down {
+			border: none;
 		}
 	}
 }
