@@ -69,6 +69,11 @@
 	&_page {
 		margin-top: inEm(60px);
 		padding-bottom: inEm(175px);
+
+		@include sm-down {
+			margin-top: inEmMob(40px);
+			padding-bottom: inEmMob(115px);
+		}
 	}
 
 	&__title-container {
@@ -97,6 +102,10 @@
 		break-inside: avoid;
 		margin-bottom: inEm(20px);
 		cursor: pointer;
+
+		@include sm-down {
+			pointer-events: none;
+		}
 
 		@include mouseover {
 

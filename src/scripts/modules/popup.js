@@ -71,11 +71,11 @@ export default () => {
 			const image   = isTextFormat ? target  : target.querySelector( '.js-cc-gallery-item-full-image' );
 			const caption = ( isImgTag ? target.parentNode : target ).querySelector( '.js-cc-gallery-item-caption' );
 
-			const currentItems = target.querySelectorAll( '[data-src]' );
+			const currentItems = target.querySelectorAll( '[data-big]' );
 			if ( currentItems.length ) {
 				currentItems.forEach((item) => {
-					item.setAttribute( 'src', item.getAttribute( 'data-src' ) );
-					item.removeAttribute( 'data-src' );
+					item.setAttribute( 'src', item.getAttribute( 'data-big' ) );
+					item.removeAttribute( 'data-big' );
 				});
 			}
 
@@ -170,8 +170,8 @@ export default () => {
 				if ( i === currentIndex ) {
 					const currentImage = imageContainer.querySelector('img');
 
-					if ( currentImage && ( currentImage.getAttribute('src') !== currentImage.getAttribute( 'data-src' ) ) ) {
-						currentImage.setAttribute( 'src', currentImage.getAttribute( 'data-src' ) );
+					if ( currentImage && ( currentImage.getAttribute('src') !== currentImage.getAttribute( 'data-big' ) ) ) {
+						currentImage.setAttribute( 'src', currentImage.getAttribute( 'data-big' ) );
 					}
 				}
 
@@ -207,8 +207,8 @@ export default () => {
 				const currentImage = currentSlide.querySelector( 'img' );
 
 
-				if ( currentImage && ( currentImage.getAttribute( 'src' ) !== currentImage.getAttribute( 'data-src' ) ) ) {
-					currentImage.setAttribute( 'src', currentImage.getAttribute( 'data-src' ) );
+				if ( currentImage && ( currentImage.getAttribute( 'src' ) !== currentImage.getAttribute( 'data-big' ) ) ) {
+					currentImage.setAttribute( 'src', currentImage.getAttribute( 'data-big' ) );
 				}
 			} );
 		} );

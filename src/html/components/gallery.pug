@@ -39,5 +39,5 @@ mixin gallery(cl, title)
 					while m < 17
 						._item.js-cc-gallery-item
 							._image-container
-								img._image(src='../images/gallery-' + m + '.jpg', data-src='../images/gallery-' + m + '.jpg', alt='#')
+								img._image.lazy(data-src='../images/gallery-' + m + '.jpg', data-big='../images/gallery-' + m + '.jpg', alt='#')
 						- m ++;
