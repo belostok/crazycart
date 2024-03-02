@@ -15,12 +15,21 @@
 
 		&__button-container {
 			margin-top: inEm(60px);
+
+			@include md-down {
+				margin-top: inEmMob(40px);
+			}
 		}
 	}
 
 	&__title-container {
 		max-width: inEm(800px);
 		margin: 0 auto inEm(60px);
+
+		@include md-down {
+			max-width: inEmMob(260px);
+			margin-bottom: inEmMob(30px);
+		}
 	}
 
 	&__grid {

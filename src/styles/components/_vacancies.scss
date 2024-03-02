@@ -3,16 +3,28 @@
 
 	&_about {
 		margin-top: inEm(180px);
+
+		@include md-down {
+			margin-top: inEmMob(120px);
+		}
 	}
 	&_about & {
 
 		&__title-container {
 			max-width: inEm(1200px);
 			margin-inline: auto;
+
+			@include md-down {
+				max-width: none;
+			}
 		}
 
 		&__title {
 			color: $black;
+
+			@include md-down {
+				text-align: left;
+			}
 		}
 
 		&__grid {
@@ -21,6 +33,10 @@
 
 		&__item {
 			width: 27%;
+
+			@include md-down {
+				width: 100%;
+			}
 
 			&:not(:nth-child(-n+3)) {
 				display: none;
@@ -45,24 +61,53 @@
 
 	&__title-container {
 		margin-bottom: inEm(60px);
+
+		@include md-down {
+			margin-bottom: inEmMob(40px);
+		}
+	}
+
+	&__content-container {
+
+		@include md-down {
+			flex-direction: column;
+		}
 	}
 
 	&__grid {
 		column-gap: inEm(40px);
 		row-gap: inEm(40px);
+
+		@include md-down {
+			width: 100%;
+			flex-direction: column;
+			row-gap: inEmMob(40px);
+		}
 	}
 
 	&__item-title {
-		font-weight: 700;
+
+		@include md-up {
+			font-weight: 700;
+		}
 	}
 
 	&__item-description-container {
 		margin-top: inEm(15px);
 
+		@include md-down {
+			margin-top: inEmMob(15px);
+		}
+
 		& > * {
 			font-size: inEm(15px);
 			line-height: lh(21px, 15px);
 			font-weight: 500;
+
+			@include md-down {
+				font-size: inEmMob(15px);
+				font-weight: 400;
+			}
 		}
 
 		ul, ol {
@@ -76,9 +121,25 @@
 		font-size: inEm(15px);
 		line-height: lh(21px, 15px);
 		font-weight: 500;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			font-weight: 400;
+		}
 	}
 
 	&__item-button-container {
 		margin-top: inEm(30px);
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+		}
+	}
+
+	&__button-container {
+
+		@include md-down {
+			margin-top: inEmMob(40px);
+		}
 	}
 }

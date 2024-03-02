@@ -2,18 +2,44 @@
 	margin-top: inEm(180px);
 	overflow: hidden;
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+	}
+
 	&__title-container {
 		text-align: center;
 		margin-bottom: inEm(34px);
+
+		@include md-down {
+			margin-bottom: inEmMob(40px);
+		}
+	}
+
+	&__columns {
+
+		@include md-down {
+			flex-direction: column;
+		}
 	}
 
 	&__text-container {
 		margin-right: inEm(-12px);
 		padding-top: inEm(64px);
+
+		@include md-down {
+			margin-right: 0;
+			padding-top: 0;
+			margin-top: inEmMob(40px);
+			order: 1;
+		}
 	}
 
 	&__column-list {
 		margin-top: inEm(30px);
+
+		@include md-down {
+			margin-top: inEmMob(30px);
+		}
 	}
 
 	&__column-item {
@@ -21,6 +47,11 @@
 		font-size: inEm(22px);
 		line-height: lh(24.2px, 22px);
 		padding-left: inEm(29px, 22px);
+
+		@include md-down {
+			font-size: inEmMob(15px);
+			padding-left: inEmMob(27px, 15px);
+		}
 
 		&::before {
 			content: "";
@@ -32,16 +63,31 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-image: url('../images/list-item.svg');
+
+			@include md-down {
+				width: inEmMob(12px, 15px);
+				height: inEmMob(20px, 15px);
+				top: inEmMob(2px, 15px);
+			}
 		}
 
 		&:not(:last-child) {
 			margin-bottom: inEm(30px);
+
+			@include md-down {
+				margin-bottom: inEmMob(15px);
+			}
 		}
 	}
 
 	&__image-container {
 		flex-shrink: 0;
 		width: inEm(692px);
+
+		@include md-down {
+			width: inEmMob(340px);
+			margin-inline: auto;
+		}
 
 		&::before {
 			content: '';
@@ -53,6 +99,13 @@
 			height: inEm(361px);
 			background: linear-gradient(82deg, #0052D4 0%, #65C7F7 inEm(288px), #4EE3FF 100%);
 			border-radius: inEm(20px) 0 0 inEm(20px);
+
+			@include md-down {
+				top: inEmMob(30px);
+				left: inEmMob(90px);
+				height: inEmMob(178px);
+				border-radius: inEmMob(10px) 0 0 inEmMob(10px);
+			}
 		}
 	}
 

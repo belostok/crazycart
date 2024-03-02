@@ -2,25 +2,47 @@
 	margin-top: inEm(180px);
 	color: $black;
 
+	@include md-down {
+		margin-top: inEmMob(90px);
+	}
+
 	&__title-container {
 		max-width: inEm(1180px);
 		margin: 0 auto inEm(60px);
+
+		@include md-down {
+			max-width: none;
+			margin: 0 auto inEmMob(30px);
+		}
 	}
 
 	&__title {
 		text-align: center;
+
+		@include md-down {
+			font-size: inEmMob(26px);
+			text-align: left;
+		}
 	}
 
 	&__items {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: inEm(70px);
+
+		@include md-down {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__item {
 		position: relative;
 
 		&:nth-child(1) {
+
+			@include md-down {
+				margin-bottom: inEmMob(190px);
+			}
 
 			&::before {
 				content: '';
@@ -33,6 +55,13 @@
 				background-repeat: no-repeat;
 				background-size: contain;
 				background-image: url('../images/heart.svg');
+
+				@include md-down {
+					width: inEmMob(144px);
+					height: inEmMob(146px);
+					top: calc(100% + #{inEmMob(20px)});
+					left: inEmMob(-17px);
+				}
 			}
 		}
 
@@ -41,8 +70,16 @@
 			line-height: lh(26.4px, 22px);
 			font-weight: 400;
 
+			@include md-down {
+				font-size: inEmMob(15px);
+			}
+
 			&:not(:last-child) {
 				margin-bottom: inEm(15px, 22px);
+
+				@include md-down {
+					margin-bottom: inEmMob(15px, 15px);
+				}
 			}
 		}
 	}

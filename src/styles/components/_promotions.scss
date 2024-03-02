@@ -36,17 +36,40 @@
 		}
 	}
 
+	&_about {
+
+		@include md-down {
+			padding-top: inEmMob(120px);
+		}
+	}
+
 	&_about & {
+
+		&__title-container {
+
+			@include md-down {
+				max-width: inEmMob(250px);
+				margin-inline: auto;
+			}
+		}
 
 		&__title {
 			font-size: inEm(110px);
 			line-height: lh(104.5px, 110px);
 			letter-spacing: -0.025em;
 			color: $red;
+
+			@include md-down {
+				font-size: inEmMob(36px);
+			}
 		}
 
 		&__items {
 			margin-top: inEm(50px);
+
+			@include md-down {
+				margin-top: inEmMob(30px);
+			}
 		}
 
 		&__item {

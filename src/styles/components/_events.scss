@@ -19,6 +19,10 @@
 
 		&__items {
 			margin-top: inEm(91px);
+
+			@include md-down {
+				margin-top: inEmMob(90px);
+			}
 		}
 	}
 

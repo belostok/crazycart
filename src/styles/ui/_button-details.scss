@@ -64,12 +64,22 @@
 	&_about {
 		width: inEm(240px);
 		height: inEm(240px);
+
+		@include md-down {
+			width: inEmMob(190px);
+			height: inEmMob(190px);
+		}
 	}
 	&_about & {
 
 		&__title {
 			width: inEm(158px, 18px);
 			margin-inline: auto;
+
+			@include md-down {
+				width: auto;
+				font-size: inEmMob(18px);
+			}
 		}
 	}
 

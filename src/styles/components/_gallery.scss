@@ -5,6 +5,65 @@
 
 	&_about {
 		margin-top: inEm(180px);
+
+		@include sm-down {
+			margin-top: inEmMob(80px);
+
+			.cc-pagination {
+
+				&__bullet {
+					width: inEmMob(20px);
+					height: inEmMob(20px);
+
+					&::before {
+						background: $red;
+						width: 4px;
+						height: 4px;
+					}
+
+					&.swiper-pagination-bullet-active {
+						border-color: $red;
+					}
+				}
+			}
+		}
+	}
+
+	@include sm-down {
+
+		&_about & {
+
+			&__slider-container {
+				margin-inline: inEmMob(-20px);
+			}
+
+			&__item {
+				margin-bottom: 0;
+			}
+
+			&__image-container {
+				aspect-ratio: 1 / 1;
+			}
+
+			&__image {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			&__nav-wrapper {
+				margin-top: inEmMob(10px);
+				padding-inline: inEmMob(20px);
+			}
+
+			&__nav-container {
+				column-gap: inEmMob(10px);
+			}
+
+			&__pagination {
+				max-width: inEmMob(170px);
+			}
+		}
 	}
 
 	&_page {
@@ -14,6 +73,10 @@
 
 	&__title-container {
 		margin-bottom: inEm(60px);
+
+		@include sm-down {
+			margin-bottom: inEmMob(30px);
+		}
 	}
 
 	&__title {
@@ -82,13 +145,25 @@
 
 	&__button-container {
 		margin-top: inEm(60px);
+
+		@include sm-down {
+			margin-top: inEmMob(30px);
+		}
 	}
 
 	.cc-button-form {
 		padding: inEm(32px);
 
+		@include sm-down {
+			padding: inEmMob(25px);
+		}
+
 		&__title {
 			font-size: inEm(22px);
+
+			@include sm-down {
+				font-size: inEmMob(18px);
+			}
 		}
 	}
 }
