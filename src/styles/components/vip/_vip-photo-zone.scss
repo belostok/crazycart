@@ -1,8 +1,24 @@
 .cc-vip-photo-zone {
 	margin-top: inEm(360px);
 
+	@include md-down {
+		margin-top: inEmMob(260px);
+	}
+
+	&__wrapper {
+
+		@include md-down {
+			max-width: inEmMob(351px);
+			margin-inline: auto;
+		}
+	}
+
 	&__container {
 		padding-top: inEm(203px);
+
+		@include md-down {
+			padding-top: inEmMob(84px);
+		}
 	}
 
 	&__title {
@@ -14,5 +30,11 @@
 		height: inEm(337px);
 		top: 0;
 		left: inEm(650px);
+
+		@include md-down {
+			width: inEmMob(136px);
+			height: inEmMob(135px);
+			left: inEmMob(175px);
+		}
 	}
 }

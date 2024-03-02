@@ -43,6 +43,19 @@
 		.cc-dropdown__list-button_active {
 			background: $gold;
 		}
+
+		.cc-contacts-item_phone,
+		.cc-header__menu-button,
+		.cc-mobile-menu__close {
+
+			@include md-down {
+				background: $gold !important;
+			}
+		}
+
+		.cc-mobile-menu {
+			background: $dark;
+		}
 	}
 	&_dark & {
 

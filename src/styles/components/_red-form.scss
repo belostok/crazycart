@@ -146,6 +146,11 @@
 		border-radius: inEm(20px);
 		overflow: hidden;
 		background: linear-gradient(98.46deg, $gold 18.71%, $black 100%);
+
+		@include md-down {
+			border-radius: inEmMob(20px);
+			background: linear-gradient(168.66deg, #C3961E 8.35%, #1B1918 109.9%);
+		}
 	}
 	&_vip & {
 
@@ -153,6 +158,10 @@
 
 			&::before {
 				background-image: url('../images/form-bg-gold.svg');
+
+				@include md-down {
+					background-image: url('../images/form-bg-gold-mobile.svg');
+				}
 			}
 		}
 	}

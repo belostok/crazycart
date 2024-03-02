@@ -1,8 +1,16 @@
 .cc-vip-disco {
 	margin-top: inEm(290px);
 
+	@include md-down {
+		margin-top: inEmMob(114px);
+	}
+
 	&__wrapper {
 		position: relative;
+
+		@include md-down {
+			max-width: inEmMob(351px);
+		}
 
 		&::before {
 			content: '';
@@ -26,6 +34,14 @@
 			height: inEm(168px);
 			top: 36.6%;
 			left: inEm(73px);
+
+			@include md-down {
+				z-index: 1;
+				width: inEmMob(45px);
+				height: inEmMob(45px);
+				top: 35%;
+				left: inEmMob(44px);
+			}
 		}
 
 		&_i2 {
@@ -34,6 +50,14 @@
 			top: 40.5%;
 			right: inEm(335px);
 			filter: blur(inEm(5px));
+
+			@include md-down {
+				width: inEmMob(38px);
+				height: inEmMob(38px);
+				top: 37.5%;
+				right: inEmMob(97px);
+				filter: blur(0.17em);
+			}
 		}
 
 		&_i3 {
@@ -42,6 +66,15 @@
 			top: 74.4%;
 			left: inEm(-38px);
 			filter: blur(inEm(13px));
+
+			@include md-down {
+				width: inEmMob(38px);
+				height: inEmMob(38px);
+				top: 55%;
+				left: auto;
+				right: inEmMob(-20px);
+				filter: blur(0.1em);
+			}
 		}
 
 		&_i4 {
@@ -49,6 +82,14 @@
 			height: inEm(59px);
 			top: 105.2%;
 			left: inEm(598px);
+
+			@include md-down {
+				width: inEmMob(50px);
+				height: inEmMob(50px);
+				top: 93%;
+				left: auto;
+				right: inEmMob(31px);
+			}
 		}
 
 		&_i5 {
@@ -56,6 +97,13 @@
 			height: inEm(119px);
 			top: 97.5%;
 			right: inEm(297px);
+
+			@include md-down {
+				width: inEmMob(20px);
+				height: inEmMob(20px);
+				top: 104%;
+				right: inEmMob(140px);
+			}
 		}
 
 		&_i6 {
@@ -64,6 +112,15 @@
 			top: 57.9%;
 			right: inEm(-60px);
 			filter: blur(inEm(5px));
+
+			@include md-down {
+				width: inEmMob(134px);
+				height: inEmMob(134px);
+				top: 79%;
+				left: 0;
+				right: auto;
+				filter: blur(0.4em);
+			}
 		}
 	}
 
@@ -79,6 +136,22 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-image: url('../images/notes.png');
+
+			@include md-down {
+				top: inEmMob(-6px);
+				right: inEmMob(-8px);
+				width: inEmMob(63px);
+				height: inEmMob(58px);
+			}
+		}
+	}
+
+	&__title {
+		text-align: center;
+		color: $white;
+
+		@include md-down {
+			font-size: inEmMob(36px);
 		}
 	}
 
@@ -87,6 +160,13 @@
 		left: inEm(-44px);
 		width: inEm(402px);
 		height: inEm(402px);
+
+		@include md-down {
+			top: inEmMob(-7px);
+			left: inEmMob(-10px);
+			width: inEmMob(82px);
+			height: inEmMob(82px);
+		}
 
 		&::before,
 		&::after {
@@ -102,6 +182,10 @@
 			left: 0;
 			width: inEm(221px);
 			background-image: url('../images/headphones-left.png');
+
+			@include md-down {
+				width: inEmMob(45px);
+			}
 		}
 
 		&::after {
@@ -109,23 +193,34 @@
 			right: 0;
 			width: inEm(181px);
 			background-image: url('../images/headphones-right.png');
-		}
-	}
 
-	&__title {
-		text-align: center;
-		color: $white;
+			@include md-down {
+				width: inEmMob(37px);
+			}
+		}
 	}
 
 	&__image-container {
 		margin-top: inEm(60px);
 		border-radius: inEm(20px);
 		overflow: hidden;
+
+		@include md-down {
+			margin-top: inEmMob(60px);
+			border-radius: inEmMob(20px);
+			width: 100%;
+			height: inEmMob(280px);
+		}
 	}
 
 	&__image {
 		display: block;
 		width: 100%;
 		height: auto;
+
+		@include md-down {
+			height: 100%;
+			object-fit: cover;
+		}
 	}
 }

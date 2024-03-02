@@ -3,19 +3,35 @@
 
 	margin-top: inEm(180px);
 
+	@include md-down {
+		margin-top: inEmMob(90px);
+	}
+
 	&__title {
 		color: $white;
 	}
 
 	&__container {
 		margin-top: inEm(90px);
+
+		@include md-down {
+			margin-top: inEmMob(40px);
+		}
 	}
 
 	&__item {
 		column-gap: inEm(40px);
 
+		@include md-down {
+			flex-direction: column;
+		}
+
 		&:not(:first-child) {
 			margin-top: inEm(-140px);
+
+			@include md-down {
+				margin-top: inEmMob(40px);
+			}
 		}
 
 		&:nth-child(even) {
@@ -23,14 +39,20 @@
 			#{$root} {
 
 				&__image-container {
-					order: 1;
+
+					@include md-up {
+						order: 1;
+					}
 				}
 
 				&__item-title-container {
-					text-align: right;
-					align-items: flex-end;
-					padding-top: inEm(173px);
-					padding-bottom: inEm(33px);
+
+					@include md-up {
+						text-align: right;
+						align-items: flex-end;
+						padding-top: inEm(173px);
+						padding-bottom: inEm(33px);
+					}
 				}
 			}
 		}
@@ -42,12 +64,26 @@
 		height: inEm(427px);
 		border-radius: inEm(20px);
 		overflow: hidden;
+
+		@include md-down {
+			order: 1;
+			width: 100%;
+			height: inVw(208px);
+			border-radius: inVw(20px);
+		}
 	}
 
 	&__item-title-container {
-		word-spacing: 100vw;
-		padding-top: inEm(24px);
-		padding-bottom: inEm(173px);
+
+		@include md-up {
+			word-spacing: 100vw;
+			padding-top: inEm(24px);
+			padding-bottom: inEm(173px);
+		}
+
+		@include md-down {
+			margin-bottom: inEmMob(20px);
+		}
 	}
 
 	&__item-title {
@@ -56,5 +92,9 @@
 		letter-spacing: -0.02em;
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(26px);
+		}
 	}
 }

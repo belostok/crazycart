@@ -3,8 +3,23 @@
 
 	margin-top: inEm(480px);
 
+	@include md-down {
+		margin-top: inEmMob(268px);
+	}
+
+	&__wrapper {
+		@include md-down {
+			max-width: inEmMob(351px);
+			margin-inline: auto;
+		}
+	}
+
 	&__container {
 		height: inEm(538px);
+
+		@include md-down {
+			height: inEmMob(198px);
+		}
 	}
 
 	&__side {
@@ -24,6 +39,13 @@
 					top: inEm(14px);
 					right: inEm(23px);
 					transform: translateX(-67%);
+
+					@include md-down {
+						width: inEmMob(120px);
+						height: inEmMob(120px);
+						top: inEmMob(10px);
+						right: inEmMob(50px);
+					}
 				}
 			}
 		}
@@ -40,6 +62,13 @@
 					left: inEm(-50px);
 					bottom: inEm(-25px);
 					transform: translateX(52%);
+
+					@include md-down {
+						width: inEmMob(150px);
+						height: inEmMob(150px);
+						left: inEmMob(10px);
+						bottom: inEmMob(-5px);
+					}
 				}
 			}
 		}

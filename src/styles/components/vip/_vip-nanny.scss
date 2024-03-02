@@ -1,8 +1,23 @@
 .cc-vip-nanny {
 	margin-top: inEm(160px);
 
+	@include sm-down {
+		margin-top: inEmMob(100px);
+	}
+
+	&__wrapper {
+
+		@include sm-down {
+			max-width: inEmMob(351px);
+		}
+	}
+
 	&__container {
 		column-gap: inEm(40px);
+
+		@include sm-down {
+			flex-direction: column;
+		}
 	}
 
 	&__image-container {
@@ -11,11 +26,25 @@
 		height: inEm(640px);
 		border-radius: inEm(20px);
 		overflow: hidden;
+
+		@include sm-down {
+			order: 1;
+			width: inEmMob(185px);
+			height: inEmMob(240px);
+			border-radius: inEmMob(20px);
+			margin-inline: auto;
+		}
 	}
 
 	&__title-container {
 		position: relative;
 		padding-block: inEm(50px);
+
+		@include sm-down {
+			width: 100%;
+			padding-block: 0;
+			margin-bottom: inEmMob(40px);
+		}
 
 		&::before,
 		&::after {
@@ -31,6 +60,13 @@
 			top: inEm(-160px);
 			left: inEm(-90px);
 			background-image: url('../images/nanny-dec-1.png');
+
+			@include sm-down {
+				width: inEmMob(140px);
+				height: inEmMob(140px);
+				top: inEmMob(237px);
+				left: inEmMob(-37px);
+			}
 		}
 
 		&::after {
@@ -40,6 +76,13 @@
 			top: inEm(149px);
 			right: inEm(-3px);
 			background-image: url('../images/nanny-dec-2.png');
+
+			@include sm-down {
+				top: inEmMob(297px);
+				right: inEmMob(-20px);
+				width: inEmMob(110px);
+				height: inEmMob(75px);
+			}
 		}
 	}
 
@@ -47,5 +90,9 @@
 		position: relative;
 		text-align: left;
 		color: $white;
+
+		@include sm-down {
+			text-align: center;
+		}
 	}
 }

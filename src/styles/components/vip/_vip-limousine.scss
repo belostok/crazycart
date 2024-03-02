@@ -1,8 +1,23 @@
 .cc-vip-limousine {
 	margin-top: inEm(180px);
 
+	@include md-down {
+		margin-top: inEmMob(120px);
+	}
+
+	&__wrapper {
+
+		@include md-down {
+			max-width: inEmMob(351px);
+		}
+	}
+
 	&__container {
 		padding-bottom: inEm(161px);
+
+		@include md-down {
+			padding-bottom: inEmMob(180px);
+		}
 	}
 
 	&__title {
@@ -14,10 +29,26 @@
 
 			&:nth-child(1) {
 				margin-left: inEm(268px, 110px);
+
+				@include md-down {
+					margin-left: 0;
+				}
+			}
+
+			&:nth-child(2) {
+
+				@include md-down {
+					text-align: right;
+				}
 			}
 
 			&:nth-child(3) {
 				margin-left: inEm(536px, 110px);
+
+				@include md-down {
+					margin-left: 0;
+					text-align: center;
+				}
 			}
 		}
 	}
@@ -26,6 +57,12 @@
 		margin-top: inEm(90px);
 		margin-left: inEm(536px);
 		max-width: inEm(728px);
+
+		@include md-down {
+			margin-left: 0;
+			max-width: none;
+			margin-top: inEmMob(60px);
+		}
 	}
 
 	&__description {
@@ -35,16 +72,29 @@
 		font-weight: 800;
 		text-transform: uppercase;
 		color: $gold;
+
+		@include md-down {
+			font-size: inEmMob(26px);
+		}
 	}
 
 	&__note-container {
 		margin-top: inEm(60px);
 		margin-left: inEm(804px);
+
+		@include md-down {
+			margin-top: inEmMob(20px);
+			margin-left: 0;
+		}
 	}
 
 	&__note {
 		font-size: inEm(22px);
 		line-height: 1.1em;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 	}
 
 	&__limousine-container {
@@ -53,5 +103,12 @@
 		left: inEm(-580px);
 		transform: translateX(-77%);
 		bottom: 0;
+
+		@include md-down {
+			width: inEmMob(665px);
+			height: inEmMob(150px);
+			left: inEmMob(-330px);
+			transform: translateX(-55%);
+		}
 	}
 }

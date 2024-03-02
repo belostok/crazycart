@@ -1,6 +1,17 @@
 .cc-vip-animation-programs {
 	margin-top: inEm(110px);
 
+	@include sm-down {
+		margin-top: inEmMob(90px);
+	}
+
+	&__title-container {
+
+		@include md-down {
+			max-width: inEmMob(351px);
+		}
+	}
+
 	&__title {
 		text-align: left;
 		color: $white;
@@ -8,20 +19,39 @@
 
 	&__content {
 		margin-top: inEm(16px);
+
+		@include sm-down {
+			margin-top: inEmMob(20px);
+			flex-direction: column;
+		}
 	}
 
 	&__note-container {
 		padding-top: inEm(136px);
+
+		@include sm-down {
+			padding-top: 0;
+		}
 	}
 
 	&__note {
 		font-size: inEm(22px);
 		line-height: 1.1em;
+
+		@include sm-down {
+			font-size: inEmMob(15px);
+		}
 	}
 
 	&__image-container {
 		width: inEm(785px);
 		height: inEm(360px);
+
+		@include sm-down {
+			margin-top: inEmMob(15px);
+			width: 100%;
+			height: auto;
+		}
 
 		&::before {
 			content: '';
@@ -33,6 +63,13 @@
 			background-repeat: no-repeat;
 			background-size: contain;
 			background-image: url('../images/vip-gear.png');
+
+			@include sm-down {
+				top: inVw(-40px);
+				right: inVw(-95px);
+				width: inVw(304px);
+				height: inVw(304px);
+			}
 		}
 	}
 

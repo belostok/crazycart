@@ -1,14 +1,31 @@
 .cc-vip-hero {
 
+	&__wrapper {
+
+		@include md-down {
+			max-width: inEmMob(351px);
+			margin-inline: auto;
+		}
+	}
+
 	&__container {
 		margin-top: inEm(56px);
 		opacity: 0;
 		transform: translateY(10%);
+
+		@include md-down {
+			margin-top: inEmMob(50px);
+		}
 	}
 
 	&__title-container {
 		width: inEm(1209px);
 		height: inEm(588px);
+
+		@include md-down {
+			width: 100%;
+			height: auto;
+		}
 	}
 
 	&__crown-container {
@@ -16,6 +33,13 @@
 		left: inEm(22px);
 		width: inEm(330px);
 		height: inEm(330px);
+
+		@include md-down {
+			top: inEmMob(125px);
+			left: inEmMob(-17px);
+			width: inEmMob(120px);
+			height: inEmMob(120px);
+		}
 	}
 
 	&__trophy-container {
@@ -23,5 +47,12 @@
 		right: inEm(-23px);
 		width: inEm(610px);
 		height: inEm(610px);
+
+		@include md-down {
+			top: inEmMob(-25px);
+			right: 0;
+			width: inEmMob(121px);
+			height: inEmMob(121px);
+		}
 	}
 }

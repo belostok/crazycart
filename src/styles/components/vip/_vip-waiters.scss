@@ -1,8 +1,16 @@
 .cc-vip-waiters {
 	margin-top: inEm(180px);
 
+	@include sm-down {
+		margin-top: inEmMob(90px);
+	}
+
 	&__title-container {
 		max-width: inEm(800px);
+
+		@include sm-down {
+			max-width: inEmMob(270px);
+		}
 	}
 
 	&__title {
@@ -14,10 +22,18 @@
 		display: flex;
 		justify-content: flex-end;
 		margin-top: inEm(-32px);
+
+		@include sm-down {
+			margin-top: inEmMob(30px);
+		}
 	}
 
 	&__image {
 		width: inEm(809px);
 		height: auto;
+
+		@include sm-down {
+			width: 100%;
+		}
 	}
 }

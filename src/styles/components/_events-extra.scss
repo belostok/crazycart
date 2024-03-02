@@ -34,6 +34,13 @@
 		}
 	}
 
+	&_vip {
+
+		@include md-down {
+			margin-top: inEmMob(283px);
+		}
+	}
+
 	&_vip & {
 
 		&__title {
@@ -42,6 +49,11 @@
 
 		&__image-container {
 			bottom: inEm(-252px);
+
+			@include md-down {
+				bottom: auto;
+				top: inEmMob(-200px);
+			}
 		}
 
 		&__description-container {

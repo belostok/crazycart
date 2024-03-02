@@ -3,13 +3,26 @@
 
 	margin-top: inEm(60px);
 
+	@include md-down {
+		margin-top: inEmMob(60px);
+	}
+
 	&__item {
 		padding-top: inEm(45px);
 		border-top: 1px solid $gold;
 		column-gap: inEm(20px);
 
+		@include md-down {
+			padding-top: inEmMob(30px);
+			flex-direction: column;
+		}
+
 		&:not(:last-child) {
 			margin-bottom: inEm(90px);
+
+			@include md-down {
+				margin-bottom: inEmMob(60px);
+			}
 		}
 
 		&:nth-child(2) {
@@ -18,6 +31,10 @@
 
 				&__title-container {
 					max-width: inEm(600px);
+
+					@include md-down {
+						max-width: none;
+					}
 				}
 			}
 		}
@@ -26,10 +43,19 @@
 	&__text-container {
 		flex-shrink: 0;
 		width: inEm(784px);
+
+		@include md-down {
+			width: 100%;
+			margin-bottom: inEmMob(30px);
+		}
 	}
 
 	&__title-container {
 		margin-bottom: inEm(30px);
+
+		@include md-down {
+			margin-bottom: inEmMob(20px);
+		}
 	}
 
 	&__title {
@@ -38,11 +64,19 @@
 		letter-spacing: -0.04em;
 		font-weight: 800;
 		text-transform: uppercase;
+
+		@include md-down {
+			font-size: inEmMob(26px);
+		}
 	}
 
 	&__list {
 		column-count: 2;
 		column-gap: inEm(15px);
+
+		@include md-down {
+			column-count: 1;
+		}
 	}
 
 	&__list-item {
@@ -54,6 +88,11 @@
 		width: inEm(384px, 15px);
 		margin-bottom: inEm(15px, 15px);
 
+		@include md-down {
+			font-size: inEmMob(15px);
+			width: 100%;
+		}
+
 		&::before {
 			content: '//';
 			flex-shrink: 0;
@@ -64,6 +103,10 @@
 
 	&__prices-title-container {
 		margin-bottom: inEm(15px);
+
+		@include md-down {
+			margin-bottom: inEmMob(15px);
+		}
 	}
 
 	&__prices-title {
@@ -72,15 +115,28 @@
 		letter-spacing: -0.04em;
 		text-transform: uppercase;
 		font-weight: 800;
+
+		@include md-down {
+			font-size: inEmMob(26px);
+		}
 	}
 
 	&__prices {
 		column-gap: inEm(5px);
 		row-gap: inEm(5px);
+
+		@include md-down {
+			column-gap: inEmMob(5px);
+			row-gap: inEmMob(5px);
+		}
 	}
 
 	&__note-container {
 		margin-top: inEm(15px);
+
+		@include md-down {
+			margin-top: inEmMob(15px);
+		}
 	}
 
 	&__note {
@@ -89,21 +145,38 @@
 		font-size: inEm(15px);
 		line-height: 1em;
 		font-weight: 500;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 	}
 
 	&__description-container {
 		max-width: inEm(576px);
+
+		@include md-down {
+			max-width: none;
+		}
 	}
 
 	&__description {
 		font-size: inEm(22px);
 		line-height: 1.1em;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 	}
 
 	&__single-container {
 		padding: inEm(15px);
 		border-radius: inEm(12px);
 		border: 1px solid $white;
+
+		@include md-down {
+			padding: inEmMob(15px);
+			border-radius: inEmMob(12px);
+		}
 	}
 
 	&__single {
@@ -112,5 +185,10 @@
 		line-height: 0.95em;
 		letter-spacing: -0.025em;
 		font-weight: 800;
+
+		@include md-down {
+			font-size: inEmMob(18px);
+			text-transform: uppercase;
+		}
 	}
 }

@@ -3,23 +3,47 @@
 
 	margin-top: inEm(180px);
 
+	@include md-down {
+		margin-top: inEmMob(90px);
+	}
+
 	&__title-wrapper {
 		column-gap: inEm(47px);
+
+		@include md-down {
+			flex-direction: column;
+		}
 	}
 
 	&__title-container {
 		flex-shrink: 0;
 		width: inEm(760px);
+
+		@include md-down {
+			max-width: inEmMob(270px);
+			width: 100%;
+			margin: 0 auto inEmMob(30px);
+		}
 	}
 
 	&__title {
-		text-align: left;
+
+		@include md-up {
+			text-align: left;
+		}
+
 		color: $white;
 	}
 
 	&__pagination-container {
 		column-gap: inEm(10px);
 		row-gap: inEm(10px);
+
+		@include md-down {
+			column-gap: inEmMob(10px);
+			row-gap: inEmMob(10px);
+			justify-content: center;
+		}
 	}
 
 	&__pagination-item {
@@ -27,6 +51,11 @@
 		padding: inEm(6px) inEm(12px);
 		border: 1px solid $white;
 		transition: background $transition-duration;
+
+		@include md-down {
+			padding: inEmMob(6px) inEmMob(12px);
+			border-radius: inEmMob(20px);
+		}
 
 		&_active {
 			pointer-events: none;
@@ -48,16 +77,32 @@
 		font-size: inEm(22px);
 		line-height: 1.1em;
 		transition: color $transition-duration;
+
+		@include md-down {
+			font-size: inEmMob(15px);
+		}
 	}
 
 	&__slider {
 		margin-top: inEm(60px);
 		overflow: hidden;
+
+		@include md-down {
+			margin-top: inEmMob(60px);
+		}
+	}
+
+	&__slide {
+		height: auto;
 	}
 
 	&__image-container {
 		border-radius: inEm(20px);
 		overflow: hidden;
+
+		@include md-down {
+			border-radius: inEmMob(20px);
+		}
 	}
 
 	&__image {

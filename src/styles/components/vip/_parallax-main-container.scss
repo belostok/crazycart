@@ -23,6 +23,13 @@
 			height: inEm(168px);
 			top: 22.6%;
 			left: inEm(193px);
+
+			@include md-down {
+				width: inEmMob(69px);
+				height: inEmMob(69px);
+				top: 33%;
+				left: 0;
+			}
 		}
 
 		&_i2 {
@@ -31,6 +38,14 @@
 			height: inEm(119px);
 			top: 37.7%;
 			left: inEm(54px);
+
+			@include md-down {
+				width: inEmMob(42px);
+				height: inEmMob(42px);
+				top: 41%;
+				left: auto;
+				right: inEmMob(158px);
+			}
 		}
 
 		&_i3 {
@@ -39,6 +54,14 @@
 			top: 39.3%;
 			left: inEm(547px);
 			filter: blur(inEm(5px));
+
+			@include md-down {
+				width: inEmMob(50px);
+				height: inEmMob(50px);
+				top: 48%;
+				left: inEmMob(134px);
+				filter: blur(0.4em);
+			}
 		}
 
 		&_i4 {
@@ -47,6 +70,15 @@
 			top: 43.1%;
 			right: inEm(-20px);
 			filter: blur(inEm(5px));
+
+			@include md-down {
+				width: inEmMob(28px);
+				height: inEmMob(28px);
+				filter: none;
+				top: 60%;
+				right: inEmMob(127px);
+				z-index: 1;
+			}
 		}
 
 		&_i5 {
@@ -56,6 +88,14 @@
 			top: 54.6%;
 			left: inEm(-164px);
 			filter: blur(inEm(13px));
+
+			@include md-down {
+				width: inEmMob(179px);
+				height: inEmMob(179px);
+				top: 68%;
+				left: inEmMob(-77px);
+				filter: blur(1em);
+			}
 		}
 
 		&_i6 {
@@ -64,6 +104,14 @@
 			height: inEm(63px);
 			top: 55.3%;
 			right: inEm(467px);
+
+			@include md-down {
+				width: inEmMob(24px);
+				height: inEmMob(24px);
+				top: 67%;
+				right: inEmMob(171px);
+				filter: blur(0.15em);
+			}
 		}
 
 		&_i7 {
@@ -72,6 +120,14 @@
 			top: 64.9%;
 			right: inEm(610px);
 			filter: blur(inEm(3px));
+
+			@include md-down {
+				width: inEmMob(84px);
+				height: inEmMob(84px);
+				top: 73%;
+				right: inEmMob(57px);
+				filter: blur(0.4em);
+			}
 		}
 	}
 
@@ -83,6 +139,13 @@
 			height: inEm(78px);
 			top: 37.4%;
 			right: inEm(287px);
+
+			@include md-down {
+				width: inEmMob(24px);
+				height: inEmMob(24px);
+				top: 47%;
+				right: inEmMob(45px);
+			}
 		}
 
 		&_i2 {
@@ -91,6 +154,13 @@
 			height: inEm(78px);
 			top: 58.7%;
 			left: inEm(268px);
+
+			@include md-down {
+				width: inEmMob(39px);
+				height: inEmMob(39px);
+				top: 63%;
+				left: inEmMob(63px);
+			}
 		}
 
 		&_i3 {
@@ -99,6 +169,13 @@
 			height: inEm(210px);
 			top: 62.5%;
 			right: inEm(38px);
+
+			@include md-down {
+				width: inEmMob(55px);
+				height: inEmMob(55px);
+				top: 65%;
+				right: inEmMob(20px);
+			}
 		}
 	}
 }
