@@ -119,5 +119,9 @@
 		position: relative;
 		width: max-content;
 		margin: inEmMob(15px) auto 0;
+
+		@include md-down {
+			max-width: calc(100% - #{inEmMob(40px)});
+		}
 	}
 }
